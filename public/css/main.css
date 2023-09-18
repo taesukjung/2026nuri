@@ -210,7 +210,9 @@ footer .f_link ul li{float: left; margin-right: 70px}
 footer .f_link ul li a{color: #fff}
 footer .facilitation{position: absolute;right: 0px; top: 150px;}
 footer .facilitation ul li{float: left; margin-right: 20px}
-
+.qa_menu{position: fixed; z-index: 99; transition: var(--transition-custom);bottom: 200px; right: 90px;}
+.qa_menu a{background: #0a4ca2; width: 60px; height: 60px; border-radius: 99;}
+.qa_menu img{text-align: center}
 @media screen and (max-width:1900px)
 {
 .value_area{background-size: auto}
