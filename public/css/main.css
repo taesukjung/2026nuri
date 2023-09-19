@@ -217,8 +217,8 @@ footer .facilitation ul li{float: left; margin-right: 20px}
 .qa_menu a:not(.to-top-btn):hover{width:180px; background:#0a4ca2;}
 .qa_menu a:not(.to-top-btn):hover .txt{opacity:1; transition:0.3s ease-out; line-height: 60px; transition-delay:0.2s;}
 .qa_menu a:not(.to-top-btn):hover:before{opacity:0;}
-.active .qa_menu a{background:#0a4ca2; animation:footerQuick 2.4s; animation-delay:0.6s}
-.active .qa_menu a .txt{animation:footerQuickTxt 2.4s; animation-delay:0.6s}
+/*.active .qa_menu a{background:#0a4ca2; animation:footerQuick 2.4s; animation-delay:0.6s}
+.active .qa_menu a .txt{animation:footerQuickTxt 2.4s; animation-delay:0.6s}*/
 
 @keyframes footerQuick {
 	0% {
