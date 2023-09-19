@@ -1,0 +1,239 @@
+body
+{
+  font-size: small;
+  font-family: verdana;
+  text-align: center;
+}
+
+A
+{
+  cursor: pointer;
+  color: #4169E1;
+  text-decoration: underline
+}
+
+A:hover
+{
+  color: #FF4500;
+  text-decoration: none
+}
+
+DIV.chat
+{
+  width: 500px;
+  height: 500px;
+  /*border: 2px solid #0c4da2;*/
+  overflow-y: scroll;
+  font-size: small;
+    background:#f8f8f8 url("../images/logo_bg.png") center no-repeat;
+}
+
+DIV.main
+{
+  width: 500px;
+  height: 500px;
+}
+
+TABLE
+{
+  border-collapse: collapse;
+}
+
+TD
+{
+  vertical-align: top;
+  font-size: small;
+  font-family: verdana;
+}
+
+TABLE.bordered
+{
+  border: 1px solid #808080;
+}
+
+TABLE.bordered TD
+{
+  vertical-align: middle;
+  border: 1px solid #808080;
+  text-align: center;
+  padding: 10px;
+}
+
+TABLE.chat_messages
+{
+  border: 1px solid #CDCDCD;
+  width: 800px;
+}
+
+TABLE.chat_messages TD
+{
+  vertical-align: top;
+  border: 1px solid #CDCDCD;
+  padding: 5px;
+}
+
+TABLE.filter TD
+{
+  vertical-align: middle;
+  text-align: left;
+  padding: 10px;
+}
+
+TABLE.chat
+{
+  width: 100%;
+  border-spacing: 10px;
+  border-collapse: separate;
+  vertical-align: top;
+}
+
+TABLE.chat TD
+{
+  font-size: small;
+  font-family: verdana;
+  vertical-align: top;
+  padding: 0px;
+}
+
+TABLE.chat TD.cnst_msg
+{
+  text-align: right;
+}
+
+TABLE.chat TD.user_msg
+{
+  text-align: left;
+}
+
+TABLE.chat TD.error_msg
+{
+  border: 1px solid #FF0000;
+  text-align: center;
+  padding: 5px;
+}
+
+TABLE.chat TD.info_msg
+{
+  border: 1px solid #000080;
+  text-align: center;
+  padding: 5px;
+}
+
+TABLE.chat_msg
+{
+  width: 100%;
+  border-collapse: separate;
+  vertical-align: top;
+}
+
+TABLE.chat_msg TD
+{
+  font-size: small;
+  font-family: verdana;
+  vertical-align: top;
+  padding: 5px;
+}
+
+TABLE.chat_msg TD.filler
+{
+  width: 50px;
+}
+TABLE.chat_msg TD.cnst_msg::before{
+    content: '';
+    width: 40px;
+    height: 35px;
+    display: inline-block;
+    background:url("../images/icon_a.png") no-repeat;
+    position: absolute;
+    left: -30px;
+    top: calc(50% - 20px);
+}
+TABLE.chat_msg TD.cnst_msg
+{
+  border: 0px solid #AAAAAA;
+  border-radius: 10px;
+  text-align: right;
+  background:#0c4da2;
+  padding-left: 20px;
+  line-height: 20px;
+  color: #fff;    
+    position: relative;
+}
+
+TABLE.chat_msg TD.user_msg
+{
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  text-align: left;
+  background:#ffffff url("../images/icon_q.png") 8px 5px no-repeat;
+  padding-left: 40px;
+  line-height: 20px;
+}
+TABLE input{
+    color: #0c4da2;
+    font-weight: bold;
+    border: 2px solid #0c4da2;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+TABLE button{
+    background-color: #0c4da2;
+    color: #fff;
+    border: 2px solid #0c4da2;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+TD.title
+{
+  font-weight: bold;
+  color: #000080;
+  text-align: center;
+  padding: 5px;
+}
+
+TR.title TD
+{
+  font-weight: bold;
+  color: #000080;
+  text-align: center;
+  padding: 5px;
+}
+
+SPAN.title
+{
+  font-size: medium;
+}
+
+SPAN.small_text
+{
+  font-size: x-small;
+}
+
+SPAN.success
+{
+  color: #008000;
+  font-weight: bold;
+}
+
+SPAN.error
+{
+  color: #FF0000;
+  font-weight: bold;
+}
+
+SPAN.info
+{
+  color: #000080;
+  font-weight: bold;
+}
+
+SPAN.msg_title
+{
+  color: #AAAAAA;
+}

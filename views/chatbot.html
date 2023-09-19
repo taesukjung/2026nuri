@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>
+      NuriChatBot
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      var script = document.createElement('script');
+      script.src = '/js/chatbot.js?' + Date.now();
+      document.head.appendChild(script);
+    </script>
+    <script>
+      var link = document.createElement('link');
+      link.setAttribute('rel', 'stylesheet');
+      link.setAttribute('href', '/css/chatbot.css?' + Date.now());
+      document.head.appendChild(link);
+    </script>
+  </head>
+  <body onload="open_chat()">
+    <center>
+      <div id="div_opening_chat" >
+        챗봇 상담
+      </div>
+      <div class="main" id="div_chat_main" style="display:none">
+        <div class="chat" id="div_chat">
+            <p>안녕하세요. <b>누리인포스</b> 상담센터 챗봇 입니다.<br>무엇을 도와드릴까요?</p>
+          <table class="chat" id="tbl_chat">
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <table style="border-top: 1px solid #eee">
+          <tr>
+            <td width="100%">
+              <input type="text" id="message_text" style="width: 100%" onkeydown="on_enter()">
+            </td>
+            <td>
+              <button id="btn_send_message" onclick="send_message()"><img src="/images/icon_send.png"></button>
+            </td>
+          </tr>
+        </table>
+        <br>
+      </div>
+    </center>
+  </body>
+</html>
