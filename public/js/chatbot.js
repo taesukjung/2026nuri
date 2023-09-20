@@ -300,7 +300,7 @@ function send_message()
   var chat_tbody = document.getElementById("tbl_chat").getElementsByTagName('tbody')[0];
   var new_row = chat_tbody.insertRow();
   var new_cell = new_row.insertCell();
-  new_cell.innerHTML = '<center><img src="../images/loading.gif"></center>';
+  new_cell.innerHTML = '<center><img src="/images/loading.gif"></center>';
   window.is_loading_indicator = 1;
 
   // block input elements for prevent sending new message
