@@ -1,8 +1,5 @@
-const API_LINK = "http://nuri.tavg.net:52270/v1/";
-
-// client version
-const CLIENT_VERSION = "1.2.1";
-const CLIENT_VERSION_DATE = "2023-08-29";
+// API link
+const API_LINK = "nuri-chat-bot-api.tavg.net/v1/";
 
 // message types
 const MSG_TYPE_USER = 1;
@@ -58,142 +55,6 @@ function getXmlHttp()
   return xmlhttp;
 }
 
-// return string with date and time from unix timestamp (ms)
-function format_time(timestamp_ms)
-{
-  // create JS Date object
-  var date_obj = new Date(timestamp_ms);
-
-  // extract date and time components
-  var day = date_obj.getDate();
-  var month = date_obj.getMonth() + 1;
-  var year = date_obj.getFullYear();
-  var hours = date_obj.getHours();
-  var minutes = date_obj.getMinutes();
-  var seconds = date_obj.getSeconds();
-  
-  // convert components to strings with lead zero
-  var day_str = String(day);          if (day < 10) day_str = "0" + day_str;
-  var month_str = String(month);      if (month < 10) month_str = "0" + month_str;
-  var year_str = String(year);
-  var hours_str = String(hours);      if (hours < 10) hours_str = "0" + hours_str;
-  var minutes_str = String(minutes);  if (minutes < 10) minutes_str = "0" + minutes_str;
-  var seconds_str = String(seconds);  if (seconds < 10) seconds_str = "0" + seconds_str;
-
-  // create result string and return it
-  return year_str + "/" + month_str + "/" + day_str + " " + hours_str + ":" + minutes_str + ":" + seconds_str;
-}
-
-// return string in "YYYY-MM-DDTHH:MM" format
-function get_date_iso_string(date_obj)
-{
-  // extract date components
-  var day = date_obj.getDate();
-  var month = date_obj.getMonth() + 1;
-  var year = date_obj.getFullYear();
-  var hours = date_obj.getHours();
-  var minutes = date_obj.getMinutes();
-
-  // convert date components to strings with lead zero
-  var day_str = String(day);          if (day < 10) day_str = "0" + day_str;
-  var month_str = String(month);      if (month < 10) month_str = "0" + month_str;
-  var year_str = String(year);
-  var hours_str = String(hours);      if (hours < 10) hours_str = "0" + hours_str;
-  var minutes_str = String(minutes);  if (minutes < 10) minutes_str = "0" + minutes_str;
-
-  // result
-  return year_str + "-" + month_str + "-" + day_str + "T" + hours_str + ":" + minutes_str;
-}
-
-// extract GET-param
-function extract_get_param(param_name)
-{
-  var result = null;
-  var tmp = [];
-  var items = location.search.substr(1).split("&");
-
-  for (var index = 0; index < items.length; index++)
-  {
-    tmp = items[index].split("=");
-    if (tmp[0] === param_name)
-    {
-      result = decodeURIComponent(tmp[1]);
-      return result;
-    }
-  }
-
-  return result;
-}
-
-// init chat page
-function init_chat_page()
-{
-  // set client page type
-  window.client_curr_page = CLIENT_PAGE_CHAT_DETAIL;
-
-  // extract chat UUID
-  var chat_uuid = extract_get_param("uuid");
-
-  // check that chat UUID is set
-  if ( (chat_uuid == null) || (chat_uuid.length == 0) )
-  {
-    document.getElementById("error_msg").innerHTML = "Chat UUID not set."
-    return;
-  }
-
-  // reset error message
-  document.getElementById("error_msg").innerHTML = "";
-
-  // set UUID to global var
-  window.chat_uid = chat_uuid;
-
-  // load chat info
-  get_chat_info();
-}
-
-// init chats list page
-function init_chats_list_page()
-{
-  // set client page type
-  window.client_curr_page = CLIENT_PAGE_CHATS_LIST;
-
-  // load chats list
-  get_chats_list();
-}
-
-// search chat by UUID handler
-function search_chat_by_uuid()
-{
-  // extract UUID
-  var chat_uuid = document.getElementById("txt_search_chat_by_uuid").value;
-
-  // if UUID empty - quit
-  if (chat_uuid.length == 0) return;
-
-  window.open("chat/?uuid=" + chat_uuid, "_self")
-}
-
-// set date/time filter for only today
-function set_chats_filter_for_today()
-{
-  // date from (for chats filter)
-  var date_from = new Date();
-  date_from.setHours(0);
-  date_from.setMinutes(0);
-  date_from.setSeconds(0);
-  date_from.setMilliseconds(0);
-  chats_filter_from_val = get_date_iso_string(date_from);
-
-  // date to (for chats filter)
-  var date_to = date_from;
-  date_to.setDate(date_from.getDate() + 1);
-  chats_filter_to_val = get_date_iso_string(date_to);
-
-  // set for the filter elements
-  document.getElementById("chats_filter_from").value = chats_filter_from_val;
-  document.getElementById("chats_filter_to").value = chats_filter_to_val;
-}
-
 // unblock input elements for allow sending new messages
 function allow_send_messages()
 {
@@ -239,6 +100,11 @@ function close_chat_post_actions()
 // calls callback_func with these params: "status" (HTTP response code) and "response" (response text)
 function send_api_request(request_type, url, chat_uid, body_json, callback_func)
 {
+  // add protocol prefix
+  if (location.protocol !== 'https:') url = "http://" + url;
+  else url = "https://" + url;
+  
+  // create XmlHTTP object
   var req = getXmlHttp();
 
   // handler for state change event
@@ -374,23 +240,6 @@ function open_chat()
   send_api_request("POST", API_LINK + "chat/start", "", "{}", open_chat_callback);
 }
 
-function open_chat_with_confirmation()
-{
-  // if chat has been already closed - chat_uid is empty
-  // so ask confirmation only if 'chat_uid' is not empty
-  if (window.chat_uid.length > 0)
-  {
-    // ask user to confirm action
-    var confirmation = confirm("New chat will be opened. Do you want to continue?");
-
-    // if not confirmed - quit
-    if (confirmation == false) return;
-  }
-
-  // call main function
-  open_chat();
-}
-
 
 /* SEND MESSAGE FUNCTIONS */
 
@@ -501,37 +350,6 @@ function close_chat()
 
   // send to API
   send_api_request("POST", API_LINK + "chat/finish", window.chat_uid, {}, close_chat_callback);
-}
-
-
-/* CALL CONSULTANT FUNCTIONS */
-
-function call_csnt_callback(result, response)
-{
-  if (result == 200)
-  {
-    add_message_to_chat(null, "Request for consultant to join this chat has been sent.", CHAT_MSG_TYPE_INFO);
-  }
-  else
-  {
-    // parse JSON
-    resp_array = parseJSONResponse(response);
-
-    // remove loader indicator
-    remove_loader_indicator();
-
-    // add error message
-    add_message_to_chat(null, "API ERROR: " + resp_array['error'], CHAT_MSG_TYPE_ERROR);
-
-    // allow send new messages
-    allow_send_messages();
-  }
-}
-
-function call_csnt()
-{
-  // send to API
-  send_api_request("POST", API_LINK + "chat/callcsnt", window.chat_uid, {}, call_csnt_callback);
 }
 
 
