@@ -26,15 +26,6 @@
 <script src="/js/swiper.min.js"></script><!--swiper-->
 <title>누리인포스</title>			 
 <meta name="GENERATOR" content="MSHTML 11.00.10570.1001">
-<script language="javascript">
-    function (){
-    popupWindow = window.open("/move/contact/chatbot.html", "a", "resizeable");
-	popupWindow.resizeTo(440, 520);
-	popupWindow.onresize = (_=>{
-	    popupWindow.resizeTo(440,520);
-	});
-    }
-</script>
 </head>	 
     
 <body><!-- #wrap -->		 
@@ -285,12 +276,16 @@
         
     </div>    
 </div>
-<div class="qa_menu"><a href="" onclick="function (){
-    popupWindow = window.open('/move/contact/chatbot.html', 'a', 'resizeable'');
-	popupWindow.resizeTo(440, 520);
-	popupWindow.onresize = (_=>{
-	    popupWindow.resizeTo(440,520);
-	});"><img src="images/main_qa.png" alt="문의"><span class="txt">문의하기</span></a></div>
+<div class="qa_menu" onclick="showPopup();"><img src="images/main_qa.png" alt="문의"><span class="txt">문의하기</span></div>
+<script language="javascript">
+    function showPopup(){
+        popupWindow = window.open("/move/contact/chatbot.html", "a", "resizeable");
+        popupWindow.resizeTo(440, 520);
+        popupWindow.onresize = (_=>{
+            popupWindow.resizeTo(440,520);
+        });
+    }
+</script>
     <script>
     $(function() {
         search_data('1');
