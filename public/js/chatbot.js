@@ -1,5 +1,5 @@
 // API link
-const API_LINK = "nuri-chat-bot-api.tavg.net/v1/";
+const API_LINK = "chatbot-api.nis.co.kr/v1/";
 
 // message types
 const MSG_TYPE_USER = 1;
@@ -53,6 +53,14 @@ function getXmlHttp()
     xmlhttp = new XMLHttpRequest();
   }
   return xmlhttp;
+}
+
+// remove HTML tags
+function stripHtml(html)
+{
+   let tmp = document.createElement("DIV");
+   tmp.innerHTML = html;
+   return tmp.textContent || tmp.innerText || "";
 }
 
 // unblock input elements for allow sending new messages
@@ -281,9 +289,19 @@ function send_message()
 
   // text of the message
   var msg_text = input_text_field_dom.value;
-
+  
+  // trim
+  msg_text = msg_text.trim();
+  
+  // remove HTML tags
+  msg_text = stripHtml(msg_text);
+  
   // if message text is empty - return
-  if (msg_text.length == 0) return;
+  if (msg_text.length == 0)
+  {
+    document.getElementById("message_text").value = "";
+    return;
+  }
 
   // create object with body content
   var body_json = {
