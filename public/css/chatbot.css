@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-=======
-body
-{
-  font-size: small;
-  font-family: verdana;
-  text-align: center;
-  margin: 0px;
-  overflow: hidden;
-}
-
-A
-{
-  cursor: pointer;
-  color: #4169E1;
-  text-decoration: underline
-}
-
-A:hover
-{
-  color: #FF4500;
-  text-decoration: none
-}
->>>>>>> aafb210476d7f668b5f9eae86ad27fe19470f35f
 
 .popup{width: 420px;height: 420px;border: 0px solid #ccc;position:absolute;left: calc(50% - 210px);top:100px;display:none; z-index: 2}
 .popup a{width: 50px;height: 50px; border-radius: 99px; background: rgba(0,0,0,0.5);position: absolute; right: 0px; top: -55px; text-align: center}
@@ -163,11 +139,7 @@ TABLE.chat_msg TD.cnst_msg
   border: 1px solid #ccc;
   border-radius: 10px;
   text-align: left;
-<<<<<<< HEAD
   background:#fff;
-=======
-  background:#0c4da2;
->>>>>>> aafb210476d7f668b5f9eae86ad27fe19470f35f
   padding-left: 20px;
   line-height: 20px;
   color: #222;    
@@ -178,15 +150,9 @@ TABLE.chat_msg TD.user_msg
 {
   border: 0px solid #e8e8e8;
   border-radius: 10px;
-<<<<<<< HEAD
   text-align: right;
   background:#333;
   padding-right: 10px;
-=======
-  text-align: left;
-  background:#ffffff url("../images/icon_q.png") 8px 3px no-repeat;
-  padding-left: 40px;
->>>>>>> aafb210476d7f668b5f9eae86ad27fe19470f35f
   line-height: 20px;
     color: #fff;
      position: relative;
@@ -284,6 +250,44 @@ SPAN.msg_title
     cursor: pointer;
     background: url("../images/close_btn.png") no-repeat rgba(0,0,0,0.5) 15px center;
     font-size: 0px;
+}
+.qa_menu{position: fixed; z-index: 1; transition:0.3s ease-out;top: calc(100% - 145px); right: 130px; cursor: pointer}
+.qa_menu .qa_menu_info{background: #0a4ca2; width: 60px; height: 60px; display: inline-block; border-radius: 99px;animation: footerQuick 2.4s; animation-delay: 0.6s;transition: 0.3s ease-out;position: relative; cursor: pointer}
+.qa_menu img{text-align: center; position: absolute; top: 14px; left: 16px}
+.qa_menu .txt{position: absolute; font-size: 20px;line-height: 60px; letter-spacing: -0.045em; color: #fff; font-weight: 700; opacity: 0; transition: all 0.2s; transition-delay: 0s; left: 65px; pointer-events: none; color: #fff; width: 80px;animation:footerQuickTxt 2.4s;}
+.qa_menu .qa_menu_info:not(.to-top-btn):hover{width:180px; background:#0a4ca2;}
+.qa_menu .qa_menu_info:not(.to-top-btn):hover .txt{opacity:1; transition:0.3s ease-out; line-height: 60px; transition-delay:0.2s;}
+.qa_menu .qa_menu_info:not(.to-top-btn):hover:before{opacity:0;}
+/*.active .qa_menu a{background:#0a4ca2; animation:footerQuick 2.4s; animation-delay:0.6s}
+.active .qa_menu a .txt{animation:footerQuickTxt 2.4s; animation-delay:0.6s}*/
+
+@keyframes footerQuick {
+	0% {
+		width:60px;
+	}
+	25% {
+		width:180px;
+	}
+	75% {
+		width:180px;
+	}
+	100%{
+		width:60px;
+	}
+}
+@keyframes footerQuickTxt {
+	0% {
+		opacity:0;
+	}
+	25% {
+		opacity:1;
+	}
+	75% {
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+	}
 }
 @media screen and (max-width:460px)
 {
