@@ -1,37 +1,22 @@
-body
-{
-  font-size: small;
-  font-family: verdana;
-  text-align: center;
-}
 
-A
-{
-  cursor: pointer;
-  color: #4169E1;
-  text-decoration: underline
-}
-
-A:hover
-{
-  color: #FF4500;
-  text-decoration: none
-}
-
+.popup{width: 420px;height: 420px;border: 0px solid #ccc;position:absolute;left: calc(50% - 210px);top:100px;display:none; z-index: 2}
+.popup a{width: 50px;height: 50px; border-radius: 99px; background: rgba(0,0,0,0.5);position: absolute; right: 0px; top: -55px; text-align: center}
+.popup a > img{margin-top: 14px}
 DIV.chat
 {
   width: 420px;
-  height: 400px;
+  height: 420px;
   /*border: 2px solid #0c4da2;*/
   overflow-y: scroll;
+    overflow-x: hidden;
   font-size: small;
-    background:#f8f8f8 url("../images/logo_bg.png") center no-repeat;
+    background:#eee url("../images/logo_bg.png") center no-repeat;
 }
 
-DIV.main
+DIV.chat_main
 {
   width: 420px;
-  height: 400px;
+  height: 420px;
 }
 
 TABLE
@@ -97,12 +82,12 @@ TABLE.chat TD
 
 TABLE.chat TD.cnst_msg
 {
-  text-align: right;
+  text-align: left;
 }
 
 TABLE.chat TD.user_msg
 {
-  text-align: left;
+  text-align: right;
 }
 
 TABLE.chat TD.error_msg
@@ -136,57 +121,70 @@ TABLE.chat_msg TD
 
 TABLE.chat_msg TD.filler
 {
-  width: 50px;
+  width: 100px;
 }
 TABLE.chat_msg TD.cnst_msg::before{
     content: '';
-    width: 40px;
-    height: 35px;
+    width: 100px;
+    height: 68px;
     display: inline-block;
-    background:url("../images/icon_a.png") no-repeat;
+    background: url("../images/icon_a.png") no-repeat;
     position: absolute;
-    left: 0px;
+    left: -6px;
     top: -32px;
+    background-size: 60%;
 }
 TABLE.chat_msg TD.cnst_msg
 {
-  border: 0px solid #AAAAAA;
+  border: 1px solid #ccc;
   border-radius: 10px;
-  text-align: right;
-  background:#0c4da2;
+  text-align: left;
+  background:#fff;
   padding-left: 20px;
   line-height: 20px;
-  color: #fff;    
+  color: #222;    
     position: relative;
 }
 
 TABLE.chat_msg TD.user_msg
 {
-  border: 1px solid #e8e8e8;
+  border: 0px solid #e8e8e8;
   border-radius: 10px;
-  text-align: left;
-  background:#ffffff url("../images/icon_q.png") 8px 5px no-repeat;
-  padding-left: 40px;
+  text-align: right;
+  background:#333;
+  padding-right: 10px;
   line-height: 20px;
+    color: #fff;
+     position: relative;
+}
+TABLE.chat_msg TD.user_msg::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url("../images/icon_q_bg.png") no-repeat;
+    position: absolute;
+    right: -12px;
+    top: 0px;
+    background-size: 80%;
 }
 TABLE input{
-    color: #0c4da2;
+    color: #222;
     font-weight: bold;
-    border: 2px solid #0c4da2;
+    border: 1px solid #ccc;
     height: 30px;
     border-radius: 5px;
     font-size: 16px;
     margin-top: 10px;
 }
 TABLE button{
-    background-color: #0c4da2;
+    background-color: #3c5478;
     color: #fff;
-    border: 2px solid #0c4da2;
+    border: 1px solid #3c5478;
     height: 30px;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 TD.title
@@ -237,6 +235,8 @@ SPAN.msg_title
 {
   color: #AAAAAA;
 }
+.input_text_area{width: 100%}
+.input_text{width: 375px}
 .close_btn{
     background-color: rgba(0,0,0,0.5);
     color: #fff;
@@ -250,4 +250,13 @@ SPAN.msg_title
     cursor: pointer;
     background: url("../images/close_btn.png") no-repeat rgba(0,0,0,0.5) 15px center;
     font-size: 0px;
+}
+@media screen and (max-width:460px)
+{
+    .popup{width: 100%;height: 100%;left: 0px; bottom: 0px; top: auto}
+    .popup > a{bottom: 490px; top: auto; left: calc(50% - 25px);}
+    .chatbot_area{bottom: 0px; position: absolute; width: 100%;border-top: 1px solid #eee}
+    div.chat_main{width: 100%; height: 100%}
+    div.chat{width: 100%; }
+    .input_text{width: 98%}
 }
