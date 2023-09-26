@@ -26,6 +26,7 @@
 <script src="/js/swiper.min.js"></script><!--swiper-->
 <title>누리인포스</title>			 
 <meta name="GENERATOR" content="MSHTML 11.00.10570.1001">
+<<<<<<< HEAD
 <script>
       var script = document.createElement('script');
       script.src = 'chatbot.js?' + Date.now();
@@ -51,6 +52,8 @@
 		/////////////////////
 	})
 </script>
+=======
+>>>>>>> aafb210476d7f668b5f9eae86ad27fe19470f35f
 </head>	 
     
 <body onload="open_chat()"><!-- #wrap -->		 
@@ -301,6 +304,7 @@
         
     </div>    
 </div>
+<<<<<<< HEAD
 <div class="qa_menu"><div class="qa_menu_info"><img src="/images/main_qa.png" alt="문의"><span class="txt">문의하기</span></div></div>
 <div class="popup">
 	<a href="#"><img src="/images/close_btn.png"></a>
@@ -330,6 +334,18 @@
       </div>
     </center>
 </div>	
+=======
+<div class="qa_menu" onclick="showPopup();"><img src="images/main_qa.png" alt="문의"><span class="txt">문의하기</span></div>
+<script language="javascript">
+    function showPopup(){
+        popupWindow = window.open("/move/contact/chatbot.html", "a", "resizeable");
+        popupWindow.resizeTo(440, 520);
+        popupWindow.onresize = (_=>{
+            popupWindow.resizeTo(440,520);
+        });
+    }
+</script>
+>>>>>>> aafb210476d7f668b5f9eae86ad27fe19470f35f
     <script>
     $(function() {
         search_data('1');

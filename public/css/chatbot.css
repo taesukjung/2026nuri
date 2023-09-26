@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+=======
+body
+{
+  font-size: small;
+  font-family: verdana;
+  text-align: center;
+  margin: 0px;
+  overflow: hidden;
+}
+
+A
+{
+  cursor: pointer;
+  color: #4169E1;
+  text-decoration: underline
+}
+
+A:hover
+{
+  color: #FF4500;
+  text-decoration: none
+}
+>>>>>>> aafb210476d7f668b5f9eae86ad27fe19470f35f
 
 .popup{width: 420px;height: 420px;border: 0px solid #ccc;position:absolute;left: calc(50% - 210px);top:100px;display:none; z-index: 2}
 .popup a{width: 50px;height: 50px; border-radius: 99px; background: rgba(0,0,0,0.5);position: absolute; right: 0px; top: -55px; text-align: center}
@@ -139,7 +163,11 @@ TABLE.chat_msg TD.cnst_msg
   border: 1px solid #ccc;
   border-radius: 10px;
   text-align: left;
+<<<<<<< HEAD
   background:#fff;
+=======
+  background:#0c4da2;
+>>>>>>> aafb210476d7f668b5f9eae86ad27fe19470f35f
   padding-left: 20px;
   line-height: 20px;
   color: #222;    
@@ -150,9 +178,15 @@ TABLE.chat_msg TD.user_msg
 {
   border: 0px solid #e8e8e8;
   border-radius: 10px;
+<<<<<<< HEAD
   text-align: right;
   background:#333;
   padding-right: 10px;
+=======
+  text-align: left;
+  background:#ffffff url("../images/icon_q.png") 8px 3px no-repeat;
+  padding-left: 40px;
+>>>>>>> aafb210476d7f668b5f9eae86ad27fe19470f35f
   line-height: 20px;
     color: #fff;
      position: relative;
