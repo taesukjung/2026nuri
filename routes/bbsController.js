@@ -38,7 +38,7 @@ module.exports = (app)=>{
         if(offset < 1) offset = 0
         console.log('offset :' + offset)
         tbl_bbs.findAndCountAll({
-            order: [['b_date', 'DESC']],
+            order: [['b_date', 'DESC'], ['b_time', 'DESC']],
             limit: pageLimit,
             offset: offset, // (Math.ceil((req.query.page - 1) / pageLimit))
             where: {
