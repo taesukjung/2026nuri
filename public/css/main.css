@@ -334,7 +334,7 @@ footer .f_link {display: none}
 
 .news_point ul li p {font-size: 14px; padding-bottom: 20px; text-align: left}
 footer .facilitation {right: auto; left: calc(50% - 90px); top: 80px;}
-address .info {padding-left: 0px; text-align: center; padding-top: 50px;font-size: 14px;}    
+address .info {padding-left: 0px; text-align: center; font-size: 14px;}    
 address > img {display: none}
 }
 @media screen and (max-width:640px)
@@ -413,7 +413,7 @@ address > img {display: none}
 .value_area .text b > em {display: block}   
 address .info {font-size: 13px;    line-height: 20px;}  
 .partner{margin-top: 200px; }
-.partner img{width: 150px}
+.partner img{width: 150px}  
 }
 @media screen and (max-width:460px)
 {

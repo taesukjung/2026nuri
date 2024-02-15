@@ -5,9 +5,9 @@
 .top_title > img{width: 100%; min-height: 150px}
 .top_title > p{text-align: center; color: #fff; font-size: 36px; width: 500px; position: absolute; top: 55%; left: calc(50% - 250px);}
 .top_title > p .menu{display: none}
-.sub_menu_area{width: 100%; height: 230px; background-color: #f3f3f3}
+.sub_menu_area{width: 100%; height: 180px; background-color: #f3f3f3}
 .sub_menu_area.h_120{height: 120px}
-.sub_menu{width: 1165px; margin: 0 auto;height: 180px; padding: 45px 0px 0px;}
+.sub_menu{width: 1165px; margin: 0 auto;height: 130px; padding: 45px 0px 0px;}
 .sub_menu_area::after{content: ''; background: url('../images/solution_title_bg.png') right bottom no-repeat; width: 100%; height: 60px; display: inline-block}
 .sub_menu.active{display: block !important}
 
@@ -780,6 +780,6 @@ table.tb_type2.news tr td:nth-child(3){display: none}
 a.top{bottom: 270px;}    
 .top_button_wrap{bottom: 230px; width: 70px; height: 70px; font-size: 15px; padding-top: 24px; left: calc(50% - 35px);}
 footer .facilitation {top: 60px}
-address .info{font-size: 13px; line-height: 20px; padding-top: 100px}
+address .info{font-size: 13px; line-height: 20px;}
 }
 
