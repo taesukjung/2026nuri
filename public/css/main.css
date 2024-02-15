@@ -195,7 +195,7 @@ html.fp-enabled {margin: 0px; padding: 0px; overflow: hidden; -webkit-tap-highli
 .fp-viewing-inquiry #fp-nav li a {color: #fff}
 /*세로스크롤 끝*/
 .partner{display: inline-block; margin-top: 100px}
-.partner img{width: 200px}
+.partner img{width: 140px}
 .fp-section.footer{height: 285px !important; display: block}
 .fp-section.footer > .fp-tableCell{height: 285px !important; display: block}
 footer{background-color: #1e2328; width: 100%; height: 285px; position: relative}
