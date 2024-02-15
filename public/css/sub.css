@@ -59,7 +59,7 @@
 .link_menu.tab_info ul li:nth-child(9){margin-top: 15px}
 .link_menu.tab_info ul li:nth-child(10){margin-top: 15px}
 .link_menu.tab_info ul li:nth-child(11){clear: both; margin-top: 15px}
-.link_menu.tab_info.tab1_sub{display: block; height: 120px;}
+.link_menu.tab_info.tab1_sub{display: block; height: 120px; width: 100%}
 .link_menu.tab_info.tab2_sub{display: none; margin-left: 130px; width: calc(100% - 130px); height:65px}
 .link_menu2{font-size: 26px; height: 42px; margin: 0 auto; display: table;}
 .link_menu2 ul li{float: left; margin-right: 10px}
@@ -253,11 +253,11 @@ table.tb_type2 tr td select{margin-left: 20px; width: calc(100% - 20px)}
 .select_text_date {padding-left: 10px; border: 1px solid #ccc; width: calc(50% - 67px); height: 50px;appearance: none; -webkit-appearance: none; background: url(../images/select_bg.png) 98% 50% no-repeat}
 .select_text_date::-ms-expand { display:none; }
 .select_text_date.w100 {width: 100%; margin-top: 20px; box-sizing: border-box}
-.input_text {padding-left: 10px; border: 1px solid #ccc; width: calc(100% - 12px); height: 50px; font-size: 16px; color: #323232;}
-.input_text.w50{width: calc(50% - 20px); margin-left: 10px; margin-top: 20px}
+.input_text {padding-left: 10px; border: 1px solid #ccc; width: 100%; height: 50px; font-size: 16px; color: #323232; box-sizing: border-box}
+.input_text.w50{width: calc(50% - 10px); margin-left: 12px; margin-top: 20px; box-sizing: border-box}
 .input_text.w50.left{margin-left: 0px}
 placeholder{color: #b0b0b0}
-textarea.input_text {padding-left: 10px; border: 1px solid #ccc; width: calc(100% - 14px); padding-top: 10px; height: 200px;}
+textarea.input_text {padding-left: 10px; border: 1px solid #ccc; width: 100%; padding-top: 10px; height: 200px;}
 .write_info{line-height: 30px; margin-bottom: 20px}
 
 .etc{text-align: center; clear: both}
@@ -354,7 +354,7 @@ address .info p{color: #6e6e6e; padding-top: 25px}
 footer .f_link{padding-top: 45px}
 footer .f_link ul li{float: left; margin-right: 70px}
 footer .f_link ul li a{color: #fff}
-footer .facilitation{position: absolute;right: 0px; top: 150px;}
+footer .facilitation{position: absolute;right: 0px; top: 150px; display: none}
 footer .facilitation ul li{float: left; margin-right: 20px}
 
 
@@ -716,7 +716,7 @@ address {padding: 30px 0px; box-sizing: border-box}
 a.top{bottom: 300px; left: auto; right: 0px; background-color: rgba(0,0,0,0.3);}    
 footer{height: auto}
 footer .facilitation {right: auto; left: calc(50% - 90px); top: 80px;}
-address .info {padding-left: 0px; text-align: center; padding-top: 120px;font-size: 14px;}    
+address .info {padding-left: 0px; text-align: center; font-size: 14px;}    
 address > img {display: none}
 }
 @media all and (max-width:420px)

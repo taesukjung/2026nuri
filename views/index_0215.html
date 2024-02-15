@@ -26,12 +26,39 @@
 <script src="/js/swiper.min.js"></script><!--swiper-->
 <title>누리인포스</title>			 
 <meta name="GENERATOR" content="MSHTML 11.00.10570.1001">
-<script language="javascript">
-    function showPopup() { window.open("/move/contact/chatbot.html", "a", "width=440, height=480, left=0, top=0"); }
+<script>
+      var script = document.createElement('script');
+      script.src = '/js/chatbot.js?' + Date.now();
+      document.head.appendChild(script);
+    </script>
+    <script>
+      var link = document.createElement('link');
+      link.setAttribute('rel', 'stylesheet');
+      link.setAttribute('href', '/css/chatbot.css?' + Date.now());
+      document.head.appendChild(link);
+    </script>
+
+
+
+<script>
+	$(function(){
+		////////////////////
+    $(".qa_menu").click(function(){
+    	$(".popup").fadeIn()
+    });
+
+    $(".popup a").click(function(){
+    	$(".popup").fadeOut()
+    });
+
+		/////////////////////
+	})
+
+
 </script>
 </head>	 
     
-<body><!-- #wrap -->		 
+<body onload="open_chat()"><!-- #wrap -->		 
 <div id="wrap">					
 		 
 <header class="header_wrap">		 
@@ -279,7 +306,36 @@
         
     </div>    
 </div>
-<div class="qa_menu"><a href="" onclick="showPopup();"><img src="images/main_qa.png" alt="문의"><span class="txt">문의하기</span></a></div>
+    <!--챗봇-->
+<div class="qa_menu" style="display: none"><div class="qa_menu_info"><img src="/images/main_qa.png" alt="문의"><span class="txt">문의하기</span></div></div>
+<div class="popup">
+	<a href="#"><img src="/images/close_btn.png"></a>
+    <center class="chatbot_area">
+      <div id="div_opening_chat" >
+        챗봇 상담
+      </div>
+      <div class="chat_main" id="div_chat_main" style="display:none">
+        <div class="chat" id="div_chat">
+            <p>안녕하세요. <b>누리인포스</b> 상담센터 챗봇 입니다.<br>무엇을 도와드릴까요?</p>
+          <table class="chat" id="tbl_chat">
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <table class="input_text_area">
+          <tr>
+            <td>
+              <input type="text" id="message_text" class="input_text" onkeydown="on_enter()">
+            </td>
+            <td width="33px">
+              <button id="btn_send_message" onclick="send_message()"><img src="images/icon_send.png"></button>
+            </td>
+          </tr>
+        </table>
+        <br>
+      </div>
+    </center>
+</div>	
     <script>
     $(function() {
         search_data('1');

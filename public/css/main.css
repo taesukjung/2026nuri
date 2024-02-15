@@ -208,7 +208,7 @@ address .info p{color: #6e6e6e; padding-top: 25px}
 footer .f_link{padding-top: 45px}
 footer .f_link ul li{float: left; margin-right: 70px}
 footer .f_link ul li a{color: #fff}
-footer .facilitation{position: absolute;right: 0px; top: 150px;}
+footer .facilitation{position: absolute;right: 0px; top: 150px; display: none}
 footer .facilitation ul li{float: left; margin-right: 20px}
 
 .qa_menu{position: fixed; z-index: 1; transition:0.3s ease-out;top: calc(100% - 145px); right: 130px; cursor: pointer}
@@ -302,7 +302,7 @@ background: #0a4ca2; width: 60px; height: 60px; display: inline-block; border-ra
 .footer_area {width: 100%; padding: 0 20px; box-sizing: border-box}
 footer .facilitation {top: 40px;}
 footer .f_link {display: none}
-address {padding-top: 100px}
+/*address {padding-top: 100px}*/
 .qa_menu{top: calc(100% - 100px);right: 30px;}
 }
 @media screen and (max-width:860px)
