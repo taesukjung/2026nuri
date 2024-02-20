@@ -59,7 +59,7 @@
 .link_menu.tab_info ul li:nth-child(9){margin-top: 15px}
 .link_menu.tab_info ul li:nth-child(10){margin-top: 15px}
 .link_menu.tab_info ul li:nth-child(11){clear: both; margin-top: 15px}
-.link_menu.tab_info.tab1_sub{display: block; height: 120px; width: 100%}
+.link_menu.tab_info.tab1_sub{display: block; height: 65px; width: 100%}
 .link_menu.tab_info.tab2_sub{display: none; margin-left: 130px; width: calc(100% - 130px); height:65px}
 .link_menu2{font-size: 26px; height: 42px; margin: 0 auto; display: table;}
 .link_menu2 ul li{float: left; margin-right: 10px}
@@ -462,7 +462,7 @@ footer .facilitation ul li{float: left; margin-right: 20px}
 .link_menu.tab_info ul li:nth-child(11){margin-top: 7.5px}
 .link_menu.tab_info ul li:nth-child(6), .link_menu.tab_info ul li:nth-child(9){clear: none}
 .link_menu.tab_info ul li:nth-child(11) {clear: none} 
-.link_menu.tab_info.tab1_sub {height: 140px}
+.link_menu.tab_info.tab1_sub {height: 100px; width: calc(100% - 40px)}
 .link_menu.tab_info.tab2_sub {margin: 20px 20px 0px; width: calc(100% - 40px); height: 105px}
 .search_area {width: calc(100% - 64px); margin: 0px 20px;}
 .search_area .input_search input {width: auto}
@@ -628,7 +628,7 @@ table.tb_type2.news tr td:nth-child(3){width: 25%; text-align: center}
 .link_menu.tab_info ul li:nth-child(3n) {margin-right: 7.5px;}
 .link_menu.tab_info ul li:nth-child(3) {margin-top: 7.5px;}
 .link_menu.tab_info ul li:nth-child(6) {margin-right: 0px;}
-.link_menu.tab_info.tab1_sub {height: 240px}
+.link_menu.tab_info.tab1_sub {height: 140px; width: calc(100% - 40px)}
 .search_area{display: none}
 .man1 ul li {padding-left: 30%; height: 140px; padding-right: 0px}
 .man1.about3 ul li:nth-child(1){background-position: 0px 0px;  background-size: 45%;}
