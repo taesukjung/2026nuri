@@ -245,7 +245,7 @@ function open_chat()
   document.getElementById("div_chat_main").style.display = "block";
 
   // send request to API
-  send_api_request("POST", API_LINK + "chat/start", "", "{}", open_chat_callback);
+  // send_api_request("POST", API_LINK + "chat/start", "", "{}", open_chat_callback);
 }
 
 
@@ -330,7 +330,7 @@ function send_message()
   div_chat_dom.scrollTop = div_chat_dom.scrollHeight;
 
   // send to API
-  send_api_request("POST", API_LINK + "chat/message", window.chat_uid, body_json, send_message_callback);
+  // send_api_request("POST", API_LINK + "chat/message", window.chat_uid, body_json, send_message_callback);
 }
 
 
@@ -367,7 +367,7 @@ function close_chat()
   if (confirmation == false) return;
 
   // send to API
-  send_api_request("POST", API_LINK + "chat/finish", window.chat_uid, {}, close_chat_callback);
+  // send_api_request("POST", API_LINK + "chat/finish", window.chat_uid, {}, close_chat_callback);
 }
 
 
@@ -433,5 +433,5 @@ function wait_reply()
   };
 
   // send request
-  send_api_request("POST", API_LINK + "chat/reply", window.chat_uid, body_json, wait_reply_callback);
+  // send_api_request("POST", API_LINK + "chat/reply", window.chat_uid, body_json, wait_reply_callback);
 }
