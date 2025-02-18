@@ -507,7 +507,7 @@ a.skip02:active {
 	vertical-align: top; width: 100px
 }
 .header_wrap #header .gnb_wrap {
-	width: 1000px; overflow: hidden; margin-left: 40px; float: left;
+	width: 1000px; overflow: hidden; margin-left: 10px; float: left;
 }
 .header_wrap #header .gnb_wrap #gnb {
 	width: 900px; float: right;
@@ -860,4 +860,30 @@ a.skip02:active {
 .overflow_x_a table {
 	width: 240% !important; -ms-overflow-x: auto;
 }
+}
+
+.gnb_eng a {
+	text-decoration: none;
+	color: #fff; /* ENG 텍스트 색상 */
+	font-size: 15px;
+}
+
+.gnb_kor a {
+	text-decoration: none;
+	color: #fff; /* ENG 텍스트 색상 */
+	font-size: 15px;
+}
+
+.gnb_eng {
+	padding-top: 20px;
+}
+
+.gnb_kor {
+	padding-top: 20px;
+}
+
+.gnb_lang {
+	display: flex;
+	align-items: center; /* ENG와 KOR을 수평 정렬 */
+	gap: 10px; /* ENG와 KOR 사이의 간격 */
 }

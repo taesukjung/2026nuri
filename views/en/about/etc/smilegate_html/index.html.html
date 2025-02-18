@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Smilegate</title>
+<!-- style -->
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	padding: 20px;
+	font-family: Malgun Gothic, dotum, Sans-Serif;
+	color: #333;
+	font-size: 12px;
+	background:#eee;
+}
+/* Title */
+a {text-decoration:none;}
+h1 {
+	color: #000;
+	letter-spacing: -1px;
+	font-family: Tahoma;
+}
+table legend {display: none;}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 3px solid #666;
+	text-align: left;
+}
+table caption {
+	margin-bottom: 5px;
+	text-align: left;
+	font-size: 10px;
+	color: #999;
+}
+table th {
+	padding: 5px;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	color: #fff;
+	font-size: 110%;
+	text-align:center;
+	background-color: #777;
+}
+table td {
+	padding: 5px 5px 3px 5px;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	background-color: #fff;
+}
+table .date {text-align:center;}
+
+footer {display:none;text-indent:-9999px;width:100px;height:40px;margin:10px auto;background:url(images/login_logo.png) no-repeat 50% 0;}
+table {border-width:3px;}
+table .line td {border-top:3px solid #666;}
+table td a:hover {text-decoration:underline;}
+.total_state {position:absolute;left:50%;top:50%;margin:-190px 0 0 -210px;font-size:20px;text-align:center;}
+.total_state h1 {font-size:1.4em;text-align:center;}
+.total_state h1 a {color:#000;}
+.total_state p {float:right;display:inline-block;margin:10px 0;height:30px;line-height:30px;padding:0 20px;font-size:0.75em;text-align:right;letter-spacing:-1px;border-radius:15px;border:1px solid #eee;background:#fff;}
+.total_state .list {clear:both;width:400px;height:240px;margin:10px 0 0;padding:30px 20px 0;text-align:center;background:#fff;border:2px solid #000;border-radius:10px;box-shadow:5px 5px 10px #000;overflow:hidden;}
+.total_state .list a {display:block;margin:10px 0;color:#000;font-size:1.3em;text-decoration:none;letter-spacing:-1px;opacity:0.3;}
+.total_state .list a:first-child {margin:0 0 30px;line-height:10px;}
+.total_state .list a:hover,.total_state .list a.on {opacity:1;color:#000;}
+.total_state .list a img {margin-right:10px;vertical-align:middle}
+.total_state.s_size {font-size:17px;position:static;left:auto;top:auto;margin:0;}
+.total_state.s_size p {float:right;}
+.total_state.s_size .list {clear:both;width:auto;height:auto;padding-top:0;border:none;box-shadow:none;}
+.total_state.s_size .list a {float:left;width:33.3%;margin:0 5%;height:50px;line-height:50px;width:20%;vertical-align:middle;text-align:center;border-bottom:2px solid #fff;}
+.total_state.s_size .list a img {width:70px;}
+.total_state.s_size .list a.on{position:relative;background:#fff;}
+.total_state.s_size .list a:first-child img {width:130px;} 
+.total_state.s_size .list a:first-child.on img {margin-right:0;}
+.total_state.s_size h1 a:hover {text-decoration:underline;}
+
+
+/* table */
+.wrap_tbl {margin:20px 0 0;}
+
+</style>
+<script type="text/javascript" src="/resources/ko/sales/js/jquery-1.11.2.js"></script>
+</head>
+<body>
+<!-- Note -->
+<h1></h1>
+<!-- Table Sheet -->
+
+<div class="total_state s_size">
+	<h1>Smilegate 인프라 플랫폼 - Publishing List</h1>
+	<p>작업자 : <strong>정태숙</strong></p>
+</div>
+
+<div class="wrap_tbl">
+
+	<!-- hyfresh(mobile) -->
+	<div id="hf_m">
+		<table>
+			<colgroup>
+				<col width="15%">
+				<col width="15%">
+				<col width="*">
+				<col width="10%">
+				<col width="*">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1 Depth</th>
+					<th scope="col">2 Depth</th>
+					<th scope="col">파일경로</th>
+					<th scope="col">ppt페이지</th>
+					<th scope="col">참고사항</th>
+				</tr>
+			</thead>
+			<tbody>
+                <tr>
+					<td>레이아웃</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+                <tr class="line">
+					<td>Monitoring</td>
+					<td>Instace List</td>
+					<td><a href="sub/login.html" target="_blank">mo_s_01.html</a></td>
+					<td>p.9</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Instance Detail</td>
+					<td><a href="sub/main.html" target="_blank">mo_d_01.html</a></td>
+					<td>p.10</td>
+					<td></td>
+				</tr>
+				
+			</tbody>
+		</table>
+	</div>
+	<!-- //hyfresh(mobile) -->
+
+	<footer></footer>
+
+</div>
+
+
+</body>
+</html>

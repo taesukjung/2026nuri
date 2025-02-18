@@ -7,7 +7,9 @@ var logger = require('morgan');
 var app = express();
 
 var indexRouter = require('./routes/index');
+var enIndexRouter = require('./routes/enIndex');
 var moveRouter = require('./routes/move');
+var enMoveRouter = require('./routes/enMove');
 var usersRouter = require('./routes/users');
 var mailRouter = require('./routes/mailController');
 var bbsRouter = require('./routes/bbsController')(app);
@@ -30,7 +32,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/en', enIndexRouter);
 app.use('/move', moveRouter);
+app.use('/en/move', enMoveRouter);
 app.use('/bbs', bbsRouter);
 app.use('/ref', refRouter);
 app.use('/upload', uploadRouter);
