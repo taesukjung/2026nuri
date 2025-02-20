@@ -1,0 +1,786 @@
+.lh30{line-height: 35px}
+.mt45{margin-top: 45px}
+.mgt20{margin-top: 20px}
+.top_title{overflow: hidden; width: 100%; position: relative}
+.top_title > img{width: 100%; min-height: 150px}
+.top_title > p{text-align: center; color: #fff; font-size: 36px; width: 500px; position: absolute; top: 55%; left: calc(50% - 250px);}
+.top_title > p .menu{display: none}
+.sub_menu_area{width: 100%; height: 180px; background-color: #f3f3f3}
+.sub_menu_area.h_120{height: 120px}
+.sub_menu{width: 1165px; margin: 0 auto;height: 130px; padding: 45px 0px 0px;}
+.sub_menu_area::after{content: ''; background: url('../images/solution_title_bg.png') right bottom no-repeat; width: 100%; height: 60px; display: inline-block}
+.sub_menu.active{display: block !important}
+
+.sub_menu.menu3, .sub_menu.menu4{height: auto}
+.sub_menu.menu3 ul li a{width: 31.5%; margin-right: 2.5%}
+.sub_menu.menu4 ul li a{width: 23%; margin-right: 2.5%}
+.sub_menu.menu3 ul li:last-child a, .sub_menu.menu4 ul li:last-child a{margin-right: 0%}
+
+.sub_menu ul li a{width:210px; height: 33px; color: #fff; float: left; text-align: center; line-height: 33px; border-radius: 17px; margin-right: 28px; margin-bottom: 16px;font-style: italic;}
+.sub_menu ul li a.h18 > img{height: 17px}
+.sub_menu ul li a{background-color: #9c9fab}
+.sub_menu ul li a:hover{background-color: #0c4da2}
+.sub_menu ul li a.active{background-color: #0c4da2}
+.sub_menu ul li:nth-child(5n) a{margin-right: 0px}
+.div_contact {max-width: 1165px; margin: 0 auto;padding-bottom: 200px;}
+.div_contact .title{text-align: center; margin: 90px 0px 70px; clear: both; position: relative}
+.div_contact .title::before{content: ''; width: 122px; height: 5px; border-radius: 3px; background-color: #0c4da2; position: absolute; top: -30px; left: calc(50% - 61px);}
+.div_contact .etc.contact6 .title::before{display: none}
+.div_contact .title.top20::before{top: -20px}
+.div_contact .title.pt{text-align: center; padding-top: 130px; margin: 0px}
+.div_contact .title > b{font-size: 36px;color: #1d4ca8; font-style: italic; margin-left: -10px;}
+.div_contact .title > p{margin-top:40px; font-size: 24px; letter-spacing: -1px;font-weight: 100}
+.div_contact .title > p.sub{margin-top: 50px; font-size: 20px}
+.div_contact .title > p.f56{font-size: 56px; text-align: left; }
+.div_contact .title > p.f36{font-size: 36px; text-align: center;}
+.div_contact .title .sub_info {margin-top: 60px}
+.div_contact .title .sub_info.mgt50 {margin-top: 50px}
+.div_contact .sub_tit{font-size: 24px; color: #0c3ea2; font-weight: bold; text-align: left; margin-top: 40px;}
+.div_contact .title .sub_info > img{margin: 50px 0px 100px}
+.div_contact .title .sub_info > .aboout3_list2{margin-top: 60px}
+.div_contact .title .sub_info.mg30 > img{margin: 30px 0px 0px}
+.div_contact .title .sub_info > p{font-size: 20px; line-height: 25px; letter-spacing: -1px; text-align: left}
+.link_menu{font-size: 20px; height: 42px; margin: 0 auto; display: table; width: calc(100% - 2%); margin-left: 1%}
+.link_menu ul li{float: left; width: 10.5%; margin-right: 2%}
+.link_menu ul li:last-child a{margin-right: 0px}
+.link_menu ul li a{border: 1px solid #c3c3c3; border-radius: 20px; height: 40px; line-height: 40px; width: 100%; float: left;text-align: center; cursor: pointer}
+.link_menu.tab_area ul{margin-left: calc(50% - 265px)}
+.link_menu.tab_area ul li{width: auto; margin-right: auto}
+.link_menu.tab_area ul li a{width: 260px; margin-right: 20px; height: 52px; line-height: 52px; border-radius: 26px; font-size: 28px}
+.link_menu.tab_area ul li:last-child a{margin-right: 0px}
+.link_menu.tab_area ul li a.on{background-color: #253252; border: 1px solid #253252; color: #fff}
+.link_menu.tab_info{margin: 40px 0px 0px;}
+.link_menu.tab_info ul li{width: auto; margin-right: 0.5%;}
+.link_menu.tab_info ul li a{width: 220px; height: 38px; line-height: 38px; border-radius: 18px;}
+.link_menu.tab_info ul li a.on{background-color: #0c4da2; border: 1px solid #0c4da2; color: #fff}
+.link_menu.tab_info ul li:nth-child(6){clear: both; margin-top: 15px}
+.link_menu.tab_info ul li:nth-child(7){margin-top: 15px}
+.link_menu.tab_info ul li:nth-child(8){margin-top: 15px}
+.link_menu.tab_info ul li:nth-child(9){margin-top: 15px}
+.link_menu.tab_info ul li:nth-child(10){margin-top: 15px}
+.link_menu.tab_info ul li:nth-child(11){clear: both; margin-top: 15px}
+.link_menu.tab_info.tab1_sub{display: block; height: 65px; width: 100%}
+.link_menu.tab_info.tab2_sub{display: none; margin-left: 130px; width: calc(100% - 130px); height:65px}
+.link_menu2{font-size: 26px; height: 42px; margin: 0 auto; display: table;}
+.link_menu2 ul li{float: left; margin-right: 10px}
+.link_menu2 ul li:last-child a{margin-right: 0px}
+.link_menu2 ul li a{border: 1px solid #c3c3c3; border-radius: 67px;line-height: 134px; width: 134px; height: 134px; float: left;text-align: center; cursor: pointer}
+.link_menu2 ul li a.line2{line-height: 30px; padding-top: 35px; height: 99px}
+.link_menu2 ul li a:active, .link_menu2 ul li a:hover{background-color: #253252; color: #fff}
+
+.composition{font-size: 20px}
+.composition dl{margin-top: 45px}
+.composition dl > b{margin-top: -20px; display: block}
+.composition.w100 dl{width: 100%; float: none}
+.composition dl:nth-child(2n){margin-right: 0px;}
+.composition dl dt{font-weight: bold; margin-bottom: 20px;color: #0c3ea2;font-size: 24px; position: relative; padding-left: 55px}
+.composition dl dt > span{position: absolute; left: 5px; top: -32px; font-size: 34px; font-family: Arial; font-weight:800}
+.composition dl dt::before{content: ''; position: absolute; height: 1px; width: 94px; display: inline-block; background-color: #9eb8da; top:-3px;left: 0px}
+.composition dl p.dd_title{font-weight: bold; color: #222222;font-size: 30px; position: relative; padding-top: 55px}
+.composition dl dd{padding-bottom: 40px; letter-spacing: -1px}
+.composition dl dd.h_auto{height: auto}
+.composition dl dd.h100{height: 100px}
+.composition dl dd.h110{height: 110px}
+.composition dl dd.h130{height: 130px}
+.composition dl dd.h160{height: 160px}
+.composition dl dd.h180{height: 180px}
+.dd_info p{padding-top: 30px; font-weight: bold; padding-bottom: 10px;}
+.contact{font-size: 18px; color: #000;letter-spacing: -0.5px; clear: both; max-width: 1165px;}
+.contact h2{font-size: 24px; color: #0c3ea2; font-weight: bold; text-align: left; margin-top: 40px;}
+.contact h2 > em{color: #e00d55; padding-left: 10px}
+.contact h2.w305::after{width: 305px}
+.contact > p{margin-top: 10px}
+.contact > p.about{margin-top: -60px; font-size: 20px}
+
+.contact > p.about img{margin: 50px 0px}
+.about1 ul li{position: relative; clear: both;}
+.about1 ul li > p{width: 40%;position: absolute; }
+.about1 ul li:nth-child(1) > p{top: 150px; left: 50px}
+.about1 ul li:nth-child(2) > p{right: 250px; top: 80px; width: 30%}
+.about1 ul li:nth-child(3) > p{right: 100px; bottom: 0px}
+.about1 ul li:nth-child(1){background: url('../images/about1_bg1.png') right 0px no-repeat; height: 449px }
+.about1 ul li:nth-child(2){background: url('../images/about1_bg2.png') left 0px no-repeat; height: 349px; margin-top: -20px}
+.about1 ul li:nth-child(3){background: url('../images/bout1_bg3.png') 90% 0px no-repeat; height: 320px;margin-top: -230px}
+.about1_2{margin-top: 30px; background: url('../images/en_about1_bg4.png') left 0px no-repeat; }
+.about1_2 ul{padding-left: 450px; padding-top: 60px; padding-bottom: 30px;}
+.about1_2 ul li{width: 100%; padding-bottom: 40px;}
+.about1_2 ul li > .info{font-size: 20px; display: inline-block}
+.about1_2 ul li > .info > em{font-size: 60px; color: #0c3ea2; margin:0px 20px}
+.about1_2 ul li > .info2{color: #0c3ea2;}
+.about1_2 > p{clear: both; margin: 20px; padding-top: 50px}
+
+.contact > img{margin: 0 auto; display: block; margin-top: 75px}
+.contact .list{margin-top: 30px}
+.contact .list ul li{line-height: 34px; position: relative; padding-left: 15px}
+.contact .list ul li::before{content: ''; width: 5px; height: 5px; background-color: #5a5a5a; position: absolute; top: 16px; left: 0px}
+.contact .list ul li > img{margin: 0 auto; display: block; margin-top: 30px}
+
+
+span.about_tit{font-size: 24px; margin: 60px 0px 20px; display: block; color: #0c3ea2; font-weight: bold;}
+
+.about2 ul li{position: relative; clear: both;}
+.about2 ul li > p{width: 40%;position: absolute; }
+.about2 ul li:nth-child(1) > p{top: 150px; left: 50px}
+.about2 ul li:nth-child(2) > p{right: 0px; top: 200px; width: 50%}
+.about2 ul li:nth-child(1){background: url('../images/about2_bg1.png') right 0px no-repeat; height: 449px }
+.about2 ul li:nth-child(2){background: url('../images/about2_bg2.png') left 0px no-repeat; height: 423px; margin-top: -100px}
+.aboout_list2{height: 60px; padding: 50px 50px 0px;}
+.aboout_list2 ul li{width: 550px; height: 60px; line-height: 60px; color: #fff; border-radius: 30px; text-align: center; font-size: 24px;}
+.aboout_list2 ul li:nth-child(1){background-color: rgba(55,87,147,.72); float: left;}
+.aboout_list2 ul li:nth-child(2){background-color: rgba(21,60,135,.83); float: right; margin-top: -60px;}
+{height: 520px}
+.man1{background: url('../images/about2_bg.png') center 70px no-repeat; height: 500px}
+.man1.about3 > p{height: 100px; display: block;font-size: 26px; text-align: center; padding: 15px 0px 70px; letter-spacing: -1px}
+.man1.about3 > p::after{content: ''; clear: both}
+.man1 ul li{float: left; width: 33.33%; text-align: center; padding-top: 210px; height: 200px}
+.man1.about3 ul li:nth-child(1){background: url('../images/about2_1.png') center 0px no-repeat}
+.man1.about3 ul li:nth-child(2){background: url('../images/about2_2.png') center 0px no-repeat; margin-top: -70px}
+.man1.about3 ul li:nth-child(3){background: url('../images/about2_3.png') center 0px no-repeat}
+.man1 ul li > span{font-size: 24px; height: 50px; display: block; position: relative; color: #0c4da2}
+.man1 ul li > span > b{font-size: 30px; padding-right: 10px}
+.man1 ul li > p{margin-top: 10px; }
+.man_point{text-align: center; color: #fff;}
+.man_point > p{height: 200px; width: 100%; background: url('../images/man4.png') center 0px no-repeat;  font-size: 28px; line-height: 70px; padding: 30px 0px; margin: 50px 0px 100px;}
+
+.about4 ul li > span{color: #fff; font-size: 56px; font-weight: bold; line-height: 309px; width: 45%; text-align: center; float: left; display: inline-block}
+.about4 ul li > p{float: right; width: calc(55% - 200px); display: inline-block; vertical-align: middle; padding: 130px 100px}
+.about4 ul li{height: 309px; margin-bottom: 50px;}
+.about4 ul li:nth-child(1){background: url('../images/bis_bg1.png') right 0px no-repeat}
+.about4 ul li:nth-child(1) > p{color: #fff;}
+.about4 ul li:nth-child(2){background: url('../images/bis_bg2.png') 30% 0px no-repeat}
+.about4 ul li:nth-child(2) > span{float: right}
+.about4 ul li:nth-child(2) > p{float: left}
+.about4 ul li:nth-child(3){background: url('../images/bis_bg3.png') 0% 0px no-repeat}
+
+
+.about6 ul li{clear: both; height: 216px; position: relative}
+.about6 ul li > span{width: 280px; height: 176px; border-radius: 98px; display: inline-block; float: left; text-align: center; vertical-align: middle}
+.about6 ul li > span > img{margin-top: 60px}
+.about6 ul li:nth-child(1) > span{background-color: #2071c5}
+.about6 ul li:nth-child(2) > span{background-color: #0ca1dc}
+.about6 ul li:nth-child(2) > span > img{margin-top: 40px}
+.about6 ul li:nth-child(3) > span{background-color: #1f70c1}
+.about6 ul li:nth-child(4){height: 430px}
+.about6 ul li:nth-child(4) > span{background-color: #1c377c}
+.about6 ul li:nth-child(5) > span{background-color: #f2f3f3}
+.about6 ul li > p{width: calc(100% - 320px); float: right; line-height: 30px; font-size: 16px}
+.about6 ul li > p > em{display: block; font-size: 24px; margin-bottom: 10px}
+.about6 ul li .about6_bg{width: 100%; height: 176px; color: #fff; background: url('../images/part_bg.png') center 0px no-repeat; clear: both; position: absolute; bottom: 40px}
+.about6 ul li .about6_bg > p{padding: 55px 150px; font-size: 28px}
+
+.answer > h3{margin-top: -50px; margin-bottom: 20px;}
+.nuri_map{margin: 50px 0px;}
+.nuri_map > p{display: inline-block; padding-left: 50px}
+.map{width: 70%; margin: 0 auto; margin-top: 50px; padding-bottom: 100px; position: relative}
+.map dl dt{width: 25%; float: left; font-size: 24px; height: 180px}
+.map dl dt.train{background: url('../images/icon_map1.png') 50px center no-repeat}
+.map dl dt.car{background: url('../images/icon_map2.png') 40px center no-repeat}
+.map dl dd{width: 75%; float: right; font-size: 18px; height: 180px;}
+.map > p{clear: both; color: #dd3e50; text-align: center; }
+.man2{}
+.man2 ul li{float: left; width: 25%; text-align: center; padding-top: 270px; height: 210px}
+.man2 ul li:nth-child(1){background: url('../images/man2_01.png') center 0px no-repeat}
+.man2 ul li:nth-child(2){background: url('../images/man2_02.png') center 0px no-repeat}
+.man2 ul li:nth-child(3){background: url('../images/man2_03.png') center 0px no-repeat}
+.man2 ul li:nth-child(4){background: url('../images/man2_04.png') center 0px no-repeat}
+.man2 ul li:nth-child(5){background: url('../images/man2_05.png') center 0px no-repeat}
+.man2 ul li:nth-child(6){background: url('../images/man2_06.png') center 0px no-repeat}
+.man2 ul li:nth-child(7){background: url('../images/man2_07.png') center 0px no-repeat}
+.man2 ul li:nth-child(8){background: url('../images/man2_08.png') center 0px no-repeat}
+.man2 ul li > span{font-size: 25px; height: 50px; display: block; position: relative; font-weight: 600}
+.man3{padding-top: 80px}
+.man3 ul li{float: left; width: 33.33%; text-align: center; padding-top: 380px; height: 200px;}
+.man3 ul li:nth-child(1){background: url('../images/man1_01.png') center 0px no-repeat}
+.man3 ul li:nth-child(2){background: url('../images/man1_02.png') center 0px no-repeat}
+.man3 ul li:nth-child(3){background: url('../images/man1_03.png') center 0px no-repeat}
+.man3 ul li > span {font-size: 24px; height: 50px; display: block; position: relative; color: #000; font-weight: bold;}
+.man3 ul li > p {margin-top: 10px;}
+.title_info > span{font-size: 24px; margin-bottom: 20px; display: block}
+.title_info{margin-bottom: 100px; clear: both}
+.recruit_gb{border: 10px solid #f3f5f6; padding: 20px 0px; clear: both; margin-bottom: 20px}
+.recruit_gb > span.title{font-size: 24px; width: 350px; text-align: center; float: left; margin: 0px}
+.recruit_gb > span.title::before{content: none}
+.recruit_gb > .info{display: inline-block}
+.recruit_gb > .info > p{}
+.recruit_gb > .info ul{padding: 10px 0px 0px 20px}
+.recruit_gb > .info ul li{}
+.recruit_gb > .info ul li::before{content: ''; width: 10px; height: 1px; background-color: #272727; display: inline-block; vertical-align: super;margin-left: -20px; margin-right: 10px;}
+.list_info ul li{margin-left: 10px; padding-left: 20px;}
+.list_info  ul li::before{content: ''; width: 10px; height: 1px; background-color: #272727; display: inline-block; vertical-align: super; margin-left: -20px;  margin-right: 10px;}
+.model_info{height: 150px}
+.model_info ul li{float: left; position: relative; width: 15%; margin-right: 5%; text-align: center}
+.model_info ul li::after{content: ''; width: 18px; height: 33px; background: url('../images/icon_next2.png') center 0px no-repeat;top: 50px; right: -30px; position: absolute}
+.model_info ul li:last-child::after{display: none}
+.model_info ul li > span.img_area{width: 110px; height: 110px; border: 2px solid #cecece; display: inline-block; border-radius: 55px; text-align: center}
+.model_info ul li > span.img_area > img{margin-top: 28px}
+.model_info ul li > p{text-align: center; margin-top: 15px; color: #7a7a7a; font-size: 16px}
+
+table.tb_type1{border-top: 2px solid #dd3e50; border-bottom: 2px solid #797979; margin-top: 40px;width: 100%; font-size: 17px}
+table.tb_type1 tr{border-bottom: 1px solid #eaeaea}
+table.tb_type1 tr:last-child{border-bottom: none}
+table.tb_type1 tr th{font-weight: normal; text-align: left; padding-left: 50px}
+table.tb_type1 tr td{padding: 20px 0px}
+table.tb_type1 tr td > ul li{padding-left: 15px; position: relative; line-height: 30px}
+table.tb_type1 tr td > ul li::before{content: ''; width: 5px; height: 5px; background-color: #5a5a5a; position: absolute; top: 12px; left: 0px}
+table.tb_type2{border-top: 2px solid #0c4da2; border-bottom: 2px solid #797979; margin-top: 40px;width: 100%; font-size: 17px}
+table.tb_type2 thead{background-color: #f5f5f5; height: 54px; line-height: 54px}
+table.tb_type2 tr{height: 54px; line-height: 54px;border-bottom: 1px solid #eaeaea}
+table.tb_type2.write tr:last-child{padding-bottom: 10px}
+table.tb_type2.write tr{border-bottom: 0px; margin-bottom: 10px}
+table.tb_type2 tr:last-child{border-bottom: none}
+table.tb_type2 tr td{text-align: center; line-height: 22px;}
+table.tb_type2.news tr td:nth-child(2){text-align: left}
+table.tb_type2.news tr td:nth-child(3){text-align: center; padding-left: 0px}
+table.tb_type2 tr td.point{color: #dd3e50}
+table.tb_type2 tr td:nth-child(3){text-align: left; padding-left: 20px}
+table.tb_type2 tr td:nth-child(4){text-align: left; padding-left: 20px}
+table.tb_type2 tr td input, table.tb_type2 tr td select{width: 100%; height: 50px;border:1px solid #ccc; box-sizing: border-box; padding-left: 10px}
+table.tb_type2 tr td select{margin-left: 20px; width: calc(100% - 20px)}
+
+.news_write{border-top: 2px solid #0c4da2; border-bottom: 2px solid #cfcfcf; margin-top: 50px}
+.news_write .title_area{padding: 40px 20px; border-bottom: 2px solid #cfcfcf}
+.news_write .title_area.info{padding: 20px 0px; border-bottom:0px}
+.news_write .title_area .day{color: #0c4da2; font-size: 18px; font-weight: bold}
+.news_write .title_area .day > span{margin-left: 20px;}
+.news_write .title_area .day > span::before{content: ''; width: 1px; height: 10px; background-color: #ccc; display: inline-block; margin-right: 20px}
+.news_write .title_area p.title{margin: 20px 0px 0px; text-align: left; font-size: 24px}
+.news_write .title_area p.title::before{display: none}
+.news_write > img{width: 100%; margin: 50px 0px}
+.news_write > p.news_info{margin: 50px 0px; line-height: 30px}
+.btn_area{margin-top: 25px;}
+.btn_area > span > a{border: 1px solid #c3c3c3; width: 130px; height: 40px; line-height: 40px; text-align: center; cursor: pointer; display: inline-block; border-radius: 20px}
+::placeholder{color: #acacac}
+.input_text_date {padding-left: 10px; border: 1px solid #ccc; width: calc(50% - 10px); height: 50px; float: right}
+.select_text_date {padding-left: 10px; border: 1px solid #ccc; width: calc(50% - 67px); height: 50px;appearance: none; -webkit-appearance: none; background: url(../images/select_bg.png) 98% 50% no-repeat}
+.select_text_date::-ms-expand { display:none; }
+.select_text_date.w100 {width: 100%; margin-top: 20px; box-sizing: border-box}
+.input_text {padding-left: 10px; border: 1px solid #ccc; width: 100%; height: 50px; font-size: 16px; color: #323232; box-sizing: border-box}
+.input_text.w50{width: calc(50% - 10px); margin-left: 12px; margin-top: 20px; box-sizing: border-box}
+.input_text.w50.left{margin-left: 0px}
+placeholder{color: #b0b0b0}
+textarea.input_text {padding-left: 10px; border: 1px solid #ccc; width: 100%; padding-top: 10px; height: 200px;}
+.write_info{line-height: 30px; margin-bottom: 20px}
+
+.etc{text-align: center; clear: both}
+.btn1{margin-top: 60px}
+.btn1 a{height: 54px; line-height: 54px; color: #fff; font-size: 30px; background: url('../images/icon_btn_bg.png') 90% 50% no-repeat #253252; display: inline-block; padding:0px 95px 0px 45px; border-radius: 27px; cursor: pointer;}
+.btn2{height: 40px; line-height: 40px; background-color: #fff; border: 1px solid #dcdcdc;color: #272727; width: 130px;text-align: center; cursor: pointer; position: absolute; right: 0px; top: 50px; border-radius: 20px;}
+.manager{border: 1px solid #d1d1d1; padding: 30px 50px; width: 570px; display: inline-block; margin-top: 100px}
+.manager > p{font-style: italic; text-align: left; font-size: 24px;}
+.manager > ul{width: 300px; margin: 0 auto; margin-top: 40px; font-size: 18px}
+.manager > ul li{line-height: 50px; width: 300px; text-align: left; padding-left: 60px}
+.manager > ul li.name{background: url('../images/icon_name.png') 1px 50% no-repeat}
+.manager > ul li.tell{background: url('../images/icon_tell.png') 3px 50% no-repeat}
+.manager > ul li.mail{background: url('../images/icon_mail.png') 0% 50% no-repeat}
+.manager > ul li > span{width: 100px; color: #777777; display: inline-block;}
+.etc span.title{text-align: left; font-size: 24px; display: block; margin: 0px;padding-top: 30px;}
+.contact6_info{width: 100%; height: 180px; border-radius: 115px; color: #fff; background-color: #223051; box-sizing: border-box; padding: 40px; margin-top: -50px; margin-bottom: 50px;}
+.contact6_info > p{float: left; width: 58%; font-size: 30px; padding: 12px 0px 0px 20px; letter-spacing: -1px}
+.contact6_info > ul{float: right; width: 40%; font-size: 24px}
+.contact6_info > ul li{line-height: 50px; padding-left: 50px}
+.contact6_info > ul li:nth-child(1){background: url('../images/icon_tell2.png') 2px center no-repeat}
+.contact6_info > ul li:nth-child(2){background: url('../images/icon_fax.png') 4px center no-repeat}
+.contact6_info > ul li:nth-child(3){background: url('../images/icon_mail2.png') 0px center no-repeat}
+.contact6_info > ul li > span{width: 100px; display: inline-block}
+.etc.contact6 ul li.manager{width: 48%; box-sizing: border-box; float: left; margin-top: 20px;}
+.etc.contact6 ul li:nth-child(2n).manager{float: right}
+.etc .qa{margin-top: 100px; font-size: 18px; line-height: 25px; background-color: #eeeff1; padding: 40px; position: relative}
+.etc .qa_tit{width: 30%; float: left; margin-top: -5px;margin-left: -30px; position: absolute}
+.etc .qa_tit a{font-size: 24px; color: #0c3ea2; font-weight: bold; text-align: left;background: url('../images/qa_bg.png') left center no-repeat; padding-left: 70px; height: 90px; line-height: 100px; display: inline-block; position: relative}
+.etc .qa_tit a::after{content: ''; background: url('../images/qa_bg2.png') center center no-repeat; width: 26px; height: 10px; display: inline-block;position: absolute; top: 45px; right: -35px;}
+.etc .qa > p{text-align: left; width: 70%; padding-left: 30%}
+.etc > p{margin-top: 100px; font-size: 22px; line-height: 35px}
+.download_area{font-size: 24px;width: 700px; margin: 0 auto; margin-top: 25px; clear: both; height: 54px; line-height: 54px}
+.download_area > em{color: #dd3e50}
+.download_area .btn1 a{float: right}
+.search_area{width: calc(100% - 24px); border: 12px solid #f3f5f6; height: 50px; line-height: 50px; margin-top: 50px; clear: both}
+.search_area .input_search input {float: left; width: 600px; padding: 0 20px; height: 48px; border: 0px}
+.search_area > span{float: right; background-color: #253252; height: 50px; line-height: 50px; color: #fff; width: 124px; text-align: center; cursor: pointer}
+.gnb_etc_service{position: relative; float: left;}
+.gnb_etc_service > select{height: 50px; width: 200px; padding-left: 10px; border: 1px solid #fff; margin-top: -2px; box-sizing: border-box; appearance: none; -webkit-appearance: none;background: url('../images/select_bg.png') 95% 50% no-repeat}
+.gnb_etc_service > select::-ms-expand { display:none; }
+.gnb_etc_service.on > a {background: url(../images/select_bg.png) 85% center no-repeat; }
+.gnb_etc_service > a {font-size: 16px; color: #000 !important; font-weight: 400; position: relative; top: 0px; width: 180px; height: 48px; line-height: 48px; padding-left: 40px; display: inline-block;}
+.gnb_etc_service > a::after{content: ''; width: 1px; height: 15px; background-color: #ccc; display: inline-block; position: absolute; right: 0px; top: 18px}
+.gnb_etc_service > ul {display: none; position: absolute; top: 46px; left: 0; width: 220px;}
+.gnb_etc_service > ul li {border: 1px solid #ccc; border-bottom: 0px;}
+.gnb_etc_service > ul li:last-child{border-bottom: 1px solid #ccc;}
+.gnb_etc_service > ul li a {display: block; font-size: 16px; height: 40px; line-height: 40px; margin-top: 0; color: #000000; font-weight: 400; text-align: left; background: #ffffff; padding-left: 17px;}
+.paging { padding: 50px 0 100px 0; text-align: center; position: relative}
+.paging .paging_inner {display: inline-block;}
+.paging .paging_inner a.current {border-color: #777; background: #777; color: #fff;}
+.paging .paging_inner a {float: left; width: 34px; height: 33px; margin-left: -1px; line-height: 33px; border: 1px solid #dcdcdc; background: #fff; font-size: 14px; color: #272727;}
+
+.company_logo{clear: both;}
+.company_logo > h4{padding-top: 50px; padding-bottom: 20px; font-size: 20px}
+.company_logo ul li{float: left;padding: 10px 20px;margin: 0px 10px 10px;border: 1px solid #eee;}
+.year_tab{padding:0;display:inline-block; width: 100%; border-top: 1px solid #bcbcbc; border-bottom: 1px solid #bcbcbc; margin-bottom: 30px}
+.year_tab li{float:left;width: 33.33%;}
+.year_tab li > a{width: 100%; padding-top: 29px; text-align: center; display:inline-block; outline: none;}
+.his_wrap > div{margin: 0px 100px}
+.his_wrap dl{clear:both;width:100%;border-bottom:solid 1px #d8d8d8;display:inline-block;}
+.his_wrap dt{float:left;width:100px;text-align:center; margin-top: 10px; line-height: 40px}
+.his_wrap dd{float:right;width:calc(100% - 100px);margin: 10px 0px;}
+.his_wrap li{line-height: 40px;letter-spacing: -1px;}
+.bro_tit{color: #fff; margin-top: -40px}
+.bro_tit > span{background: url(../images/down01.png) left center no-repeat;  font-size: 30px; width: 921px; height: 176px; display: inline-block; float: left; padding: 45px 0px 0px 80px;box-sizing: border-box;}
+.bro_tit > .btn > a{font-size: 18px; color: #fff; background: url(../images/icon_download1.png) center 70% no-repeat #223051;height: 176px; width: 176px; border-radius: 88px; float: right; text-align: center; padding-top: 50px; box-sizing: border-box;display: inline-block;}
+.brochure{clear: both; padding-top: 100px}
+.brochure ul li{float: left; width: 50%; height: 140px; margin-bottom: 50px}
+.brochure ul li:last-child{margin-bottom: 0px}
+.brochure ul li > span.title{background-color: #dd3e50; color: #fff; width: 45%; display: inline-block; float: left; margin: 0px; line-height: 160px; font-size: 24px}
+.brochure ul li .bro_info{float: right; padding: 0px 20px; box-sizing: border-box; width: 55%; position: relative; height: 160px;}
+.brochure ul li .bro_info > b{font-size: 22px; font-weight: normal}
+.brochure ul li .bro_info > p{color: #777; margin: 10px 0px; font-size: 17px}
+.brochure ul li .bro_info .btn_brodown > a{ background: url(../images/icon_download2.png) 80% center  no-repeat; border: 1px solid #c3c3c3; width: 165px; line-height: 34px; border-radius: 17px; color: #272727; font-size: 16px; box-sizing: border-box; padding: 0px 30px; bottom: 0px; position: absolute;}
+.product_menu{font-size: 12px;border: 1px solid #ccc; line-height: 30px; display: table; padding: 0px 10px; margin: 0 auto; margin-bottom: 30px; display: none}
+.product_menu.close{display: none}
+.layer_popup_area {display: none;background-color: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: fixed; top: 0px; z-index: 1001;}
+.layer_popup2 {width: 300px; height: 180px; background-color: #fff; border-radius: 3px; margin: 20% auto 0%; position: relative;}
+.popup_close {right: calc(50% - 50px); top: auto; bottom: 20px; border: 0px; background-color: #253252; color: #fff}
+.popup_close > img {width: 15px; position: absolute; right: 10px; top: 10px; cursor: pointer}
+.layer_popup2 > .layer_info {font-size: 14px;padding: 20px;}
+.layer_popup2 > .layer_info > input{width: 100%; height: 40px; padding-left: 10px; box-sizing: border-box; border: 1px solid #ccc; margin-top: 10px;}
+#b_text{padding: 40px 20px}
+
+a.top {position: fixed; left: 90%; bottom: 180px; display: none; color: #ffffff; background-color: rgba(0,0,0,0.5); border: 1px solid #ffffff; width: 70px; height: 70px; line-height: 70px; z-index: 1;text-align: center;}
+
+footer{background-color: #1e2328; width: 100%; height: 285px; position: relative; clear: both;}
+.footer_area{width: 1165px;margin: 0px auto;font-size: 18px;color: #fff; position: relative}
+address{line-height: 25px; padding: 80px 0px 0px; font-style: normal;}
+address > img{width: 120px; float: left}
+address .info{ padding-left: 180px}
+address .info em{display: block}
+address .info p{color: #6e6e6e; padding-top: 25px}
+footer .f_link{padding-top: 45px}
+footer .f_link ul li{float: left; margin-right: 70px}
+footer .f_link ul li a{color: #fff}
+footer .facilitation{position: absolute;right: 0px; top: 150px; display: none}
+footer .facilitation ul li{float: left; margin-right: 20px}
+
+
+@media all and (max-width:1280px)
+{
+}
+
+@media all and (max-width:1180px)
+{
+.contact {margin: 0px 20px;}
+/*.link_menu {margin-left: 3%}
+.link_menu ul li a {width: 20%; margin-right: 5%;margin-bottom: 10px;}
+.link_menu ul li:nth-child(4n) a{margin-right: 0px}*/
+.sub_menu{width: 100%; padding: 20px; box-sizing: border-box}
+.sub_menu ul li a{width: 24%; margin-right: 1.3%}
+.sub_menu ul li:nth-child(4n) a{margin-right: 0%}
+.sub_menu ul li:nth-child(5n) a {margin-right: 1.3%}
+.sub_menu_area {height: 170px; margin-bottom: 50px;}
+.sub_menu_area::after {display: none}
+.sub_menu_area.h_120 {height: 80px;}
+/*.div_contact .title{margin: 0 20px 30px}*/
+.div_contact .title > p > br{display: none}
+.div_contact .title > p.f56 {font-size: 35px;}
+.div_contact .title .sub_info > img {width: 100%; margin: 30px 0px}
+.contact > .fs30{font-size: 25px}
+.contact > p.about {margin-top: 0px}
+.contact > p.about img {width: 100%; margin: 30px 0px}
+.contact > p.about img.ceo{width: 166px}
+.div_contact .title > p.f36{font-size: 30px}
+
+.about1 ul li:nth-child(1){background-size: 40%;}    
+.about1 ul li:nth-child(2){background-size: 40%; margin-top: -100px}    
+.about1 ul li:nth-child(3){background-size: 15%;}    
+.about1 ul li:nth-child(1) > p{top: 50px}
+.about1 ul li:nth-child(2) > p{right: 10%}
+.about1 ul li:nth-child(3) > p{top: 150px; right: 20%}
+.about1_2{background-size: 35%}
+.about1_2 ul{padding-left: 40%; padding-top: 30px}
+.about1_2 ul li{padding-bottom: 20px}
+.about1_2 ul li > .info > em{font-size: 40px}
+.about1_2 ul li > .info2{display: block}
+
+.about2 ul li:nth-child(1){background-size: 40%}
+.about2 ul li:nth-child(1) > p{top: 50px}
+.about2 ul li:nth-child(2){background-size: 40%; margin-top: -150px}
+.about2 ul li:nth-child(2) > p{top: 150px}
+.aboout_list2{height: 120px; padding: 0px}
+.aboout_list2 ul li {width: 100%; float: none; height: 70px; line-height: 70px; border-radius: 35px; font-size: 20px}
+.aboout_list2 ul li:nth-child(2){margin-top: -10px}
+.man1{background: none}
+.man1.about3 > p{padding: 0px 0px 30px; height: auto;}
+.man1.about3 ul li:nth-child(2){margin-top: 0px}
+    
+.about2 ul li{height: 100px; border-radius: 50px;}
+.about2 ul li > .tit{font-size: 40px; width: 30%; line-height: 100px;}
+.about2 ul li > .info{font-size: 40px; width: 38%;}
+.about2 ul li > .info > em{font-size: 14px;}
+.about2 ul li > .info.right{width: 30%}
+.about2 ul li > .info2{font-size: 20px; width: 30%;}
+.about3 > img{width: 100%}
+.aboout3_list2 ul li{width: 100%; clear: both; margin: 0px 0px 20px}
+.about4 ul li > p {padding-left: 0px; padding-right: 50px; width: calc(55% - 50px);}
+.about4 ul li:nth-child(2) > p {padding-left: 50px; padding-right: 0px}
+.contact6_info{margin: 0px 20px; width: calc(100% - 40px)}
+.contact6_info > p {width: calc(100% - 430px); padding: 0px 0px 0px 20px; font-size: 23px}
+.contact6_info > p > br{display: none;}
+.contact6_info > ul {width: 380px; font-size: 20px}
+.about6 ul li {height: auto; padding-top: 30px}
+
+.about6 ul li > span {width: 30%}
+.about6 ul li > p {width: 65%}
+.about6 ul li:nth-child(4) {height: auto}
+.about6 ul li .about6_bg {position: relative; bottom: 0px; margin-top: 30px; display: inline-block;}
+.about6 ul li .about6_bg > p {padding: 60px 0px; text-align: center; font-size: 20px}
+.contact6 ul li.manager{padding: 20px 10px 10px}
+.contact6 ul li.manager > p {text-align: center}
+.answer > h3{margin-top: 0px;}
+.mapinfo > img{width: 100%}
+.nuri_map > p {width: 50%; vertical-align: middle}
+.nuri_map > span > img {width: 40%}
+.mapinfo .map_wrap > iframe{width: 100%}
+.map {width: calc(100% - 40px)}
+.map > img{width: 100%}
+.map dl dt {width: 40%; text-align: center}
+.map dl dd {width: 60%}
+.map dl dt.train {background-position: center}
+.map dl dt.car {background-position: center}
+.link_menu {margin: 0px 20px; }
+.link_menu.tab_area{width: calc(100% - 40px)}
+.link_menu.tab_area ul {margin-left: 0px}
+.link_menu.tab_area ul li {width: 49%; margin-right: 2%;}
+.link_menu.tab_area ul li:last-child{margin-right: 0px}
+.link_menu.tab_area ul li a {width: 100%; border-radius: 0px; font-size: 18px}
+.link_menu.tab_info {margin: 20px 20px 0px; font-size: 16px; width: calc(100% - 40px);}
+.link_menu.tab_info ul li{width: calc(33.33% - 5px); margin-right: 7.5px}
+.link_menu.tab_info ul li:nth-child(3n){margin-right: 0px}
+.link_menu.tab_info ul li a {width: 100%; border-radius: 0px}
+.link_menu.tab_info ul li:nth-child(4), 
+.link_menu.tab_info ul li:nth-child(5), 
+.link_menu.tab_info ul li:nth-child(6), 
+.link_menu.tab_info ul li:nth-child(7),
+.link_menu.tab_info ul li:nth-child(8),
+.link_menu.tab_info ul li:nth-child(9),
+.link_menu.tab_info ul li:nth-child(10),
+.link_menu.tab_info ul li:nth-child(11){margin-top: 7.5px}
+.link_menu.tab_info ul li:nth-child(6), .link_menu.tab_info ul li:nth-child(9){clear: none}
+.link_menu.tab_info ul li:nth-child(11) {clear: none} 
+.link_menu.tab_info.tab1_sub {height: 100px; width: calc(100% - 40px)}
+.link_menu.tab_info.tab2_sub {margin: 20px 20px 0px; width: calc(100% - 40px); height: 105px}
+.search_area {width: calc(100% - 64px); margin: 0px 20px;}
+.search_area .input_search input {width: auto}
+.man_point > p {margin: 0px; font-size: 25px}
+.man1 ul li{background-size: 90% ; padding-top: 22%}
+.man1 ul li > span {font-size: 25px; font-weight: normal}
+
+.man2 ul li{width: 50%;}
+.man2 ul li > span {font-size: 25px;font-weight: normal;}
+.recruit_gb > span.title {width: 100%; font-size: 20px}
+.recruit_gb > span.title.pt20, .recruit_gb > span.title.pt70, .recruit_gb > span.title.pt130{padding-top: 0px !important; border-bottom: 1px solid #eee; padding-bottom: 10px;}
+.recruit_gb > .info {padding: 30px 0px 0px 20px}
+.model_info ul li {width: 28.33%;height: 190px;}
+.model_info ul li::after {right: -20px}
+.composition > img{width: 100%}
+.composition dl {width: 100%; float: none}
+.composition dl dd {height: auto}
+.composition dl dd.h180, .composition dl dd.h160, .composition dl dd.h130, .composition dl dd.h110, .composition dl dd.h100  {height: auto}
+
+.etc{margin: 0px 20px}
+.etc > p{width: 90%; margin-left: 5%;}
+.etc > p > br{display: none;}
+.his_wrap > div{margin: 0px}
+.news_write .title_area {padding: 30px 0px 30px 10px}
+.bro_tit {margin-top: 0px}
+.bro_tit > span {width: 100%; float: none; color: #223051; background: none; padding: 0px 0px 20px 20px;height: auto; font-size: 22px;}
+.bro_tit > span > br{display: none}
+.brochure ul li {float: none; width: 100%}
+.bro_tit > .btn > a {float: none; height: 60px; line-height: 60px; width: calc(100% - 40px); padding: 0px; margin: 0px 20px; background-position: 80% center}
+.bro_tit > .btn > a > br{display: none}
+.title_info > span {font-size: 20px}
+
+a.top{bottom: 300px; left: auto; right: 10px}
+
+.footer_area {width: 100%; padding: 0 20px; box-sizing: border-box}
+footer .facilitation {top: 40px;}
+footer .f_link {display: none}
+address {padding-top: 100px}
+}
+
+@media all and (max-width:1000px)
+{
+.div_contact .title::before{display: none}
+.div_contact .title > p.f36{font-size: 25px}
+.top_title > img{width: 150%}
+.about1 ul li:nth-child(2){margin-top: -200px}
+.about1 ul li:nth-child(2) > p{top: 20%; width: 40%}
+.about1 ul li:nth-child(3){height: 250px}
+.about1 ul li:nth-child(3) > p{right: 30%; width: 60%;}
+.about1 ul li > p > br{display: none}
+.about1_2 ul{padding-top: 0px; padding-bottom: 0px}
+.about1_2 ul li > .info > em{font-size: 30px}
+.about2 ul li:nth-child(2){margin-top: -200px; height: 300px}
+.about2 ul li:nth-child(2) > p{top: 100px}
+.man1 ul li{width: 100%; padding-left: 50%; box-sizing: border-box; height: 180px; padding: 20px 20px 20px 30%; font-size: 15px} 
+.man1 ul li > span{font-size: 20px}
+.man1.about3 > p{font-size: 20px; text-align: left}
+.man1.about3 ul li:nth-child(1){background-position: 20% 0px; background-size: 30%}
+.man1.about3 ul li:nth-child(2){background-position: 75% 0px; background-size: 30%; padding: 20px 40% 20px 20px}
+.man1.about3 ul li:nth-child(3){background-position: 20% 0px; background-size: 30%}
+.man3 ul li{width: 100%; padding-left: 50%; box-sizing: border-box; height: 220px; padding: 20px 20px 20px 50%; font-size: 15px} 
+.man3 ul li > span{font-size: 22px}
+.man3 ul li > p{font-size: 18px; text-align: left; display: inline-block;}
+.man3 ul li:nth-child(1){background-position: 25% 0px; background-size: 25%}
+.man3 ul li:nth-child(2){background-position: 75% 0px; background-size: 25%; padding: 20px 40% 20px 20px}
+.man3 ul li:nth-child(3){background-position: 25% 0px; background-size: 25%}
+    
+}
+
+@media all and (max-width:640px)
+{
+.top_title > p .menu{display:inline-block}
+.top_title > img{width: 200%}
+.contact {margin: 0px 10px;}
+.top_title > p::before {height: 30px; width: 1px; top: -40px;}
+.top_title > p {font-size: 30px}
+.div_contact{padding-bottom: 100px}
+.div_contact .title{margin: 0px 10px 20px;}
+.div_contact .title.pt {padding-top: 30px; margin: 0px 10px;}
+.div_contact .title > img{height: 30px}
+.div_contact .title > b {font-size: 30px; font-weight: normal}
+.div_contact .title > p {font-size: 18px; margin-top: 30px}
+.div_contact .title > p.sub {font-size: 16px}
+.div_contact .title > p.f56 {font-size: 25px}
+    .div_contact .title .sub_info{margin-top: 50px}
+.div_contact .title .sub_info > p {font-size: 14px; line-height: 22px}
+    .div_contact .title > p.f36{font-size: 20px}
+
+/*.link_menu ul li a{font-size: 14px; width: 23%; margin-right: 2%}*/
+.contact{font-size: 14px; letter-spacing: -0.5px;}
+.contact h2 {font-size: 20px; font-weight: 500;}
+.contact h2::after {height: 2px}
+.contact .list ul li {line-height: 28px}
+.contact > .fs30{font-size: 18px}
+.contact > .fs30 > br{display: none}
+.contact > p.about {font-size: 15px}
+.contact > p.lh30 {line-height: 20px}
+.contact > p.lh30 > br{padding-top: 10px; display: block; content: ''}
+.sub_menu_area{background-color: #fff; height: auto}
+.sub_menu_area.h_120{height: 120px; background-color: #f3f3f3}
+.sub_menu ul li a > img {height: 18px;}
+.sub_menu ul li a.h18 > img {height: 14px;}
+.sub_menu.menu3 ul li a, .sub_menu.menu4 ul li a {font-size: 16px}
+.about1 ul li:nth-child(1) > p{top: 30px}
+.about1 ul li:nth-child(2){margin-top: -250px}
+.about1 ul li:nth-child(2) > p{top: 10%}
+.about1 ul li:nth-child(3){height: 200px}
+.about1 ul li:nth-child(3) > p{top: 100px}
+.about1_2 ul li > .info{font-size: 14px}
+.about1_2 ul li > .info > em{font-size: 24px; margin: 0px 20px 0px 10px}
+span.about_tit{margin: 40px 0px 10px; font-size: 20px}
+.about2 ul li:nth-child(2){height: 180px;  margin-top: -240px;}
+.about2 ul li:nth-child(2) > p{top:50px}
+.aboout_list2{padding: 20px 10px 0px}
+.aboout_list2 ul li{font-size: 15px}
+.man1 ul li{padding-top: 10px}    
+.man1 ul li > p{margin-top: 0px; }
+
+.about2 ul li{height: 100px; border-radius: 50px; position: relative}
+.about2 ul li > .tit{font-size: 30px; width: 40%; line-height: 100px;}
+.about2 ul li > .info{font-size: 20px; width: 58%; position: absolute; top: 20px}
+.about2 ul li > .info > em{font-size: 14px;}
+.about2 ul li > .info.right{width: 58%; top: 50px}
+.about2 ul li > .info2{font-size: 14px; width: 30%; position: absolute; top: 60px;}
+
+.about4 ul li {padding-top: 70px; height: 250px}
+.about4 ul li > span {width: 100%; line-height: normal;}
+.about4 ul li:nth-child(2) > span{color: #272727 }
+.about4 ul li > p {width: 100%; line-height: normal;padding: 20px !important; box-sizing: border-box;}
+.about4 ul li:nth-child(3) > p {color: #fff}
+.about6 ul li > span {width: 100%; height: 100px}
+.about6 ul li > span > img {margin-top: 30px; height: 40%}
+.about6 ul li:nth-child(2) > span > img {height: 60%; margin-top: 20px}
+.about6 ul li > p > em {display: none}
+.about6 ul li > p {width: 100%; line-height: 25px; margin-top: 20px}
+.answer > h3 {font-size: 18px}
+.top_title > p {width: 400px;top: 100px; left: calc(50% - 200px)}
+.top_title > p::before {left: 179px}
+.product_menu{display: table; margin: 20px auto 10px;}
+table.tb_type1 {font-size: 14px}
+table.tb_type1 tr th {width: 100%; display: block; padding-left: 0px;line-height: 50px; font-weight: bold}
+table.tb_type1 tr td {width: 100%; display: block; padding: 0px 0px 10px}
+table.tb_type2 {font-size: 14px}
+table.tb_type2 colgroup{display: none}
+table.tb_type2 tr th{text-align: left; padding-left: 20px}
+table.tb_type2 tr th:nth-child(1){display: none}
+table.tb_type2 tr th:nth-child(2){display: none}
+table.tb_type2.news tr th:nth-child(2){display: inline-block; text-align: center;width: 100%; padding-left: 0px;}
+table.tb_type2.news tr th:nth-child(3){width: 25%; text-align: center; padding-left: 0px}
+table.tb_type2 tr td:nth-child(1){display: none}
+table.tb_type2 tr td:nth-child(2){display: none}
+table.tb_type2.news tr td:nth-child(2){display: inline-block;width: 100%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;padding-left: 10px;}
+table.tb_type2.news tr td:nth-child(3){width: 25%; text-align: center}
+.btn1 a {font-size: 20px;}
+.etc > p {font-size: 14px; margin-top: 0px;width: 100%; margin-left: 0px; line-height: 25px}
+.manager {width: calc(100% - 60px); margin-top: 50px; padding: 30px; margin-bottom: 50px}
+.download_area {width: 100%; font-size: 18px; height: auto}
+.download_area .btn1 a {float: none}
+.download_area .btn1{display: block; margin-top: 0px}
+.link_menu.tab_info {font-size: 14px}
+.link_menu.tab_info ul li {width: calc(50% - 5px); margin-right: 7.5px;}
+.link_menu.tab_info ul li:nth-child(2n) {margin-right: 0px;}
+.link_menu.tab_info ul li:nth-child(3n) {margin-right: 7.5px;}
+.link_menu.tab_info ul li:nth-child(3) {margin-top: 7.5px;}
+.link_menu.tab_info ul li:nth-child(6) {margin-right: 0px;}
+.link_menu.tab_info.tab1_sub {height: 140px; width: calc(100% - 40px)}
+.search_area{display: none}
+.man1 ul li {padding-left: 30%; height: 140px; padding-right: 0px}
+.man1.about3 ul li:nth-child(1){background-position: 0px 0px;  background-size: 45%;}
+.man1.about3 ul li:nth-child(2){background-position: 100% 0px;  background-size: 45%;padding: 20px 40% 20px 0px;}
+.man1.about3 ul li:nth-child(3){background-position: 0px 0px;  background-size: 45%;}
+.about2 ul li:nth-child(1){background-size: 50%}
+.about2 ul li:nth-child(1) > p{top: 20px; left: 0px}
+.about2 ul li:nth-child(2){background-size: 50%}
+.about2 ul li:nth-child(2) > p{top: 20px}
+
+.title_info {margin-bottom: 50px}
+.man2 ul li{background-size: 80% !important; padding-top: 200px; height: 150px}
+.man2 ul li > span {font-size: 20px;height: 35px;}
+.man3 ul li{padding-left: 220px}
+.man3 ul li:nth-child(1) {background-position: 10% 0px; background-size: 150px;}
+.man3 ul li:nth-child(2) {background-position: 90% 0px; background-size: 150px; padding-left: 20px; padding-right: 250px;}
+.man3 ul li:nth-child(3) {background-position: 10% 0px; background-size: 150px;}
+.man3 ul li > span {text-align: left; height: auto; font-size: 20px;}
+.man3 ul li > p{font-size: 15px; display: block}
+.man3 ul li > p > br{display: none}
+.man_point > p {font-size: 18px; line-height: 30px;background-size: 200%; padding: 30px; width: calc(100% - 60px); height: auto; margin: 0px;}
+.man_point > p > br{display: none}
+address {padding: 30px 0px; box-sizing: border-box}
+.sub_menu {height: 300px; display: none; }
+.sub_menu ul li a{width: 49%; margin-right: 2%}
+.sub_menu ul li:nth-child(2n) a{margin-right: 0px}
+.sub_menu.menu3, .sub_menu.menu4{display: block}
+.sub_menu.menu3 ul li a, .sub_menu.menu4 ul li a{width: 49%; margin-right: 2%}
+.sub_menu.menu3 ul li:nth-child(2n) a, .sub_menu.menu4 ul li:nth-child(2n) a{border-right: 0px; margin-right: 0%}
+.sub_menu ul li:nth-child(8) a{border-bottom: 0px}
+.sub_menu ul li:nth-child(11) a{border-right: 1px solid #bcbcbc; width: calc(50% + 1px); border-top: 0px}
+.composition{font-size: 14px}
+.composition dl dt{font-size: 18px; padding-left: 40px;}
+.composition dl dt > span{font-size: 22px; top: -20px;}
+.composition > p.mt45 > br{display: none}
+.composition dl dd, .composition dl dd.h100, .composition dl dd.h110, .composition dl dd.h130, .composition dl dd.h160, .composition dl dd.h180 {height: auto}
+.composition dl dd.h_auto > br{display: block; content: ''; padding-top: 10px}
+.composition dl img{width: 100%}
+.aboout3_list2 {height: 120px}
+.aboout3_list2 ul li {width: calc(100% - 20px); margin: 0 10px 10px; font-size: 16px}
+.nuri_map > span > img {width: 100%;}
+.nuri_map > p {width: 100%; margin-top: 25px; padding-left: 0px; text-align: center}
+.map {width: calc(100% - 20px)}
+.map dl dt {background: none !important; width: 100%; height: auto; font-size: 20px; line-height: 40px;}
+.map dl dd {float: none; width: 100%; height: auto; margin-bottom: 50px; font-size: 15px}
+.news_write .title_area p.title {font-size: 18px}    
+.btn_area > span > a {width: 100px}
+.etc.contact6{margin: 0px 20px}
+.contact6_info {border-radius: 0px; height: auto; display: inline-block; padding: 20px}
+.contact6_info > p {width: 100%; padding: 0px; font-size: 18px;}
+.contact6_info > ul { font-size: 18px; margin: 20px 0px;}
+.etc.contact6 ul li.manager {width: 100%; float: none; margin-bottom: 20px}
+.etc.contact6 ul li.manager li > span {padding-left: 20px}
+.etc span.title {font-size: 20px}  
+.manager > ul li {line-height: 35px; font-size: 15px}
+.manager > ul li.name {background-size: 18px}
+.manager > ul li.tell {background-size: 14px}
+.manager > ul li.mail {background-size: 21px}
+.manager > p {font-style: normal; font-size: 20px; text-align: center}
+.brochure ul li {margin-bottom: 30px}
+.brochure ul li > span.title {display: none}
+.brochure ul li .bro_info {width: 100%}
+.brochure ul li .bro_info > b {font-weight: bold; font-size: 20px}
+.brochure ul li .bro_info > p {font-size: 16px}
+.brochure ul li .bro_info .btn_brodown > a {bottom: auto}    
+.year_tab li > a{padding-top: 15px}
+.year_tab li > a > img{width: 100px}
+.man_point {padding-top: 0px}
+.btn1 {margin-top: 30px}
+.his_wrap dt {margin-top: 0px}
+.his_wrap li {line-height: 20px; margin-bottom: 10px}
+.his_wrap li:last-child{margin-bottom: 0px}
+.bro_tit > span {font-size: 18px}
+.btn2{bottom: 10px; top: auto; right: calc(50% - 50px)}
+.btn2.pw_open{right: calc(50% - 65px)}
+.etc .qa {font-size: 14px; padding: 20px; line-height:normal}
+.etc .qa > p{width: 100%; padding-left: 0px; padding-top: 60px;}
+.etc .qa_tit{margin-top: -20px; margin-left: 0px; width: 100%;position: relative; text-align: left;}
+.etc .qa_tit a{background-size: 40px; font-size: 18px; padding-left: 40px;}
+.paging .paging_inner {display: block; width: 100%;}
+    .paging .paging_inner a{display: none}
+.paging .paging_inner a:first-child {display: block; left: 0px; position: absolute;}
+.paging .paging_inner a:last-child {display: block; right: 0px; position: absolute;}
+
+a.top{bottom: 300px; left: auto; right: 0px; background-color: rgba(0,0,0,0.3);}    
+footer{height: auto}
+footer .facilitation {right: auto; left: calc(50% - 90px); top: 80px;}
+address .info {padding-left: 0px; text-align: center; font-size: 14px;}    
+address > img {display: none}
+}
+@media all and (max-width:420px)
+{
+.contact {padding-top: 10px}
+.title_info {margin-bottom: 50px}
+    .top_title > p{font-size: 20px}
+.div_contact .title > p.f56 {font-size: 22px;}
+.div_contact .title > p.f56 > br{display: none}
+.sub_menu ul li a > img {height: 15px;}
+.sub_menu ul li a.h18 > img {height: 12px;}
+/*.link_menu {display: none}*/
+.man1 ul li{font-size: 14px}
+.man1 ul li > span {font-size: 18px; height: auto; padding-bottom: 10px}
+.man1 ul li > span > b{font-size: 20px}
+
+
+.manager > ul {font-size: 15px; margin-top: 20px}
+.manager > ul li > span {width: 70px; padding-left: 20px}
+.manager ul li {padding-left: 0px; background: none !important;}   
+.man2 ul li{padding-top: 150px;height: 170px;}
+.man3 ul li {padding-left: 20px; padding-top: 180px;padding-right: 20px;height: 300px;}
+.man3 ul li:nth-child(1), .man3 ul li:nth-child(2), .man3 ul li:nth-child(3){background-position: center 0px}
+.man3 ul li:nth-child(2){padding-left: 20px; padding-right: 20px; padding-top: 180px}
+.man3 ul li > span {text-align: center}
+.man3 ul li > p {text-align: center}
+.man_point{padding-top: 0px}
+.man_point > p{font-size: 15px; background-size: 220%;}
+.recruit_gb > .info > p {font-weight: bold}
+.recruit_gb > .info ul {padding: 10px 0px 0px 0px}
+.recruit_gb > .info ul li::before {content: none}
+.model_info ul li {width: 45%; height: 175px}
+.model_info ul li::after {right: -10px}
+.list_info ul li::before {content: none}
+.sub_menu {height: 300px;}
+.sub_menu ul li a {line-height: 40px;}
+.year_tab {margin-bottom: 10px}
+.his_wrap dt {width: 100%; text-align: left; font-weight: bold}
+.his_wrap dd {width: 100%; margin-top: 0px}
+.his_wrap li {line-height: 30px}
+table.tb_type2.news tr th{text-align: center; width: 100%; padding-left: 0px}
+table.tb_type2.news tr th:nth-child(3){display: none;}
+table.tb_type2.news tr td:nth-child(3){display: none}
+.select_text_date {width: 100%; box-sizing: border-box;}
+.news_write .title_area .day > span::before {display: none}
+.news_write .title_area .day > span {margin-left: 0px}
+.input_text_date {width: 100%; box-sizing: border-box; margin: 10px 0px;}
+.contact6_info > ul {width: 100%}
+.contact6_info > ul li {padding-left: 0px; background: none !important; text-align: center;}
+.contact6_info > ul li > span{width: 80px; text-align: left}
+.bro_tit > span {font-size: 16px; padding-bottom: 10px}
+.bro_tit > .btn > a {background-position: 90% center;}
+.etc > p {line-height: 25px}
+.answer_info > input{width: calc(100% - 10px)}
+.input_text.w50 {width: calc(100% - 10px); margin-top: 10px; margin-left: 0px}
+.select_text_date.w100 {width: 100%; margin-top: 10px; margin-left: 0px}
+.write_info.mgt20{margin-top: 10px}
+.sub_menu.menu3 ul li a, .sub_menu.menu4 ul li a {font-size: 13px; line-height: 30px;}
+
+
+a.top{bottom: 270px;}    
+.top_button_wrap{bottom: 230px; width: 70px; height: 70px; font-size: 15px; padding-top: 24px; left: calc(50% - 35px);}
+footer .facilitation {top: 60px}
+address .info{font-size: 13px; line-height: 20px;}
+}
+

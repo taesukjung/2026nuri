@@ -725,6 +725,11 @@ a.skip02:active {
 .header_wrap #header {
 	width: 100%;
 }
+.header_wrap #header .gnb_lang {
+	position: absolute;
+    top: -25px;
+    right: 60px;
+}
 .header_wrap #header h1.logo.pc {
 	display: none
 }
@@ -865,13 +870,13 @@ a.skip02:active {
 .gnb_eng a {
 	text-decoration: none;
 	color: #fff; /* ENG 텍스트 색상 */
-	font-size: 15px;
+	font-size: 13px;
 }
 
 .gnb_kor a {
 	text-decoration: none;
 	color: #fff; /* ENG 텍스트 색상 */
-	font-size: 15px;
+	font-size: 13px;
 }
 
 .gnb_eng {

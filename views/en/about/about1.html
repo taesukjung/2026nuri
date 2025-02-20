@@ -15,7 +15,7 @@
 <link href="/css/font.css" rel="stylesheet" type="text/css">
 <link href="/css/reset.css" rel="stylesheet" type="text/css">
 <link href="/css/common.css" rel="stylesheet" type="text/css">
-<link href="/css/sub.css" rel="stylesheet" type="text/css">
+<link href="/css/sub_en.css" rel="stylesheet" type="text/css">
     
 <script src="/js/jquery-1.10.1.min.js" type="text/javascript"></script>
 <script src="/js/common.js" type="text/javascript"></script>
@@ -33,7 +33,7 @@
 
 		    function count0Fn() {
 		      cnt0++;
-		      if (cnt0 > 31) {
+		      if (cnt0 > 32) {
 		        clearInterval(id0);
 		      } else {
 		        $(".number").text(cnt0);
@@ -82,81 +82,81 @@
 </head>	 
     
 <body><!-- #wrap -->		 
-<div id="wrap">					
-		 
+<div id="wrap">
+<!--<div data-include-path="/en/move/layout/header.html"></div>-->
 <header class="header_wrap">		 
-<div id="header">
-<h1 class="logo pc">
-    <a href="/en">
-        <img alt="누리인포스" src="/images/logo.png">
+    <div id="header">
+    <h1 class="logo pc">
+        <a href="/en">
+            <img alt="누리인포스" src="/images/logo.png">
+        </a>
+    </h1>
+    <h1 class="logo mobile">
+        <a href="/en">
+            <img alt="누리인포스" src="/images/logo.png">
+        </a>
+    </h1>
+    <a class="ham_btn ham_open active" href="#">
+        <img alt="모바일 전체메뉴 열기" src="/images/ham_btn.png">
     </a>
-</h1>
-<h1 class="logo mobile">
-    <a href="/en">
-        <img alt="누리인포스" src="/images/logo.png">
+    <a class="ham_btn ham_close" href="#">
+        <img class="ham_close" alt="모바일 전체메뉴 닫기" src="/images/ham_close.png">
     </a>
-</h1>
-<a class="ham_btn ham_open active" href="#">
-    <img alt="모바일 전체메뉴 열기" src="/images/ham_btn.png">
-</a>
-<a class="ham_btn ham_close" href="#">
-    <img class="ham_close" alt="모바일 전체메뉴 닫기" src="/images/ham_close.png">
-</a>
- <!-- .gnb_wrap -->					 
-<nav class="gnb_wrap">
-<h2 id="gnbAnchor">글로벌 네비게이션 영역</h2><!-- #gnb -->						 
-<div id="gnb">
-<ul class="gnb_1depth">
-<li>
-    <h3><a href="/en/move/business/solution1.html">Business<span class="gnb_bar"></span></a></h3>
-    <ul class="gnb_2depth">
-        <li><h4><a href="/en/move/business/solution1.html">Solution</a></h4></li>
-        <li><h4><a href="/en/move/business/service.html">Service</a></h4></li>
-        <li><h4><a href="/en/move/business/industries.html">Industries</a></h4></li>
+     <!-- .gnb_wrap -->					 
+    <nav class="gnb_wrap">
+    <h2 id="gnbAnchor">글로벌 네비게이션 영역</h2><!-- #gnb -->						 
+    <div id="gnb">
+    <ul class="gnb_1depth">
+    <li>
+        <h3><a href="/en/move/business/solution1.html">Business<span class="gnb_bar"></span></a></h3>
+        <ul class="gnb_2depth">
+            <li><h4><a href="/en/move/business/solution1.html">Solution</a></h4></li>
+            <li><h4><a href="/en/move/business/service.html">Service</a></h4></li>
+            <li><h4><a href="/en/move/business/industries.html">Industries</a></h4></li>
+        </ul>
+    </li>
+    <li>
+        <H3><a href="/en/move/about/about1.html">About NIS<span class="gnb_bar"></span></a></H3>
+        <ul class="gnb_2depth">
+            <li><h4><a href="/en/move/about/about1.html">At a Glance</a></h4></li>
+            <li><h4><a href="/en/move/about/about2.html">Mission/Core Value</a></h4></li>
+            <li><h4><a href="/en/move/about/about3.html">Footprint</a></h4></li>
+            <li><h4><a href="/en/move/about/about4.html">Reference</a></h4></li>
+            <li><h4><a href="/en/move/about/about5.html">Location</a></h4></li>
+        </ul>
+    </li>
+    <li>
+      <h3><a href="/en/move/recruiting/recruiting1.html">Recruiting<span class="gnb_bar"></span></a></h3>
+      <ul class="gnb_2depth">
+        <li><h4><a href="/en/move/recruiting/recruiting1.html">Ideal Candidate</a></h4></li>
+        <li><h4><a href="/en/move/recruiting/recruiting2.html">Employee Benefits</a></h4></li>
+        <li><h4><a href="/en/move/recruiting/recruiting3.html">Recruitment</a></h4></li>
+      </ul>
+    </li>
+    <li>
+        <h3><a href="/en/move/contact/contact1.html">Contact Us<span class="gnb_bar"></span></a></h3>
+        <UL class="gnb_2depth">
+            <li><h4><a href="/en/move/contact/contact1.html">News Room</a></h4></li>
+            <!--<li><h4><a href="/en/move/contact/contact2.html">Brochure</a></h4></li>-->
+            <li><h4><a href="/en/move/contact/contact3.html">Inquiry</a></h4></li>
+            <li><h4><a href="/en/move/contact/contact4.html">Contact point</a></h4></li>
+        </UL>
+    </li>
     </ul>
-</li>
-<li>
-    <H3><a href="/en/move/about/about1.html">About NIS<span class="gnb_bar"></span></a></H3>
-    <ul class="gnb_2depth">
-        <li><h4><a href="/en/move/about/about1.html">At a Glance</a></h4></li>
-        <li><h4><a href="/en/move/about/about2.html">Mission/Core Value</a></h4></li>
-        <li><h4><a href="/en/move/about/about3.html">Footprint</a></h4></li>
-        <li><h4><a href="/en/move/about/about4.html">Reference</a></h4></li>
-        <li><h4><a href="/en/move/about/about5.html">Location</a></h4></li>
-    </ul>
-</li>
-<li>
-  <h3><a href="/en/move/recruiting/recruiting1.html">Recruiting<span class="gnb_bar"></span></a></h3>
-  <ul class="gnb_2depth">
-    <li><h4><a href="/en/move/recruiting/recruiting1.html">인재상</a></h4></li>
-    <li><h4><a href="/en/move/recruiting/recruiting2.html">인사제도</a></h4></li>
-    <li><h4><a href="/en/move/recruiting/recruiting3.html">상시채용</a></h4></li>
-  </ul>
-</li>
-<li>
-    <h3><a href="/en/move/contact/contact1.html">Contact Us<span class="gnb_bar"></span></a></h3>
-    <UL class="gnb_2depth">
-        <li><h4><a href="/en/move/contact/contact1.html">News Room</a></h4></li>
-        <!--<li><h4><a href="/en/move/contact/contact2.html">Brochure</a></h4></li>-->
-        <li><h4><a href="/en/move/contact/contact3.html">Inquiry</a></h4></li>
-        <li><h4><a href="/en/move/contact/contact4.html">Contact point</a></h4></li>
-    </UL>
-</li>
-</ul>
-</div><!-- // #gnb -->
-</nav>
-    <!-- 언어 선택 (오른쪽) -->
-    <div class="gnb_lang">
-        <div class="gnb_eng">
-            <a href="/en">ENG</a>
+    </div><!-- // #gnb -->
+    </nav>
+        <!-- 언어 선택 (오른쪽) -->
+        <div class="gnb_lang">
+            <!--<div class="gnb_eng">
+                <a href="/en">ENG</a>
+            </div>-->
+            <div class="gnb_kor">
+                <a href="/">Korea</a>
+            </div>
         </div>
-        <div class="gnb_kor">
-            <a href="/">KOR</a>
-        </div>
-    </div>
-</div> 
-<div class="gnb_bg"></div>
-<div class="gnb_mo_bg"></div>
+    </div> 
+    <div class="gnb_bg"></div>
+    <div class="gnb_mo_bg"></div>
 </header>
     
 <div class="main-wrap" id="contentcontainer">
@@ -167,31 +167,35 @@
     <div class="div_contact">
         <div class="title">
             <p class="f36">
-                최고의 기술력이<br>
-                만드는 최고의 가치 <b>누리인포스</b>
+                <b>NURIINFOS</b> Top Technology Creating Top Value
             </p>
         </div>
         <div class="contact">
             <div class="about1">
                 <ul>
-                    <li><p>누리인포스는 수많은 프로젝트 경험에서 <br>축적된 국내 최고의 기술력과 오랫 동안 함께한 <br>고객사의 신뢰를 바탕으로 최적의 <br>통합 IT서비스를 제공하고 있습니다.</p></li>
-                    <li><p>직원들의 꾸준한 노력, 그리고 <br>경영진의 미래 지향적인 마인드는 <br>누리인포스의 핵심 경쟁력입니다.</p></li>
-                    <li><p>신뢰받는 회사, <br>성장하는 회사, <br>기술이 중심이 되는 회사 <br>누리인포스는 오늘도 미래를 향해 달려갑니다.</p></li>
+                    <li><p>Based on the best technology in Korea accumulated from numerous project experiences and the trust of long-term customers, Nuri Infos provides optimal integrated IT services.</p></li>
+                    <li><p>The consistent efforts of our employees and the future-oriented mindset of our management are NuriInfos' core competitive advantages.</p></li>
+                    <li><p>A trusted company, <br>
+                        a growing company, <br>
+                        a company centered on technology. <br>
+                        NURIINFOS continues to run towards the future today.</p></li>
                 </ul>
             </div>
             <div class="about1_2">
                 <ul>
                     <li>
-                        <span class="info">설립년월일<em>1993.6.1</em></span>
-                        <span class="info right">업력<em class="number">31</em></span>
+                        <span class="info">Date of Establishment<em>1993.6.1</em></span>
                     </li>
                     <li>
-                        <span class="info">전년도 매출액<em>154억원</em></span>
+                        <span class="info right">Years in Business<em class="number">32</em></span>
+                    </li>
+                    <li>
+                        <span class="info">Previous Year's Revenue<em>15.4 billion KRW</em></span>
                         <!--<span class="info2">지난 7년간 지속적 성장(매출액)</span>-->
                     </li>
                     <li>
-                        <span class="info">직원수<em>72명</em></span>
-                        <span class="info">기술인력<em>61명</em></span>
+                        <span class="info">Talents<em>80</em></span>
+                        <span class="info">Developers<em>70</em></span>
                     </li>
                 </ul>
             </div>
@@ -204,33 +208,7 @@
     <a href="#" class="top">Top</a>
     <!--<a title="최상단으로" class="top_button_wrap" href="#" style="display: inline">TOP</a>-->
 </div><!--end of containerr-->		
-<footer>
-    <div class="footer_area">
-        <div class="f_link">
-            <ul>
-                <li><a href="/en/move/recruiting/recruiting3.html">누리 채용정보</a></li>
-                <li><a href="/en/move/contact/contact1.html">누리 새소식</a></li>
-                <li><a href="/en/move/contact/contact3.html">문의하기</a></li>
-            </ul>
-        </div>
-        <address>
-            <img src="/images/logo2.png" alt="누리인포스">
-            <div class="info">
-                463-400 경기도 성남시 분당구 대왕판교로 660 유스페이스1 A-1003호 
-                <em>TEL 031-504-7261 FAX 031-504-7271</em>
-                <p>ⓒ COPYRIGHT NURIINFOS.CO.Ltd. Allright Reserved.</p>
-            </div>                    
-        </address>
-        <div class="facilitation">
-            <ul>
-                <li><a href="https://m.blog.naver.com/PostView.nhn?blogId=turandot428&amp;logNo=221166722288&amp;proxyReferer=https:%2F%2Fwww.google.com%2F" target="_blank"><img src="/images/footer_b.png" alt="네이버 블로그"></a></li>
-                <li><a href="https://bluester.tistory.com/382" target="_blank"><img src="/images/footer_f.png" alt="페이스북"></a></li>
-                <li><a href="https://cs.daum.net/faq/59/14971.html#37917" target="_blank"><img src="/images/footer_c.png" alt="다음 카페"></a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
+<div data-include-path="/en/move/layout/footer.html"></div>
 </div>
 					
 </body>
