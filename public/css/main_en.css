@@ -112,7 +112,7 @@ body.ofy {
 .news_list ul li span{display: inline-block; right: 0px; position: absolute; top: 0px}
 .news_list .more{position: absolute; right: 0px; clear: both; top: 0px}
 
-.recruiting_area{background: url(../images/recruiting_bg.jpg) no-repeat; background-size: 100%}
+.recruiting_area{background: url(../images/en_recruiting_bg.png) no-repeat bottom #0d3ea4; background-size: 100%}
 .recruiting_area .text::before{background-color: #fff}
 .recruiting_area .text{color: #fff;}
 .recruiting{width: 1020px; margin: 0 auto; color: #fff; margin-top: 75px}
