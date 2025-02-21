@@ -177,7 +177,7 @@ span.about_tit{font-size: 24px; margin: 60px 0px 20px; display: block; color: #0
 .map dl dd{width: 75%; float: right; font-size: 18px; height: 180px;}
 .map > p{clear: both; color: #dd3e50; text-align: center; }
 .man2{}
-.man2 ul li{float: left; width: 25%; text-align: center; padding-top: 270px; height: 210px}
+.man2 ul li{float: left; width: 25%; text-align: center; padding-top: 230px; height: 230px}
 .man2 ul li:nth-child(1){background: url('../images/man2_01.png') center 0px no-repeat}
 .man2 ul li:nth-child(2){background: url('../images/man2_02.png') center 0px no-repeat}
 .man2 ul li:nth-child(3){background: url('../images/man2_03.png') center 0px no-repeat}
@@ -186,7 +186,7 @@ span.about_tit{font-size: 24px; margin: 60px 0px 20px; display: block; color: #0
 .man2 ul li:nth-child(6){background: url('../images/man2_06.png') center 0px no-repeat}
 .man2 ul li:nth-child(7){background: url('../images/man2_07.png') center 0px no-repeat}
 .man2 ul li:nth-child(8){background: url('../images/man2_08.png') center 0px no-repeat}
-.man2 ul li > span{font-size: 30px; height: 50px; display: block; position: relative; font-weight: 600}
+.man2 ul li > span{font-size: 26px; height: 50px; display: block; position: relative; font-weight: 600}
 .man3{padding-top: 80px}
 .man3 ul li{float: left; width: 33.33%; text-align: center; padding-top: 380px; height: 200px;}
 .man3 ul li:nth-child(1){background: url('../images/man1_01.png') center 0px no-repeat}
@@ -471,7 +471,7 @@ footer .facilitation ul li{float: left; margin-right: 20px}
 .man1 ul li > span {font-size: 25px; font-weight: normal}
 
 .man2 ul li{width: 50%;}
-.man2 ul li > span {font-size: 25px;font-weight: normal;}
+.man2 ul li > span {font-size: 25px;font-weight: normal;padding-top: 200px}
 .recruit_gb > span.title {width: 100%; font-size: 20px}
 .recruit_gb > span.title.pt20, .recruit_gb > span.title.pt70, .recruit_gb > span.title.pt130{padding-top: 0px !important; border-bottom: 1px solid #eee; padding-bottom: 10px;}
 .recruit_gb > .info {padding: 30px 0px 0px 20px}
@@ -640,7 +640,7 @@ table.tb_type2.news tr td:nth-child(3){width: 25%; text-align: center}
 .about2 ul li:nth-child(2) > p{top: 20px}
 
 .title_info {margin-bottom: 50px}
-.man2 ul li{background-size: 80% !important; padding-top: 200px; height: 150px}
+.man2 ul li{background-size: 80% !important; padding-top: 200px; height: 170px}
 .man2 ul li > span {font-size: 20px;height: 35px;}
 .man3 ul li{padding-left: 220px}
 .man3 ul li:nth-child(1) {background-position: 10% 0px; background-size: 150px;}
