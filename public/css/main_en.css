@@ -325,7 +325,7 @@ footer .f_link {display: none}
 .business ul li:nth-child(3)::after {display: none}
 
 .main_tit .value + p {font-size: 25px}
-.recruiting {margin-top: 40px}
+.recruiting {margin-top: 40px; padding: 0px;}
 .recruiting .re1 {width: 80%; height: 200px; background-size: cover; margin-left: 10%;}
 .recruiting .re1 p > a {left: 10px; bottom: 10px;}
 .recruiting .re1 > span.more {top: -10px; right: 10px;}

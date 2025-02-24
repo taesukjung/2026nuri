@@ -471,7 +471,7 @@ footer .facilitation ul li{float: left; margin-right: 20px}
 .man1 ul li > span {font-size: 25px; font-weight: normal}
 
 .man2 ul li{width: 50%;}
-.man2 ul li > span {font-size: 25px;font-weight: normal;padding-top: 200px}
+.man2 ul li > span {font-size: 25px;font-weight: normal;padding-top: 0px}
 .recruit_gb > span.title {width: 100%; font-size: 20px}
 .recruit_gb > span.title.pt20, .recruit_gb > span.title.pt70, .recruit_gb > span.title.pt130{padding-top: 0px !important; border-bottom: 1px solid #eee; padding-bottom: 10px;}
 .recruit_gb > .info {padding: 30px 0px 0px 20px}
@@ -713,7 +713,7 @@ address {padding: 30px 0px; box-sizing: border-box}
 .paging .paging_inner a:first-child {display: block; left: 0px; position: absolute;}
 .paging .paging_inner a:last-child {display: block; right: 0px; position: absolute;}
 
-a.top{bottom: 300px; left: auto; right: 0px; background-color: rgba(0,0,0,0.3);}    
+a.top{bottom: 200px; left: auto; right: 0px; background-color: rgba(0,0,0,0.3);}    
 footer{height: auto}
 footer .facilitation {right: auto; left: calc(50% - 90px); top: 80px;}
 address .info {padding-left: 0px; text-align: center; font-size: 14px;}    
@@ -777,7 +777,7 @@ table.tb_type2.news tr td:nth-child(3){display: none}
 .sub_menu.menu3 ul li a, .sub_menu.menu4 ul li a {font-size: 13px; line-height: 30px;}
 
 
-a.top{bottom: 270px;}    
+a.top{bottom: 170px;}    
 .top_button_wrap{bottom: 230px; width: 70px; height: 70px; font-size: 15px; padding-top: 24px; left: calc(50% - 35px);}
 footer .facilitation {top: 60px}
 address .info{font-size: 13px; line-height: 20px;}

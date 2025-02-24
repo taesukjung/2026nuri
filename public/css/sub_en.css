@@ -525,11 +525,11 @@ address {padding-top: 100px}
 .man1.about3 ul li:nth-child(2){background-position: 75% 0px; background-size: 30%; padding: 20px 40% 20px 20px}
 .man1.about3 ul li:nth-child(3){background-position: 20% 0px; background-size: 30%}
 .man3 ul li{width: 100%; padding-left: 50%; box-sizing: border-box; height: 220px; padding: 20px 20px 20px 50%; font-size: 15px} 
-.man3 ul li > span{font-size: 22px}
+.man3 ul li > span{font-size: 22px; text-align: left; }
 .man3 ul li > p{font-size: 18px; text-align: left; display: inline-block;}
-.man3 ul li:nth-child(1){background-position: 25% 0px; background-size: 25%}
-.man3 ul li:nth-child(2){background-position: 75% 0px; background-size: 25%; padding: 20px 40% 20px 20px}
-.man3 ul li:nth-child(3){background-position: 25% 0px; background-size: 25%}
+.man3 ul li:nth-child(1){background-position: 10% 0px; background-size: 25%}
+.man3 ul li:nth-child(2){background-position: 90% 0px; background-size: 25%; padding: 20px 40% 20px 20px}
+.man3 ul li:nth-child(3){background-position: 10% 0px; background-size: 25%}
     
 }
 
@@ -575,7 +575,7 @@ address {padding-top: 100px}
 .about1_2 ul li > .info{font-size: 14px}
 .about1_2 ul li > .info > em{font-size: 24px; margin: 0px 20px 0px 10px}
 span.about_tit{margin: 40px 0px 10px; font-size: 20px}
-.about2 ul li:nth-child(2){height: 180px;  margin-top: -240px;}
+.about2 ul li:nth-child(2){height: 180px;  margin-top: -160px;}
 .about2 ul li:nth-child(2) > p{top:50px}
 .aboout_list2{padding: 20px 10px 0px}
 .aboout_list2 ul li{font-size: 15px}
@@ -631,7 +631,7 @@ table.tb_type2.news tr td:nth-child(3){width: 25%; text-align: center}
 .link_menu.tab_info ul li:nth-child(6) {margin-right: 0px;}
 .link_menu.tab_info.tab1_sub {height: 140px; width: calc(100% - 40px)}
 .search_area{display: none}
-.man1 ul li {padding-left: 30%; height: 140px; padding-right: 0px}
+.man1 ul li {padding-left: 40%; height: 140px; padding-right: 0px}
 .man1.about3 ul li:nth-child(1){background-position: 0px 0px;  background-size: 45%;}
 .man1.about3 ul li:nth-child(2){background-position: 100% 0px;  background-size: 45%;padding: 20px 40% 20px 0px;}
 .man1.about3 ul li:nth-child(3){background-position: 0px 0px;  background-size: 45%;}
@@ -647,7 +647,7 @@ table.tb_type2.news tr td:nth-child(3){width: 25%; text-align: center}
 .man3 ul li:nth-child(1) {background-position: 10% 0px; background-size: 150px;}
 .man3 ul li:nth-child(2) {background-position: 90% 0px; background-size: 150px; padding-left: 20px; padding-right: 250px;}
 .man3 ul li:nth-child(3) {background-position: 10% 0px; background-size: 150px;}
-.man3 ul li > span {text-align: left; height: auto; font-size: 20px;}
+.man3 ul li > span {height: auto; font-size: 20px;}
 .man3 ul li > p{font-size: 15px; display: block}
 .man3 ul li > p > br{display: none}
 .man_point > p {font-size: 18px; line-height: 30px;background-size: 200%; padding: 30px; width: calc(100% - 60px); height: auto; margin: 0px;}
@@ -714,7 +714,7 @@ address {padding: 30px 0px; box-sizing: border-box}
 .paging .paging_inner a:first-child {display: block; left: 0px; position: absolute;}
 .paging .paging_inner a:last-child {display: block; right: 0px; position: absolute;}
 
-a.top{bottom: 300px; left: auto; right: 0px; background-color: rgba(0,0,0,0.3);}    
+a.top{bottom: 200px; left: auto; right: 0px; background-color: rgba(0,0,0,0.3);}    
 footer{height: auto}
 footer .facilitation {right: auto; left: calc(50% - 90px); top: 80px;}
 address .info {padding-left: 0px; text-align: center; font-size: 14px;}    
@@ -778,7 +778,7 @@ table.tb_type2.news tr td:nth-child(3){display: none}
 .sub_menu.menu3 ul li a, .sub_menu.menu4 ul li a {font-size: 13px; line-height: 30px;}
 
 
-a.top{bottom: 270px;}    
+a.top{bottom: 200px;}    
 .top_button_wrap{bottom: 230px; width: 70px; height: 70px; font-size: 15px; padding-top: 24px; left: calc(50% - 35px);}
 footer .facilitation {top: 60px}
 address .info{font-size: 13px; line-height: 20px;}
