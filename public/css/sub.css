@@ -29,7 +29,7 @@
 .div_contact .title.top20::before{top: -20px}
 .div_contact .title.pt{text-align: center; padding-top: 130px; margin: 0px}
 .div_contact .title > b{font-size: 36px;color: #1d4ca8; font-style: italic; margin-left: -10px;}
-.div_contact .title > p{margin-top:70px; font-size: 24px; letter-spacing: -1px;font-weight: 100}
+.div_contact .title > p{margin-top:70px; font-size: 24px; letter-spacing: -1px;}
 .div_contact .title > p.sub{margin-top: 50px; font-size: 20px}
 .div_contact .title > p.f56{font-size: 56px; text-align: left; }
 .div_contact .title > p.f36{font-size: 36px; text-align: center;}
