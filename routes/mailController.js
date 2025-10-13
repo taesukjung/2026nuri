@@ -10,7 +10,7 @@ router.post("/sendMail", function(req, res, next){
         secure: true,
         auth: {
            user: 'admin@nis.co.kr',
-           pass: 'k5s#fscyqb'
+           pass: 'k5s#fscyqB'
         }
     });
 
