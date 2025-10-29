@@ -284,6 +284,7 @@ textarea.input_text {padding-left: 10px; border: 1px solid #ccc; width: 100%; pa
 .contact6_info > ul li > span{width: 100px; display: inline-block}
 .etc.contact6 ul li.manager{width: 48%; box-sizing: border-box; float: left; margin-top: 20px;}
 .etc.contact6 ul li:nth-child(2n).manager{float: right}
+.privacy ul li {padding-bottom: 20px;}
 .etc .qa{margin-top: 100px; font-size: 18px; line-height: 25px; background-color: #eeeff1; padding: 40px; position: relative}
 .etc .qa_tit{width: 30%; float: left; margin-top: -5px;margin-left: -30px; position: absolute}
 .etc .qa_tit a{font-size: 24px; color: #0c3ea2; font-weight: bold; text-align: left;background: url('../images/qa_bg.png') left center no-repeat; padding-left: 70px; height: 90px; line-height: 100px; display: inline-block; position: relative}
@@ -433,6 +434,7 @@ footer .facilitation ul li{float: left; margin-right: 20px}
 .contact6 ul li.manager{padding: 20px 10px 10px}
 .contact6 ul li.manager > p {text-align: center}
 .answer > h3{margin-top: 0px;}
+.privacy {padding: 0px 20px;}
 .mapinfo > img{width: 100%}
 .nuri_map > p {width: 50%; vertical-align: middle}
 .nuri_map > span > img {width: 40%}
@@ -500,7 +502,6 @@ a.top{bottom: 300px; left: auto; right: 10px}
 
 .footer_area {width: 100%; padding: 0 20px; box-sizing: border-box}
 footer .facilitation {top: 40px;}
-footer .f_link {display: none}
 address {padding-top: 100px}
 }
 
@@ -652,7 +653,7 @@ table.tb_type2.news tr td:nth-child(3){width: 25%; text-align: center}
 .man3 ul li > p > br{display: none}
 .man_point > p {font-size: 18px; line-height: 30px;background-size: 200%; padding: 30px; width: calc(100% - 60px); height: auto; margin: 0px;}
 .man_point > p > br{display: none}
-address {padding: 30px 0px; box-sizing: border-box}
+address {padding: 20px 0px; box-sizing: border-box}
 .sub_menu {height: 300px; display: none; }
 .sub_menu ul li a{width: 49%; margin-right: 2%}
 .sub_menu ul li:nth-child(2n) a{margin-right: 0px}
@@ -716,7 +717,12 @@ address {padding: 30px 0px; box-sizing: border-box}
 
 a.top{bottom: 200px; left: auto; right: 0px; background-color: rgba(0,0,0,0.3);}    
 footer{height: auto}
+.footer_area{text-align: center;}
+footer .f_link{font-size: 13px; display: inline-block;}
+footer .f_link ul li{margin-right: 10px;}
+footer .f_link ul li a{color: #ccc;}
 footer .facilitation {right: auto; left: calc(50% - 90px); top: 80px;}
+address{clear: both;}
 address .info {padding-left: 0px; text-align: center; font-size: 14px;}    
 address > img {display: none}
 }

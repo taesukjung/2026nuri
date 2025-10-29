@@ -338,6 +338,13 @@ footer .f_link {display: none}
 footer .facilitation {right: auto; left: calc(50% - 90px); top: 80px;}
 address .info {padding-left: 0px; text-align: center; font-size: 14px;}    
 address > img {display: none}
+footer{height: auto}
+.footer_area{text-align: center;}
+footer .f_link{font-size: 13px; display: inline-block;}
+footer .f_link ul li{margin-right: 10px;}
+footer .f_link ul li a{color: #ccc;}
+footer .facilitation {right: auto; left: calc(50% - 90px); top: 80px;}
+address{clear: both;}
 }
 @media screen and (max-width:640px)
 {
