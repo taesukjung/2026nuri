@@ -1,27 +1,82 @@
-﻿<footer>
-    <div class="footer_area">
-        <div class="f_link">
-            <ul>
-                <li><a href="/move/recruiting/recruiting3.html">누리 채용정보</a></li>
-                <li><a href="/move/contact/contact1.html">누리 새소식</a></li>
-                <li><a href="/move/contact/contact3.html">문의하기</a></li>
-                <li><a href="/move/contact/contact5.html">개인정보처리방침</a></li>
+<footer class="footer">
+    <div class="footer-sitemap">
+        <div class="sitemap-column">
+            <h3 class="column-title">COMPANY</h3>
+            <ul class="column-links">
+                <li><a href="/company/introduction">기업 개요</a></li>
+                <li><a href="/company/history">연혁 & 인증</a></li>
+                <li><a href="/company/careers">인재 채용</a></li>
+                <li><a href="/company/location">오시는 길</a></li>
             </ul>
         </div>
-        <address>
-            <img src="/images/logo2.png" alt="누리인포스">
-            <div class="info">
-                463-400 경기도 성남시 분당구 대왕판교로 660 유스페이스1 A-1003호 
-                <em>TEL 031-504-7261 FAX 031-504-7271</em>
-                <p>ⓒ COPYRIGHT NURIINFOS.CO.Ltd. Allright Reserved.</p>
-            </div>                    
-        </address>
-        <div class="facilitation">
-            <ul>
-                <li><a href="https://m.blog.naver.com/PostView.nhn?blogId=turandot428&amp;logNo=221166722288&amp;proxyReferer=https:%2F%2Fwww.google.com%2F" target="_blank"><img src="/images/footer_b.png" alt="네이버 블로그"></a></li>
-                <li><a href="https://bluester.tistory.com/382" target="_blank"><img src="/images/footer_f.png" alt="페이스북"></a></li>
-                <li><a href="https://cs.daum.net/faq/59/14971.html#37917" target="_blank"><img src="/images/footer_c.png" alt="다음 카페"></a></li>
+
+        <div class="sitemap-column">
+            <h3 class="column-title">BUSINESS</h3>
+            <ul class="column-links">
+                <li><a href="/business/retail">스마트 유통</a></li>
+                <li><a href="/business/public">지능형 공공</a></li>
+                <li><a href="/business/cloud">클라우드 인프라</a></li>
+            </ul>
+        </div>
+
+        <div class="sitemap-column">
+            <h3 class="column-title">SOLUTIONS</h3>
+            <ul class="column-links">
+                <li><a href="/solutions/nuriaf">NuriAF</a></li>
+                <li><a href="/solutions/studioloop">StudioLoop®</a></li>
+                <li><a href="/solutions/saida">Saida®</a></li>
+            </ul>
+        </div>
+
+        <div class="sitemap-column">
+            <h3 class="column-title">CASE STUDY</h3>
+            <ul class="column-links">
+                <li><a href="/case-study/industrial-project">구축 사례</a></li>
+                <li><a href="/case-study/notice">공지사항</a></li>
+            </ul>
+        </div>
+
+        <div class="sitemap-column">
+            <h3 class="column-title">CONTACT</h3>
+            <ul class="column-links">
+                <li><a href="/contact/support">도입문의</a></li>
+                <li><a href="/contact/inquiry">문의하기</a></li>
             </ul>
         </div>
     </div>
+
+    <div class="footer-bottom">
+        <div class="footer-menu">
+            <a href="#">사이트맵</a>
+            <a href="#">문의하기</a>
+            <a href="#">개인정보처리방침</a>
+        </div>
+        <p class="copyright">ⓒ COPYRIGHT NURIINFOS.CO.Ltd. Allright Reserved.</p>
+    </div>
 </footer>
+
+<!-- Top Button -->
+<button class="btn-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="맨 위로">
+    <img src="/images/sub/up_fixed_i.svg" alt="맨 위로" style="width: 24px; height: 24px;">
+</button>
+
+<script>
+    (function () {
+        var btnTop = document.querySelector('.btn-top');
+        if (btnTop) {
+            // 초기 상태: 숨김
+            btnTop.style.opacity = '0';
+            btnTop.style.visibility = 'hidden';
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 200) {
+                    btnTop.style.opacity = '1';
+                    btnTop.style.visibility = 'visible';
+                } else {
+                    btnTop.style.opacity = '0';
+                    btnTop.style.visibility = 'hidden';
+                }
+            });
+        }
+    })();
+</script>

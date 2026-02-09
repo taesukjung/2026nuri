@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>기업개요 - NURIINFOS</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+        rel="stylesheet">
+    <link href="/css/common.css" rel="stylesheet" type="text/css">
+    <link href="/css/sub.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="/css/nav-style.css">
+    <script src="/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <!-- 공통 네비게이션 포함 -->
+    <%- include('../layout/nav.html') %>
+
+        <!-- 히어로 섹션 -->
+        <section class="history-hero intro">
+            <div class="history-hero-content">
+                <h2 class="hero-label">기업개요</h2>
+                <h1 class="hero-title">기술을 하나로, 혁신을 일상으로.<br>스마트 ICT의 새로운 기준을 만듭니다.</h1>
+            </div>
+            <div class="scroll-down">
+                <span>Scroll Down</span>
+                <div class="arrow"></div>
+            </div>
+        </section>
+
+        <!-- 숫자 섹션 -->
+        <section class="introduction">
+            <div class="number-info">
+                <div class="number">
+                    <h2 class="num-label">설립일</h2>
+                    <h1 class="num-title">1993<em>년</em>06<em>월</em>01<em>일</em></h1>
+                </div>
+                <div class="number">
+                    <h2 class="num-label">업력</h2>
+                    <h1 class="num-title counter">33<em>년</em></h1>
+                </div>
+                <div class="number">
+                    <h2 class="num-label">매출</h2>
+                    <h1 class="num-title counter">154<em>억원</em></h1>
+                </div>
+                <div class="number">
+                    <h2 class="num-label">임직원 수</h2>
+                    <h1 class="num-title">88<em>명</em></h1>
+                </div>
+            </div>
+            <div class="text-info">
+                <div class="text-item">
+                    <h1 class="text-label">비전</h1>
+                    <div class="text-title">
+                        30년의 멈추지 않는 도전, 데이터의 확신으로 내일의 솔루션을 설계합니다.
+                        <p>클라우드·AI·데이터 기술의 융합으로 디지털 혁신을 현실로 만드는 스마트 ICT 파트너, 누리인포스입니다.</p>
+                    </div>
+                </div>
+                <div class="text-item">
+                    <h1 class="text-label">인사말</h1>
+                    <div class="text-title">
+                        기술은 정직하게, 가치는 고객에게.
+                        <p>지난 30년, 누리인포스는 독보적인 기술력과 신뢰를 바탕으로 성장해왔습니다. <br>
+                            우리는 변화를 두려워하지 않는 진취적인 마인드로, 기술이 중심이 되는 미래를 고객과 함께 만들어갑니다.</p>
+                    </div>
+                </div>
+                <div class="text-item">
+                    <h1 class="text-label">경영이념</h1>
+                    <div class="text-title col-ui">
+                        <ul>
+                            <li>
+                                <div class="card-title">고객감동</div>
+                                <p>기대를 뛰어넘는 최적의 서비스 제공</p>
+                                <img src="/images/sub/intro1.png" alt="">
+                            </li>
+                            <li>
+                                <div class="card-title">창조적 혁신</div>
+                                <p>고정관념을 깨는 유연한 기술 설계</p>
+                                <img src="/images/sub/intro2.png" alt="">
+                            </li>
+                            <li>
+                                <div class="card-title">열정적 도전</div>
+                                <p>멈추지 않는 열정으로 신시장 개척</p>
+                                <img src="/images/sub/intro3.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-item">
+                    <h1 class="text-label">주요사업</h1>
+                    <div class="text-title row-ui">
+                        <ul>
+                            <li>
+                                <div class="card-title">유통부문</div>
+                                <p>Anyworks® PRM 솔루션 기반 파트너 - 판매채널관리</p>
+                                <img src="/images/sub/intro4.png" alt="유통부문 함축 이미지">
+                            </li>
+                            <li>
+                                <div class="card-title">공공부문</div>
+                                <p>StudioLoop® AI 프레임워크를 활용한 대국민 서비스 제공</p>
+                                <img src="/images/sub/intro5.png" alt="공공부문 함축 이미지">
+                            </li>
+                            <li>
+                                <div class="card-title">클라우드부문</div>
+                                <p>Citrix VDI를 통한 안전한 원격 근무 환경 구축</p>
+                                <img src="/images/sub/intro6.png" alt="클라우드부문 함축 이미지">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section (Wrapped for styling match with Index) -->
+        <div id="footer-section">
+            <%- include('../layout/footer.html') %>
+        </div>
+
+        <script src="/js/sub.js" type="text/javascript"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<div class="header_wrap">
+    <div id="header">
+        <h1 class="logo pc">
+            <a href="/"><img src="/images/landing/logo-nuriinfos_w.svg" alt="NURIINFOS" style="width: 104px;"></a>
+        </h1>
+        <h1 class="logo mobile">
+            <a href="/"><img src="/images/landing/logo-nuriinfos_w.svg" alt="NURIINFOS" style="width: 85px;"></a>
+        </h1>
+
+        <div class="gnb_wrap">
+            <div id="gnb">
+                <ul class="gnb_1depth">
+                    <li>
+                        <h3><a href="#">COMPANY</a></h3>
+                        <ul class="gnb_2depth">
+                            <li><a href="#">기업 개요</a></li>
+                            <li><a href="#">연혁 &amp; 인증</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="#">BUSINESS</a></h3>
+                        <ul class="gnb_2depth">
+                            <li><a href="#">스마트 유통</a></li>
+                            <li><a href="#">지능형 공공</a></li>
+                            <li><a href="#">클라우드 인프라</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="#">SOLUTIONS</a></h3>
+                        <ul class="gnb_2depth">
+                            <li><a href="#">NuriAF</a></li>
+                            <li><a href="#">StudioLoop®</a></li>
+                            <li><a href="#">Saida®</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="#">CASE STUDY</a></h3>
+                        <ul class="gnb_2depth">
+                            <li><a href="#">글로벌 프로젝트</a></li>
+                            <li><a href="#">산업별 구축 사례</a></li>
+                            <li><a href="#">공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3><a href="#">CONTACT</a></h3>
+                        <ul class="gnb_2depth">
+                            <li><a href="#">도입문의</a></li>
+                            <li><a href="#">기술 지원</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="gnb_etc">
+                <ul>
+                    <li class="gnb_etc_language">
+                        <a href="#">KR</a>
+                        <ul class="gnb_language_selection">
+                            <li><a href="#">EN</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <a href="#" class="ham_btn"><img src="/images/com/btn_total_menu.png" alt="전체메뉴"
+                onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxsaW5lIHgxPSIzIiB5MT0iMTIiIHgyPSIyMSIgeTI9IjEyIj48L2xpbmU+PGxpbmUgeDE9IjMiIHkxPSI2IiB4Mj0iMjEiIHkyPSI2Ij48L2xpbmU+PGxpbmUgeDE9IjMiIHkxPSIxOCIgeDI9IjIxIiB5Mj0iMTgiPjwvbGluZT48L3N2Zz4='"></a>
+    </div>
+    <div class="gnb_bg"></div>
+</div>

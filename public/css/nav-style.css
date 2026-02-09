@@ -1,0 +1,614 @@
+:root {
+    --color-primary-purple: #352482;
+    --color-dark-blue: #1a1d3f;
+    --color-white: #ffffff;
+    --color-black: #222222;
+    --color-gray: #666666;
+    --color-border-gray: #d4d4d4;
+    --color-accent-blue: #1c1a7e;
+
+    /* Font fallback to ensure it looks similar if fonts widely vary, but history page uses pretendard */
+    --font-primary: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    --font-heading: 'Lato', sans-serif;
+
+    --gap-small: 10px;
+    --gap-medium: 20px;
+    --gap-large: 40px;
+    --gap-xlarge: 60px;
+
+    --font-size-base: 16px;
+    --font-size-md: 20px;
+    --font-size-lg: 22px;
+    --font-size-xl: 24px;
+    --font-size-2xl: 28px;
+    --font-size-3xl: 30px;
+    --font-size-4xl: 32px;
+    --font-size-5xl: 36px;
+    --font-size-6xl: 50px;
+    --font-size-7xl: 64px;
+}
+
+.gnb {
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* GNB hover 시 배경색 흰색으로 변경 */
+.gnb:hover {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gnb:hover .logo {
+    content: url('/images/landing/logo-nuriinfos.svg');
+}
+
+.gnb-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logo-link {
+    display: block;
+    flex-shrink: 0;
+}
+
+.logo {
+    height: 59px;
+    width: auto;
+}
+
+.gnb-menu {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--gap-large);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: var(--color-white);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 10px 0;
+}
+
+/* GNB hover 시 1뎁스 링크 색상 변경 */
+.gnb:hover .nav-link {
+    color: var(--color-black);
+}
+
+.gnb:hover .icon-globe {
+    filter: brightness(0);
+}
+
+/* 2뎁스 서브메뉴 - 기본적으로 숨김 */
+.sub-menu {
+    min-width: 140px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* PC: 전체 GNB hover 시 모든 2뎁스 표시 */
+@media screen and (min-width: 769px) {
+    .gnb:hover .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        max-height: 400px;
+        padding: 20px 0 40px 0;
+    }
+
+    .gnb:hover .sub-menu li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* 2뎁스 hover 시 해당 1뎁스에 밑줄 추가 */
+    .nav-item:hover .nav-link {
+        border-bottom: 2px solid var(--color-primary-purple);
+        padding-bottom: 8px;
+    }
+}
+
+/* Mobile: 클릭으로 active 클래스 추가 시 해당 서브메뉴 표시 */
+@media screen and (max-width: 768px) {
+    .nav-item.active .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        max-height: 400px;
+        padding: 15px 0 30px 0;
+    }
+
+    .nav-item.active .sub-menu li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-item.active .sub-menu li:nth-child(1) {
+        transition-delay: 0.05s;
+    }
+
+    .nav-item.active .sub-menu li:nth-child(2) {
+        transition-delay: 0.1s;
+    }
+
+    .nav-item.active .sub-menu li:nth-child(3) {
+        transition-delay: 0.15s;
+    }
+
+    .nav-item.active .sub-menu li:nth-child(4) {
+        transition-delay: 0.2s;
+    }
+
+    .nav-item.active .sub-menu li:nth-child(5) {
+        transition-delay: 0.25s;
+    }
+}
+
+/* 서브메뉴 아이템 기본 스타일 */
+.sub-menu li {
+    text-align: left;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sub-menu a {
+    display: block;
+    padding: 12px 0;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-md);
+    font-weight: 400;
+    color: var(--color-gray);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+/* 2뎁스 hover 시 active 효과 */
+.sub-menu a:hover {
+    color: var(--color-accent-blue);
+    padding-left: 5px;
+}
+
+/* Globe 아이콘 */
+.globe-item {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.icon-globe {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.icon-globe:hover {
+    opacity: 0.8;
+}
+
+/* Mobile Menu Button - Hidden on Desktop */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+    padding: 10px;
+}
+
+
+
+/* GNB Hover 시 햄버거 버튼 색상 변경 */
+.gnb:hover .mobile-menu-btn span,
+.gnb.active .mobile-menu-btn span {
+    background-color: var(--color-black);
+}
+
+/* GNB Active (Mobile Menu Open) */
+.gnb.active {
+    background-color: var(--color-white);
+}
+
+.gnb.active .mobile-menu-btn span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.gnb.active .mobile-menu-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.gnb.active .mobile-menu-btn span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Footer Styles from main.css */
+#footer-section {
+    background: var(--color-white);
+    border-top: 1px solid var(--color-border-gray);
+    padding: 80px 0px 40px;
+    justify-content: flex-start;
+    min-height: auto;
+}
+
+.footer {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    /* Ensure it centers itself in the viewport */
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+#footer-include {
+    width: 1440px;
+}
+
+.footer-sitemap {
+    display: flex;
+    gap: var(--gap-large);
+    justify-content: flex-start;
+}
+
+.sitemap-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-small);
+    min-width: 180px;
+}
+
+.column-title {
+    font-family: lato;
+    font-size: var(--font-size-md);
+    font-weight: 500;
+    color: var(--color-black);
+    margin: 0 0 14px 0;
+}
+
+.column-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.column-links a {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    color: var(--color-black);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.column-links a:hover {
+    color: var(--color-accent-blue);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--color-border-gray);
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-menu a {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    color: var(--color-black);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color: var(--color-accent-blue);
+}
+
+.copyright {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    color: var(--color-gray);
+    margin: 0;
+}
+
+/* Footer Responsive Overrides */
+@media (max-width: 1200px) {
+    .footer {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        min-width: 0 !important;
+    }
+
+    #footer-section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .footer-sitemap {
+        display: none;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        padding: 30px 0;
+        border-top: 0px;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* ===================================
+   Top Button Styles
+   =================================== */
+.btn-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    color: var(--color-white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 999;
+}
+
+.btn-top:hover {
+    background-color: #e8eafd;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-top {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* =========================================
+   GNB Responsive Styles (Added)
+   ========================================= */
+@media screen and (max-width: 1024px) {
+    .gnb-container {
+        padding: 0 40px;
+    }
+
+    .nav-link {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gnb-container {
+        padding: 0 20px;
+        height: 60px;
+        align-items: center;
+    }
+
+    .logo {
+        height: 40px;
+        width: auto;
+    }
+
+    /* Show Mobile Menu Button */
+    .mobile-menu-btn {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 24px;
+        z-index: 101;
+        padding: 0;
+    }
+
+    .mobile-menu-btn span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-white);
+        margin-bottom: 6px;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+    }
+
+    .mobile-menu-btn span:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Change burger color when active or hovered */
+    .gnb:hover .mobile-menu-btn span,
+    .gnb.active .mobile-menu-btn span {
+        background-color: var(--color-black);
+    }
+
+    /* Mobile Menu - Fade in instead of slide */
+    .gnb-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-white);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 100px 20px 40px;
+        gap: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .gnb.active .gnb-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-link {
+        color: var(--color-black);
+        font-size: 18px;
+        font-weight: 600;
+        padding: 18px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Accordion arrow icon */
+    .nav-link::after {
+        content: '+';
+        font-size: 24px;
+        font-weight: 300;
+        color: var(--color-gray);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-item.active .nav-link::after {
+        content: '−';
+    }
+
+    /* Submenu Accordion Style */
+    .sub-menu {
+        position: static;
+        min-width: auto;
+        width: 100%;
+        padding: 0 0 0 15px;
+        opacity: 1;
+        visibility: visible;
+        max-height: 0;
+        overflow: hidden;
+        background-color: #fafafa;
+        border-radius: 8px;
+        margin-bottom: 0;
+        transition: max-height 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+        display: block;
+        box-shadow: none;
+    }
+
+    .nav-item.active .sub-menu {
+        max-height: 300px;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+    }
+
+    .sub-menu li {
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .nav-item.active .sub-menu li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-item.active .sub-menu li:nth-child(1) {
+        transition-delay: 0.05s;
+    }
+
+    .nav-item.active .sub-menu li:nth-child(2) {
+        transition-delay: 0.1s;
+    }
+
+    .nav-item.active .sub-menu li:nth-child(3) {
+        transition-delay: 0.15s;
+    }
+
+    .sub-menu a {
+        padding: 12px 0;
+        font-size: 15px;
+        color: #666;
+        display: block;
+        transition: color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    .sub-menu a:hover {
+        color: var(--color-primary-purple);
+        padding-left: 5px;
+    }
+
+    .globe-item {
+        display: none;
+        /* Hide language selector on mobile for now or reposition */
+    }
+
+    /* GNB Background on active */
+    .gnb.active {
+        background-color: var(--color-white);
+        box-shadow: none;
+    }
+
+    .logo-link {
+        z-index: 101;
+        /* Ensure logo is above white menu bg */
+    }
+
+    /* Change logo to color version when menu is active */
+    .gnb.active .logo,
+    .gnb:hover .logo {
+        content: url('/images/landing/logo-nuriinfos.svg');
+    }
+}

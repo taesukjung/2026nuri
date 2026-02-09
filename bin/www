@@ -12,18 +12,19 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '80');
+var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
  * Create HTTP server.
  */
 
-//var server = http.createServer(app);
-const server = http.createServer((req, res) => {
-  res.writeHead(301,{Location: `https://${req.headers.host}${req.url}`});
-  res.end();
-});
+var server = http.createServer(app);
+// HTTPS 리다이렉트 비활성화 (개발용)
+// const server = http.createServer((req, res) => {
+//   res.writeHead(301,{Location: `https://${req.headers.host}${req.url}`});
+//   res.end();
+// });
 
 //server.listen(80);
 
@@ -32,6 +33,7 @@ const server = http.createServer((req, res) => {
  */
 
 server.listen(port);
+console.log('Server running at http://localhost:' + port);
 server.on('error', onError);
 server.on('listening', onListening);
 
@@ -95,16 +97,17 @@ function onListening() {
   debug('Listening on ' + bind);
 }
 
-var app = require('../app');
-var https = require('https');
-var fs = require('fs');
+// HTTPS 서버 - 개발 환경에서는 비활성화 (관리자 권한 필요)
+// var app = require('../app');
+// var https = require('https');
+// var fs = require('fs');
 
-const options = {
-	key: fs.readFileSync('./keys/newkey.pem'),
-	cert: fs.readFileSync('./keys/cert.pem'),
-};
-var httpsServer = https.createServer(options, app);
+// const options = {
+// 	key: fs.readFileSync('./keys/newkey.pem'),
+// 	cert: fs.readFileSync('./keys/cert.pem'),
+// };
+// var httpsServer = https.createServer(options, app);
 
-httpsServer.listen(443);
-httpsServer.on('error', onError);
-httpsServer.on('listening', onListening);
+// httpsServer.listen(443);
+// httpsServer.on('error', onError);
+// httpsServer.on('listening', onListening);

@@ -4,81 +4,129 @@
 	font-weight: 100;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: NotoSansKR;
 	src: url(NotoSansKRlight.otf) format("opentype"), url(NotoSansKRlight.woff) format("woff"), url(NotoSansKRlight.woff2) format("woff2");
 	font-weight: 300;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: NotoSansKR;
 	src: url(NotoSansKRregular.otf) format("opentype"), url(NotoSansKRregular.woff) format("woff"), url(NotoSansKRregular.woff2) format("woff2");
 	font-weight: 400;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: NotoSansKR;
 	src: url(NotoSansKRregular.otf) format("opentype"), url(NotoSansKRregular.woff) format("woff"), url(NotoSansKRregular.woff2) format("woff2");
 	font-weight: 500;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: NotoSansKR;
 	src: url(NotoSansKRmedium.otf) format("opentype"), url(NotoSansKRmedium.woff) format("woff"), url(NotoSansKRmedium.woff2) format("woff2");
 	font-weight: 700;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: NotoSansKR;
 	src: url(NotoSansKRbold.otf) format("opentype"), url(NotoSansKRbold.woff) format("woff"), url(NotoSansKRbold.woff2) format("woff2");
 	font-weight: 900;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: NotoSansKR;
 	src: url(NotoSansKRbold.otf) format("opentype"), url(NotoSansKRbold.woff) format("woff"), url(NotoSansKRbold.woff2) format("woff2");
 	font-weight: bold;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: NanumGothic;
 	src: url(nanumgothic_right.otf) format("opentype"), url(nanumgothic_right.woff) format("woff"), url(nanumgothic_right.woff2) format("woff2");
 	font-weight: 100;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: NanumGothic;
 	src: url(nanumgothic_right.otf) format("opentype"), url(nanumgothic_right.woff) format("woff"), url(nanumgothic_right.woff2) format("woff2");
 	font-weight: 300;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: NanumGothic;
 	src: url(nanumgothic_regular.otf) format("opentype"), url(nanumgothic_regular.woff) format("woff"), url(nanumgothic_regular.woff2) format("woff2");
 	font-weight: 400;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: NanumGothic;
 	src: url(nanumgothic_regular.otf) format("opentype"), url(nanumgothic_regular.woff) format("woff"), url(nanumgothic_regular.woff2) format("woff2");
 	font-weight: 500;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: NanumGothic;
 	src: url(nanumgothic_bold.otf) format("opentype"), url(nanumgothic_bold.woff) format("woff"), url(nanumgothic_bold.woff2) format("woff2");
 	font-weight: 700;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: NanumGothic;
 	src: url(nanumgothic_bold.otf) format("opentype"), url(nanumgothic_bold.woff) format("woff"), url(nanumgothic_bold.woff2) format("woff2");
 	font-weight: 900;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: NanumGothic;
 	src: url(nanumgothic_bold.otf) format("opentype"), url(nanumgothic_bold.woff) format("woff"), url(nanumgothic_bold.woff2) format("woff2");
 	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-Black.ttf') format('truetype');
+	font-weight: 900;
 	font-style: normal;
 }

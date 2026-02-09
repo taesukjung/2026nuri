@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>오시는 길 - NURIINFOS</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+        rel="stylesheet">
+    <link href="/css/common.css" rel="stylesheet" type="text/css">
+    <link href="/css/sub.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="/css/nav-style.css">
+    <script src="/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+    <meta name="GENERATOR" content="MSHTML 11.00.10570.1001">
+    <style>
+        .root_daum_roughmap .wrap_controllers {
+            display: none
+        }
+
+        .root_daum_roughmap {
+            width: 100% !important;
+            border: 0px !important;
+            padding: 0px !important
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 공통 네비게이션 포함 -->
+    <%- include('../layout/nav.html') %>
+
+        <!-- 히어로 섹션 -->
+        <section class="history-hero map">
+            <div class="history-hero-content">
+                <h2 class="hero-label">오시는 길</h2>
+                <h1 class="hero-title">대한민국 IT의 심장 판교에서, <br>누리인포스의 스마트 혁신이 시작됩니다.</h1>
+            </div>
+            <div class="scroll-down">
+                <span>Scroll Down</span>
+                <div class="arrow"></div>
+            </div>
+        </section>
+
+        <section class="location">
+            <div class="map-info">
+                <div class="map">
+                    <!-- * 카카오맵 - 지도퍼가기 -->
+                    <!-- 1. 지도 노드 -->
+                    <div id="daumRoughmapContainer1578620731836" class="root_daum_roughmap root_daum_roughmap_landing">
+                    </div>
+
+                    <!--
+                2. 설치 스크립트
+                * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+            -->
+                    <script charset="UTF-8" class="daum_roughmap_loader_script"
+                        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                    <!-- 3. 실행 스크립트 -->
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp": "1578620731836",
+                            "key": "wjra",
+                            "mapHeight": "500"
+                        }).render();
+                    </script>
+
+                </div>
+            </div>
+            <div class="address-info-wrapper">
+                <div class="address-info">
+                    <div class="address-item">
+                        <h1 class="address-label">NURIINFOS</h1>
+                        <div class="address-title">
+                            (주) 누리인포스
+                            <p>경기도 성남시 분당구 대왕판교로 660 유스페이스1 A동 1003호</p>
+                            <p>Tel. 031-504-7261 <br> Fax. 031-504-7271</p>
+                        </div>
+                    </div>
+                    <div class="address-item">
+                        <h1 class="address-label">대중교통</h1>
+                        <div class="address-title subway">
+                            판교역
+                            <p>지하철 신분당선 판교역 하차, 4번출구 (도보10분)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section (Wrapped for styling match with Index) -->
+        <div id="footer-section">
+            <%- include('../layout/footer.html') %>
+        </div>
+
+        <script src="/js/sub.js" type="text/javascript"></script>
+
+</body>
+
+</html>
