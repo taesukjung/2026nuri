@@ -27,7 +27,6 @@ const upload = multer({
 module.exports = (app)=>{
 
     router.post('/image', upload.single('file'), function(req, res){
-        console.log(req.file)
         res.send({
             url: "/uploads/"+req.file.filename
         })
