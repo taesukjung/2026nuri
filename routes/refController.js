@@ -30,9 +30,6 @@ module.exports = (app)=>{
         if(typeof b_category == "undefined") b_category = "";
         if(typeof b_sector == "undefined") b_sector = "";
 
-        //if(b_category == 0)  b_category = "";
-        //if(b_sector == 0)  b_sector = "";
-
         let offset = (req.query.b_page- 1) * pageLimit
         if(offset < 1) offset = 0
         console.log('오프셋 :' + offset)
