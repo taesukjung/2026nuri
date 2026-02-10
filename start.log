@@ -1,0 +1,17 @@
+
+> nuribbs@0.0.0 start
+> node ./bin/www
+
+--------> models/index.js
+--------> models/tbl_auth.js
+--------> models/tbl_bbs.js
+--------> models/tbl_ref.js
+Server running at http://localhost:3000
+(node:119725) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Executing (default): CREATE TABLE IF NOT EXISTS `tbl_auths` (`w_id` VARCHAR(10) , `w_passwd` VARCHAR(10), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`w_id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `tbl_auths` FROM `niswww`
+Executing (default): CREATE TABLE IF NOT EXISTS `tbl_bbs` (`b_id` INTEGER auto_increment , `b_category` INTEGER UNSIGNED NOT NULL, `b_time` VARCHAR(10) NOT NULL, `b_date` VARCHAR(10) NOT NULL, `b_writer` VARCHAR(255) NOT NULL, `b_subject` VARCHAR(255), `b_text` TEXT, `b_count` INTEGER DEFAULT 0, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`b_id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `tbl_bbs` FROM `niswww`
+Executing (default): CREATE TABLE IF NOT EXISTS `tbl_refs` (`b_id` INTEGER auto_increment , `b_category` INTEGER UNSIGNED NOT NULL, `b_date` VARCHAR(4), `b_sector` INTEGER UNSIGNED, `b_client` VARCHAR(30), `b_text` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`b_id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `tbl_refs` FROM `niswww`
