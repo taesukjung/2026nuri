@@ -20,7 +20,6 @@ module.exports = (app)=>{
     router.all(function (req, res, next) {
         // set default or minimum is 10 (as it was prior to v0.2.0)
         if (req.query.limit <= 10) req.query.limit = 10;
-        // if (req.query.page < 1) req.query.page = 1;
         next();
     });
 
