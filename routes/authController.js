@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 
-module.exports = (app)=>{
+module.exports = ()=>{
 
     // models/*.js 파일이름이 객체 이름이 된다.
     const { tbl_auth } = require('../models')
