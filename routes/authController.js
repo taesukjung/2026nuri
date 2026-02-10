@@ -5,7 +5,7 @@ var moment = require('moment');
 require('moment-timezone');
 moment.tz.setDefault("Asia/Seoul");
 
-module.exports = (app)=>{
+module.exports = ()=>{
 
     // models/*.js 파일이름이 객체 이름이 된다.
     const { tbl_auth } = require('../models')

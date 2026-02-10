@@ -14,8 +14,8 @@ var usersRouter = require('./routes/users');
 var mailRouter = require('./routes/mailController');
 var bbsRouter = require('./routes/bbsController')(app);
 var refRouter = require('./routes/refController')(app);
-var uploadRouter = require('./routes/uploadController')(app);
-var authRouter = require('./routes/authController')(app);
+var uploadRouter = require('./routes/uploadController')();
+var authRouter = require('./routes/authController')();
 
 var sequelize = require('./models/index').sequelize;
 sequelize.sync()
