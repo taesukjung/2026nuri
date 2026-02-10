@@ -1,4 +1,3 @@
-console.log("--------> models/tbl_ref.js")
 module.exports = (sequelize, DataTypes) => {
 
     var ref = sequelize.define('tbl_ref', {
