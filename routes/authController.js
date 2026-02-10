@@ -1,9 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var moment = require('moment');
 
-require('moment-timezone');
-moment.tz.setDefault("Asia/Seoul");
 
 module.exports = (app)=>{
 
