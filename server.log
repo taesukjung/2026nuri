@@ -1,0 +1,30 @@
+
+> nuribbs@0.0.0 start
+> node ./bin/www
+
+--------> models/index.js
+--------> models/tbl_auth.js
+--------> models/tbl_bbs.js
+--------> models/tbl_ref.js
+Server running at http://localhost:3000
+(node:3540) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Executing (default): CREATE TABLE IF NOT EXISTS `tbl_auths` (`w_id` VARCHAR(10) , `w_passwd` VARCHAR(10), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`w_id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `tbl_auths` FROM `niswww`
+Executing (default): CREATE TABLE IF NOT EXISTS `tbl_bbs` (`b_id` INTEGER auto_increment , `b_category` INTEGER UNSIGNED NOT NULL, `b_time` VARCHAR(10) NOT NULL, `b_date` VARCHAR(10) NOT NULL, `b_writer` VARCHAR(255) NOT NULL, `b_subject` VARCHAR(255), `b_text` TEXT, `b_count` INTEGER DEFAULT 0, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`b_id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `tbl_bbs` FROM `niswww`
+Executing (default): CREATE TABLE IF NOT EXISTS `tbl_refs` (`b_id` INTEGER auto_increment , `b_category` INTEGER UNSIGNED NOT NULL, `b_date` VARCHAR(4), `b_sector` INTEGER UNSIGNED, `b_client` VARCHAR(30), `b_text` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`b_id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `tbl_refs` FROM `niswww`
+[0mGET /move/contact/inquiry.html [32m200 [0m15.724 ms - 13404[0m
+[0mGET /css/common.css [32m200 [0m7.967 ms - 28707[0m
+[0mGET /css/sub.css [32m200 [0m13.179 ms - 38720[0m
+[0mGET /css/nav-style.css [32m200 [0m13.981 ms - 13046[0m
+[0mGET /images/landing/logo-nuriinfos_w.svg [32m200 [0m13.276 ms - 3685[0m
+[0mGET /images/landing/icon-globe.svg [32m200 [0m13.862 ms - 818[0m
+[0mGET /js/jquery-1.10.1.min.js [32m200 [0m19.126 ms - 92905[0m
+[0mGET /images/sub/up_fixed_i.svg [32m200 [0m1.226 ms - 610[0m
+[0mGET /js/sub.js [32m200 [0m2.714 ms - 9613[0m
+[0mGET /images/sub/inquiry_bg.png [32m200 [0m2.579 ms - 1827750[0m
+[0mGET /images/landing/logo-nuriinfos.svg [32m200 [0m5.009 ms - 3822[0m
+[0mGET /css/fonts/PretendardGOV-Regular.subset.woff2 [32m200 [0m3.912 ms - 263044[0m
+[0mGET /css/fonts/PretendardGOV-Bold.subset.woff2 [32m200 [0m4.289 ms - 267248[0m
