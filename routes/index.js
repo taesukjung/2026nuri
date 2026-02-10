@@ -61,4 +61,9 @@ router.get('/contact/support', function (req, res, next) {
     res.render('contact/support.html', { title: '기술지원 - NURIINFOS' })
 });
 
+/* GET archive casestudy page. */
+router.get('/archive/casestudy', function (req, res, next) {
+    res.render('archive/casestudy.html', { title: '구축사례 - NURIINFOS' })
+});
+
 module.exports = router;

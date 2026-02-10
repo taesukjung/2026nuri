@@ -1,7 +1,3 @@
-/* ===================================
-   History Page Styles
-   =================================== */
-
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -13,7 +9,6 @@ body {
     padding: 0;
 }
 
-/* Hero Section */
 .history-hero {
     background-color: var(--color-primary-purple);
     background: url(../images/sub/history_bg.png) center center no-repeat;
@@ -76,6 +71,20 @@ body {
     height: 100vh;
 }
 
+.history-hero.support {
+    background: url(../images/sub/support_bg.png) center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.history-hero.casestudy {
+    background: url(../images/sub/casestudy_bg.png) center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
 .history-hero-content {
     max-width: 1440px;
     margin: 0 auto;
@@ -104,7 +113,6 @@ body {
     font-size: 20px;
 }
 
-/* Scroll Down Animation */
 .scroll-down {
     position: absolute;
     bottom: 40px;
@@ -121,6 +129,7 @@ body {
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    display: none;
 }
 
 .scroll-down .arrow {
@@ -169,7 +178,6 @@ body {
     min-height: 100vh;
 }
 
-/* Timeline Hero */
 .timeline-hero {
     text-align: center;
     padding: 80px 0 60px;
@@ -202,7 +210,6 @@ body {
     padding-top: 20px;
 }
 
-/* Background Images for Timeline Sections */
 .timeline-innovation {
     background-color: #ffffff;
 }
@@ -228,7 +235,6 @@ body {
     background-size: cover;
 }
 
-/* Timeline Container */
 .timeline-container {
     max-width: 1440px;
     margin: 0 auto;
@@ -236,7 +242,6 @@ body {
     position: relative;
 }
 
-/* Period Tabs Wrapper */
 .period-tabs-wrapper {
     position: fixed;
     top: 0;
@@ -247,8 +252,6 @@ body {
     border-bottom: 1px solid #eee;
     overflow-x: hidden;
     box-sizing: border-box;
-
-    /* 초기 상태 숨김 */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -294,7 +297,6 @@ body {
     color: var(--color-text-dark);
 }
 
-/* Timeline Line */
 .timeline-line {
     position: absolute;
     left: 240px;
@@ -314,28 +316,22 @@ body {
     top: 0;
 }
 
-/* Timeline Content */
 .timeline-content {
     display: flex;
     flex-direction: column;
-    /* gap 제거: 마커 라인이 이어지도록 padding으로 간격 처리 */
     gap: 0;
     position: relative;
     z-index: 2;
 }
 
-/* Timeline Year */
 .timeline-year {
     display: flex;
     gap: 100px;
-    /* padding-bottom 제거: year-events로 이동하여 라인이 끊기지 않도록 수정 */
     padding-bottom: 0;
     position: relative;
-    /* Flex 아이템 높이 맞춤 (라인 100%를 위해) */
     align-items: stretch;
 }
 
-/* 마지막 연도는 라인이 끊겨야 하므로 padding 조정 (필요 시) */
 .timeline-year:last-child {
     padding-bottom: 0;
 }
@@ -347,7 +343,6 @@ body {
     font-weight: 700;
     color: #333;
     padding-top: 5px;
-    /* Dot 위치와 시각적 정렬 */
     flex-shrink: 0;
 }
 
@@ -359,20 +354,15 @@ body {
     flex-shrink: 0;
 }
 
-/* Vertical Line */
-/* Vertical Line */
 .timeline-marker .line {
     width: 2px;
     height: 100%;
     background-color: #ddd;
-    /* 기본 회색 */
     position: absolute;
     top: 0;
     left: 0;
-    /* transition 제거 (가상 요소로 대체) */
 }
 
-/* Vertical Line Fill Animation */
 .timeline-marker .line::after {
     content: '';
     position: absolute;
@@ -389,13 +379,10 @@ body {
     width: 12px;
     height: 12px;
     background-color: #ddd;
-    /* 기본 회색 */
     border-radius: 50%;
     position: absolute;
     top: 10px;
-    /* 텍스트 베이스라인에 맞게 조정 */
     left: -5px;
-    /* 라인 중앙 정렬 */
     z-index: 10;
     transition: background-color 0.3s ease;
 }
@@ -414,21 +401,17 @@ body {
 
 .year-events {
     padding-top: 5px;
-    /* Dot 위치와 시각적 정렬 */
     padding-bottom: 60px;
-    /* 여기서 간격 확보 -> 라인 늘어남 */
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-/* 마지막 연도 이벤트 하단 여백 제거 */
 .timeline-year:last-child .year-events {
     padding-bottom: 0;
 }
 
-/* Event */
 .event {
     display: flex;
     flex-direction: column;
@@ -469,9 +452,6 @@ body {
     position: relative;
 }
 
-/* ===================================
-   introduction Page Styles
-   =================================== */
 section.introduction {
     display: flex;
     width: 1440px;
@@ -568,9 +548,7 @@ section.introduction {
     align-items: flex-start;
     gap: 10px;
     flex: 1 1 0;
-    /* Equal width distribution */
     min-width: 0;
-    /* Prevent flex item overflow */
 }
 
 .introduction .text-info .text-title.col-ui ul li .card-title {
@@ -628,9 +606,6 @@ section.introduction {
     border-radius: 6px;
 }
 
-/* ===================================
-   Location Page Styles
-   =================================== */
 .location {}
 
 .location .map-info {
@@ -723,431 +698,6 @@ section.introduction {
 
 .location .address-info .text-item .text-title {}
 
-/* Responsive Design */
-@media screen and (max-width: 1440px) {
-
-    .history-hero-content,
-    .timeline-container {
-        padding-left: 120px;
-        padding-right: 120px;
-    }
-
-    /* Introduction Responsive */
-    section.introduction {
-        width: 100%;
-        max-width: 1200px;
-        padding: 0 60px;
-        gap: 100px;
-    }
-
-    .introduction .text-info {
-        width: 100%;
-        gap: 100px;
-    }
-
-    .introduction .text-info .text-item {
-        gap: 80px;
-    }
-
-    .introduction .text-info .text-label {
-        width: 180px;
-        font-size: 44px;
-    }
-
-    .introduction .text-info .text-title {
-        font-size: 24px;
-    }
-
-    .introduction .text-info .text-title p {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-
-    .history-hero-content,
-    .timeline-container {
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-
-    .timeline-container {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-
-    .timeline-year {
-        gap: 60px;
-        /* Gap 축소 */
-    }
-
-    .timeline-year .year {
-        font-size: 32px;
-        width: 100px;
-    }
-
-    /* Introduction Responsive */
-    section.introduction {
-        max-width: 960px;
-        padding: 0 40px;
-        gap: 80px;
-        margin: 80px auto;
-    }
-
-    .introduction .number-info {
-        flex-wrap: wrap;
-        gap: 40px 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .introduction .number-info .number {
-        flex: 0 0 calc(50% - 10px);
-    }
-
-    .introduction .number-info .number .num-label {
-        font-size: 24px;
-    }
-
-    .introduction .number-info .number .num-title {
-        font-size: 50px;
-    }
-
-    .introduction .number-info .number .num-title em {
-        font-size: 26px;
-    }
-
-    .introduction .text-info {
-        gap: 80px;
-    }
-
-    .introduction .text-info .text-item {
-        gap: 60px;
-    }
-
-    .introduction .text-info .text-label {
-        width: 150px;
-        font-size: 36px;
-    }
-
-    .introduction .text-info .text-title {
-        font-size: 22px;
-    }
-
-    .introduction .text-info .text-title p {
-        font-size: 16px;
-    }
-
-    .introduction .text-info .text-title.col-ui ul li .card-title {
-        font-size: 24px;
-    }
-
-    .introduction .text-info .text-title.col-ui ul li p {
-        font-size: 16px;
-    }
-
-    .introduction .text-info .text-title.row-ui ul li .card-title {
-        font-size: 24px;
-    }
-
-    .introduction .text-info .text-title.row-ui ul li p {
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .history-hero-content h2 {
-        font-size: 20px;
-    }
-
-    .history-hero-content,
-    .timeline-container {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    .timeline-hero {
-        text-align: center;
-        padding: 40px 0 30px;
-        position: relative;
-    }
-
-    .timeline-container {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-
-    .timeline-hero .period-label {
-        font-size: 20px;
-    }
-
-    .history-hero .hero-title {
-        font-size: 30px;
-    }
-
-    .timeline-hero .period-title {
-        font-size: 40px;
-    }
-
-    .timeline-hero .period-desc {
-        font-size: 16px;
-        font-weight: normal;
-        padding: 20px 20px 0px;
-    }
-
-    .timeline-year {
-        gap: 30px;
-        /* Gap 대폭 축소 */
-    }
-
-    .timeline-year .year {
-        width: 60px;
-        /* 연도 너비 축소 */
-        font-size: 20px;
-        text-align: right;
-        padding-top: 8px;
-        /* 마커와 높이 맞춤 */
-    }
-
-    .timeline-marker .dot {
-        width: 10px;
-        height: 10px;
-        left: -4px;
-        top: 12px;
-    }
-
-    .timeline-year.active .timeline-marker .dot {
-        width: 14px;
-        height: 14px;
-        left: -6px;
-    }
-
-    .year-events {
-        gap: 15px;
-        padding-bottom: 40px;
-    }
-
-    .event-month {
-        font-size: 16px;
-        padding-bottom: 4px;
-    }
-
-    .event-desc {
-        font-size: 15px;
-    }
-
-    .period-tabs {
-        gap: 8px;
-        padding: 15px 10px;
-        flex-wrap: wrap;
-    }
-
-    .tab-btn {
-        font-size: 14px;
-        white-space: nowrap;
-    }
-
-    .period-name {
-        display: none;
-    }
-
-    /* Introduction Responsive - Mobile */
-    section.introduction {
-        padding: 0 20px;
-        gap: 60px;
-        margin: 60px auto;
-        width: calc(100% - 40px);
-    }
-
-    .introduction .number-info {
-        gap: 30px 15px;
-    }
-
-    .introduction .number-info .number {
-        flex: 0 0 calc(50% - 7.5px);
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .introduction .number-info .number .num-label {
-        font-size: 18px;
-    }
-
-    .introduction .number-info .number .num-title {
-        font-size: 36px;
-    }
-
-    .introduction .number-info .number .num-title em {
-        font-size: 20px;
-    }
-
-    .introduction .text-info {
-        gap: 60px;
-    }
-
-    .introduction .text-info .text-item {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .introduction .text-info .text-label {
-        width: 100%;
-        font-size: 28px;
-    }
-
-    .introduction .text-info .text-title {
-        font-size: 18px;
-        align-items: normal;
-        width: 100%;
-    }
-
-    .introduction .text-info .text-title p {
-        font-size: 14px;
-    }
-
-    .introduction .text-info .text-title.col-ui {
-        width: 100%;
-    }
-
-    .introduction .text-info .text-title.col-ui ul {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .introduction .text-info .text-title.col-ui ul li {
-        width: 100%;
-    }
-
-    .introduction .text-info .text-title.col-ui ul li .card-title {
-        font-size: 20px;
-    }
-
-    .introduction .text-info .text-title.col-ui ul li p {
-        font-size: 14px;
-    }
-
-    .introduction .text-info .text-title.col-ui ul li img {
-        height: auto;
-    }
-
-    .introduction .text-info .text-title.row-ui ul {
-        gap: 40px;
-    }
-
-    .introduction .text-info .text-title.row-ui ul li .card-title {
-        font-size: 20px;
-    }
-
-    .introduction .text-info .text-title.row-ui ul li p {
-        font-size: 14px;
-    }
-
-    .introduction .text-info .text-title.row-ui ul li img {
-        height: 150px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-
-    .history-hero-content,
-    .timeline-container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .timeline-year {
-        gap: 20px;
-    }
-
-    .timeline-year .year {
-        font-size: 18px;
-        width: 50px;
-    }
-
-    .timeline-hero .period-title {
-        font-size: 32px;
-    }
-
-    .tab-btn {
-        font-size: 14px;
-    }
-
-    /* Introduction Responsive - Extra Small Mobile */
-    section.introduction {
-        padding: 0 20px;
-        gap: 40px;
-        margin: 40px auto;
-    }
-
-    .introduction .number-info {
-        gap: 20px 10px;
-    }
-
-    .introduction .number-info .number {
-        flex: 0 0 calc(50% - 5px);
-    }
-
-    .introduction .number-info .number .num-label {
-        font-size: 16px;
-    }
-
-    .introduction .number-info .number .num-title {
-        font-size: 30px;
-    }
-
-    .introduction .number-info .number .num-title em {
-        font-size: 16px;
-    }
-
-    .introduction .text-info {
-        gap: 40px;
-    }
-
-    .introduction .text-info .text-item {
-        gap: 15px;
-    }
-
-    .introduction .text-info .text-label {
-        font-size: 24px;
-    }
-
-    .introduction .text-info .text-title {
-        font-size: 16px;
-    }
-
-    .introduction .text-info .text-title p {
-        font-size: 13px;
-    }
-
-    .introduction .text-info .text-title.col-ui ul {
-        gap: 25px;
-    }
-
-    .introduction .text-info .text-title.col-ui ul li .card-title {
-        font-size: 18px;
-    }
-
-    .introduction .text-info .text-title.col-ui ul li p {
-        font-size: 13px;
-    }
-
-    .introduction .text-info .text-title.row-ui ul {
-        gap: 30px;
-    }
-
-    .introduction .text-info .text-title.row-ui ul li .card-title {
-        font-size: 18px;
-    }
-
-    .introduction .text-info .text-title.row-ui ul li p {
-        font-size: 13px;
-    }
-
-    .introduction .text-info .text-title.row-ui ul li img {
-        height: 120px;
-    }
-}
 
 /* Footer Section Snap Alignment */
 #footer-section {
@@ -1155,77 +705,6 @@ section.introduction {
     scroll-snap-stop: normal;
 }
 
-/* Location Page Responsive */
-@media screen and (max-width: 1440px) {
-
-    .address-info-wrapper {
-        padding: 60px 60px;
-        margin: 20px auto;
-        width: auto;
-    }
-
-    .location .address-info {
-        gap: 60px;
-    }
-
-    .location .address-info .address-item h1 {
-        font-size: 40px;
-    }
-
-    .location .address-info .address-item .address-title {
-        font-size: 24px;
-        padding-left: 120px;
-    }
-
-    .location .address-info .address-item .address-title::before {
-        width: 100px;
-        height: 100px;
-    }
-
-    .location .address-info .address-item .address-title.subway::before {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .address-info-wrapper {
-        padding: 60px 30px;
-        margin: 0 auto;
-    }
-
-    .location .address-info {
-        flex-direction: column;
-        gap: 50px;
-    }
-
-    .location .address-info .address-item h1 {
-        font-size: 30px;
-    }
-
-    .location .address-info .address-item .address-title {
-        font-size: 20px;
-        padding-left: 90px;
-    }
-
-    .location .address-info .address-item .address-title::before {
-        width: 80px;
-        height: 80px;
-    }
-
-    .location .address-info .address-item .address-title.subway::before {
-        width: 80px;
-        height: 80px;
-    }
-
-    .location .address-info .address-item .address-title p {
-        font-size: 16px;
-    }
-}
-
-/* ===================================
-   Cloud Infrastructure Page Styles
-   =================================== */
 
 .info-container {
     max-width: 1920px;
@@ -1237,7 +716,7 @@ section.introduction {
 /* Header Section */
 .info-header {
     padding-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
 .info-title {
@@ -1625,127 +1104,9 @@ section.introduction {
 }
 
 /* Responsive Design */
-@media (max-width: 1440px) {
-    .cloud-infra-container {
-        padding: 0 120px;
-    }
-}
 
-@media (max-width: 1024px) {
-    .cloud-infra-container {
-        padding: 0 60px;
-        width: 100%;
-    }
 
-    .cloud-competency-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
 
-    .cloud-competency-grid.colum4 {
-        grid-template-columns: 1fr;
-    }
-
-    .cloud-process-flow {
-        flex-direction: column;
-    }
-
-    .cloud-process-arrow {
-        transform: rotate(90deg);
-    }
-
-    .cloud-case-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .cloud-case-grid.colum2 {
-        grid-template-columns: 1fr;
-    }
-
-    .cloud-case-grid.colum3 {
-        grid-template-columns: 1fr;
-    }
-
-    .cloud-process-step {
-        width: 100%;
-        min-height: 160px;
-    }
-}
-
-@media (max-width: 768px) {
-    .cloud-infra-container {
-        padding: 0 30px;
-    }
-
-    .cloud-infra-header {
-        padding-top: 60px;
-        margin-bottom: 60px;
-    }
-
-    .cloud-infra-title {
-        font-size: 36px;
-    }
-
-    .cloud-intro-main {
-        font-size: 22px;
-    }
-
-    .cloud-intro-service,
-    .cloud-intro-solution {
-        font-size: 16px;
-    }
-
-    .cloud-section-title {
-        font-size: 24px;
-    }
-
-    .cloud-card-title {
-        font-size: 24px;
-    }
-
-    .cloud-card-subtitle,
-    .cloud-card-desc,
-    .info-case-subtitle,
-    .info-case-desc {
-        font-size: 16px;
-    }
-
-    .cloud-step-title,
-    .info-case-title {
-        font-size: 20px;
-    }
-
-    .cloud-competency-card,
-    .info-case-card {
-        padding: 30px;
-    }
-
-    .cloud-competencies,
-    .cloud-process,
-    .info-case-studies {
-        margin-bottom: 60px;
-    }
-}
-
-@media (max-width: 480px) {
-    .cloud-infra-container {
-        padding: 0 20px;
-    }
-
-    .cloud-infra-title {
-        font-size: 28px;
-    }
-
-    .cloud-intro-main {
-        font-size: 18px;
-    }
-
-    .cloud-competency-card,
-    .info-case-card {
-        padding: 20px;
-    }
-}
 
 /* ===================================
    Image Info Responsive (PC/MO Toggle)
@@ -1769,30 +1130,15 @@ section.introduction {
     display: none;
 }
 
-/* Mobile: mo 이미지 표시, pc 이미지 숨김 */
-@media screen and (max-width: 768px) {
-    .img-info .pc {
-        display: none;
-    }
-
-    .img-info .mo {
-        display: block;
-    }
-}
-
-/* ===================================
-   Inquiry Form Styles
-   =================================== */
 
 .inquiry {
-    padding: 100px 0;
+    padding: 100px 0 0px;
     background-color: #ffffff;
 }
 
 .inquiry-container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 60px;
     box-sizing: border-box;
 }
 
@@ -1805,15 +1151,39 @@ section.introduction {
     font-size: 40px;
     font-weight: 700;
     color: #222222;
-    margin: 0 0 20px 0;
+    margin: 0 0 40px 0;
 }
 
 .inquiry-subtitle {
     font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     color: #666666;
     margin: 0;
+}
+
+.inquiry-tel {
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+    border-radius: 99px 0;
+    background: #312CBF;
+    margin-top: 40px;
+}
+
+.inquiry-tel img {
+    width: 28px;
+    height: 28px;
+    aspect-ratio: 1/1;
+}
+
+.inquiry-tel p {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 .inquiry-form {
@@ -1928,22 +1298,1177 @@ section.introduction {
     box-shadow: 0 8px 25px rgba(49, 44, 191, 0.3);
 }
 
-/* Inquiry Form Responsive */
-@media screen and (max-width: 768px) {
-    .inquiry {
-        padding: 60px 0;
+/***********************/
+.inquiry-case-studies {
+    margin-bottom: 100px;
+}
+
+.inquiry-section-title {
+    font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #222222;
+    margin: 0 0 20px 0;
+}
+
+.inquiry-case-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.inquiry-case-grid.colum2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.inquiry-case-grid.colum3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.inquiry-case-grid.colum4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.inquiry-case-grid.colum6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.inquiry-case-content {
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+}
+
+.inquiry-case-content.blue {
+    background: #F3F4FF;
+    border: 0px;
+}
+
+.inquiry-case-content h3 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.inquiry-case-content h3.small {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.inquiry-case-content ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.inquiry-case-content ul li:first-child {
+    margin-bottom: 20px;
+}
+
+.inquiry-case-content ul li img {
+    width: 24px;
+    height: 24px;
+}
+
+.inquiry-case-content ul li p {
+    color: #222222;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.inquiry-case-content ul li p.blue {
+    color: #312CBF;
+}
+
+.inquiry-case-content ul li p>em {
+    font-weight: 400;
+    color: #666666;
+    width: 60px;
+    display: inline-block;
+}
+
+/*********/
+.link_menu ul li {
+    float: left;
+}
+
+.link_menu ul li a {
+    border: 1px solid #c3c3c3;
+    border-radius: 20px;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    float: left;
+    text-align: center;
+    cursor: pointer
+}
+
+
+.link_menu.tab_area ul li {
+    width: auto;
+    margin-right: auto
+}
+
+.link_menu.tab_area ul li a {
+    width: 260px;
+    margin-right: 20px;
+    height: 52px;
+    line-height: 52px;
+    border-radius: 26px;
+    font-size: 28px
+}
+
+.link_menu.tab_area ul li:last-child a {
+    margin-right: 0px
+}
+
+.link_menu.tab_area ul li a.on {
+    color: #666666;
+}
+
+.link_menu.tab_info {
+    margin: 40px 0px 0px;
+}
+
+.link_menu.tab_info ul li {
+    width: auto;
+    margin-right: 0.5%;
+}
+
+.link_menu.tab_info ul li a {
+    width: 220px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 18px;
+}
+
+.link_menu.tab_info ul li a.on {
+    background-color: #0c4da2;
+    border: 1px solid #0c4da2;
+    color: #fff
+}
+
+.link_menu.tab_info ul li:nth-child(6) {
+    clear: both;
+    margin-top: 15px
+}
+
+.link_menu.tab_info ul li:nth-child(7) {
+    margin-top: 15px
+}
+
+.link_menu.tab_info ul li:nth-child(8) {
+    margin-top: 15px
+}
+
+.link_menu.tab_info ul li:nth-child(9) {
+    margin-top: 15px
+}
+
+.link_menu.tab_info ul li:nth-child(10) {
+    margin-top: 15px
+}
+
+.link_menu.tab_info ul li:nth-child(11) {
+    clear: both;
+    margin-top: 15px
+}
+
+.link_menu.tab_info.tab1_sub {
+    display: block;
+    height: 65px;
+    width: 100%
+}
+
+.link_menu.tab_info.tab2_sub {
+    display: none;
+    width: 100%;
+    height: 65px
+}
+
+.link_menu2 {
+    font-size: 26px;
+    height: 42px;
+    margin: 0 auto;
+    display: table;
+}
+
+.link_menu2 ul li {
+    float: left;
+    margin-right: 10px
+}
+
+.link_menu2 ul li:last-child a {
+    margin-right: 0px
+}
+
+.link_menu2 ul li a {
+    border: 1px solid #c3c3c3;
+    border-radius: 67px;
+    line-height: 134px;
+    width: 134px;
+    height: 134px;
+    float: left;
+    text-align: center;
+    cursor: pointer
+}
+
+.link_menu2 ul li a.line2 {
+    line-height: 30px;
+    padding-top: 35px;
+    height: 99px
+}
+
+.link_menu2 ul li a:active,
+.link_menu2 ul li a:hover {
+    background-color: #253252;
+    color: #fff
+}
+
+/* ===================================
+   Case Study & Archive Styles
+   =================================== */
+
+/* Container & Layout */
+.casestudy-info {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 200px;
+}
+
+.casestudy-info .title {
+    text-align: center;
+    margin: 90px 0px 70px;
+    clear: both;
+    position: relative;
+}
+
+.casestudy-info .title p.f36 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.casestudy-info .contact {
+    font-size: 18px;
+    color: #000;
+    letter-spacing: -0.5px;
+    clear: both;
+}
+
+/* Tab Menu */
+.casestudy-info .link_menu {
+    font-size: 20px;
+    height: 42px;
+    margin: 0 auto;
+    display: table;
+    width: 100%;
+}
+
+.casestudy-info .link_menu ul li a {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    float: left;
+    text-align: center;
+    cursor: pointer
+}
+
+
+.casestudy-info .link_menu.tab_area ul li {
+    width: auto;
+    margin-right: auto
+}
+
+.casestudy-info .link_menu.tab_area ul li a {
+    width: auto;
+    margin-right: 40px;
+    font-size: 28px;
+    font-weight: 600;
+    border: none;
+}
+
+.casestudy-info .link_menu.tab_area ul li:last-child a {
+    margin-right: 0px
+}
+
+.casestudy-info .link_menu.tab_area ul li a.on {
+    color: #312CBF;
+}
+
+.casestudy-info .link_menu.tab_info {
+    margin: 20px 0px 0px;
+}
+
+.casestudy-info .link_menu.tab_info ul li {
+    width: auto;
+    margin-right: 0.5%;
+}
+
+.casestudy-info .link_menu.tab_info ul li a {
+    width: 220px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 18px;
+    margin-right: 20px;
+}
+
+.casestudy-info .link_menu.tab_info ul li a.on {
+    background-color: #DFE3FF;
+    border: 1px solid #DFE3FF;
+    color: #222222
+}
+
+.casestudy-info .link_menu.tab_info.tab1_sub {
+    display: block;
+    height: 65px;
+}
+
+.casestudy-info .link_menu.tab_info.tab2_sub {
+    display: none;
+    height: 65px
+}
+
+/* Table Styles */
+table.tb_type2 {
+    border-top: 2px solid #312CBF;
+    border-bottom: 1px solid #cccccc;
+    margin-top: 40px;
+    width: 100%;
+    font-size: 17px;
+}
+
+table.tb_type2 thead {
+    background-color: #f5f5f5;
+    height: 54px;
+    line-height: 54px;
+}
+
+table.tb_type2 tr {
+    height: 54px;
+    line-height: 54px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+table.tb_type2 tr:last-child {
+    border-bottom: none;
+}
+
+table.tb_type2 tr td {
+    text-align: center;
+    line-height: 22px;
+}
+
+/* Paging */
+.paging {
+    padding: 50px 0 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.paging .paging_inner {
+    display: inline-block;
+}
+
+.paging .paging_inner a.current {
+    border-color: #777;
+    background: #777;
+    color: #fff;
+    border-radius: 99px;
+}
+
+.paging .paging_inner a {
+    float: left;
+    width: 34px;
+    height: 34px;
+    line-height: 33px;
+    background: #fff;
+    font-size: 14px;
+    color: #272727;
+}
+
+/* Button & Popup */
+.btn2 {
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    color: #272727;
+    width: 130px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    border-radius: 20px;
+}
+
+.btn2:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(185, 185, 185, 0.3);
+}
+
+.layer_popup_area {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 1001;
+}
+
+.layer_popup2 {
+    width: 300px;
+    height: 180px;
+    background-color: #fff;
+    border-radius: 3px;
+    margin: 20% auto 0%;
+    position: relative;
+}
+
+.popup_close {
+    right: calc(50% - 50px);
+    top: auto;
+    bottom: 20px;
+    border: 0px;
+    background-color: #253252;
+    color: #fff;
+    cursor: pointer;
+}
+
+.popup_close>img {
+    width: 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.layer_popup2>.layer_info {
+    font-size: 16px;
+    line-height: 130%;
+    padding: 20px;
+}
+
+.layer_popup2>.layer_info>input {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.layer_popup2>.layer_info>.btn2.popup_close {
+    position: relative;
+    top: 10px;
+    right: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* ===================================
+   Desktop (max-width: 1440px)
+   =================================== */
+@media screen and (max-width: 1440px) {
+
+    .history-hero-content,
+    .timeline-container {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+    /* Introduction Responsive */
+    section.introduction {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 60px;
+        gap: 100px;
+    }
+
+    .introduction .text-info {
+        width: 100%;
+        gap: 100px;
+    }
+
+    .introduction .text-info .text-item {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .introduction .text-info .text-label {
+        width: 100%;
+        font-size: 44px;
+    }
+
+    .introduction .text-info .text-title {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .introduction .text-info .text-title.row-ui ul {
+        width: 100%;
+    }
+
+    .introduction .text-info .text-title p {
+        font-size: 18px;
+    }
+
+    .address-info-wrapper {
+        padding: 60px 60px;
+        margin: 20px auto;
+        width: auto;
+    }
+
+    .location .address-info {
+        gap: 60px;
+    }
+
+    .location .address-info .address-item h1 {
+        font-size: 40px;
+    }
+
+    .location .address-info .address-item .address-title {
+        font-size: 24px;
+        padding-left: 120px;
+    }
+
+    .location .address-info .address-item .address-title::before {
+        width: 100px;
+        height: 100px;
+    }
+
+    .location .address-info .address-item .address-title.subway::before {
+        width: 100px;
+        height: 100px;
+    }
+
+    .info-container {
+        width: 100%;
+        padding: 0 40px;
     }
 
     .inquiry-container {
-        padding: 0px;
+        width: 100%;
+        padding: 0 40px;
     }
 
-    .inquiry-title {
+    .casestudy {
+        width: calc(100% - 80px);
+        padding: 0 40px;
+    }
+
+    .casestudy-info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1440px) {
+    .cloud-infra-container {
+        padding: 0 120px;
+    }
+}
+
+/* ===================================
+   Tablet (max-width: 1024px)
+   =================================== */
+@media screen and (max-width: 1024px) {
+
+    .history-hero-content,
+    .timeline-container {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .timeline-container {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .timeline-year {
+        gap: 60px;
+        /* Gap 축소 */
+    }
+
+    .timeline-year .year {
+        font-size: 32px;
+        width: 100px;
+    }
+
+    /* Introduction Responsive */
+    section.introduction {
+        max-width: 960px;
+        padding: 0 40px;
+        gap: 80px;
+        margin: 80px auto;
+    }
+
+    .introduction .number-info {
+        flex-wrap: wrap;
+        gap: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .introduction .number-info .number {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .introduction .number-info .number .num-label {
+        font-size: 24px;
+    }
+
+    .introduction .number-info .number .num-title {
+        font-size: 50px;
+    }
+
+    .introduction .number-info .number .num-title em {
+        font-size: 26px;
+    }
+
+    .introduction .text-info {
+        gap: 80px;
+    }
+
+    .introduction .text-info .text-item {
+        gap: 60px;
+    }
+
+    .introduction .text-info .text-label {
+        width: 150px;
+        font-size: 36px;
+    }
+
+    .introduction .text-info .text-title {
+        font-size: 22px;
+    }
+
+    .introduction .text-info .text-title p {
+        font-size: 18px;
+    }
+
+    .introduction .text-info .text-title.col-ui ul li .card-title {
+        font-size: 24px;
+    }
+
+    .introduction .text-info .text-title.col-ui ul li p {
+        font-size: 16px;
+    }
+
+    .introduction .text-info .text-title.row-ui ul li .card-title {
+        font-size: 24px;
+    }
+
+    .introduction .text-info .text-title.row-ui ul li p {
+        font-size: 16px;
+    }
+
+    .casestudy-info .link_menu.tab_info ul li {
+        width: calc(33.33% - 10px);
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .casestudy-info .link_menu.tab_info ul li a {
+        width: 100%;
+        border-radius: 0px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cloud-infra-container {
+        padding: 0 60px;
+        width: 100%;
+    }
+
+    .cloud-competency-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .cloud-competency-grid.colum4 {
+        grid-template-columns: 1fr;
+    }
+
+    .cloud-process-flow {
+        flex-direction: column;
+    }
+
+    .cloud-process-arrow {
+        transform: rotate(90deg);
+    }
+
+    .cloud-case-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .cloud-case-grid.colum2 {
+        grid-template-columns: 1fr;
+    }
+
+    .cloud-case-grid.colum3 {
+        grid-template-columns: 1fr;
+    }
+
+    .cloud-process-step {
+        width: 100%;
+        min-height: 160px;
+    }
+
+    /* Business Pages (Cloud, Public, Industries) */
+    .info-competency-grid,
+    .info-competency-grid.colum4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-process-flow {
+        flex-direction: column;
+    }
+
+    .info-process-arrow {
+        transform: rotate(90deg);
+    }
+
+    .info-case-grid,
+    .info-case-grid.column2,
+    .info-case-grid.colum3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-process-step {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .inquiry-case-grid.colum3,
+    .inquiry-case-grid.colum4,
+    .inquiry-case-grid.colum6 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* ===================================
+   Mobile (max-width: 768px)
+   =================================== */
+@media screen and (max-width: 768px) {
+    .history-hero-content h2 {
+        font-size: 20px;
+    }
+
+    .history-hero-content,
+    .timeline-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .timeline-hero {
+        text-align: center;
+        padding: 40px 0 30px;
+        position: relative;
+    }
+
+    .timeline-container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .timeline-hero .period-label {
+        font-size: 20px;
+    }
+
+    .history-hero .hero-title {
+        font-size: 30px;
+    }
+
+    .timeline-hero .period-title {
+        font-size: 40px;
+    }
+
+    .timeline-hero .period-desc {
+        font-size: 16px;
+        font-weight: normal;
+        padding: 20px 20px 0px;
+    }
+
+    .timeline-year {
+        gap: 30px;
+        /* Gap 대폭 축소 */
+    }
+
+    .timeline-year .year {
+        width: 60px;
+        /* 연도 너비 축소 */
+        font-size: 20px;
+        text-align: right;
+        padding-top: 8px;
+        /* 마커와 높이 맞춤 */
+    }
+
+    .timeline-marker .dot {
+        width: 10px;
+        height: 10px;
+        left: -4px;
+        top: 12px;
+    }
+
+    .timeline-year.active .timeline-marker .dot {
+        width: 14px;
+        height: 14px;
+        left: -6px;
+    }
+
+    .year-events {
+        gap: 15px;
+        padding-bottom: 40px;
+    }
+
+    .event-month {
+        font-size: 16px;
+        padding-bottom: 4px;
+    }
+
+    .event-desc {
+        font-size: 15px;
+    }
+
+    .period-tabs {
+        gap: 8px;
+        padding: 15px 10px;
+        flex-wrap: wrap;
+    }
+
+    .tab-btn {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .period-name {
+        display: none;
+    }
+
+    /* Introduction Responsive - Mobile */
+    section.introduction {
+        padding: 0 20px;
+        gap: 60px;
+        margin: 60px auto;
+        width: calc(100% - 40px);
+    }
+
+    .introduction .number-info {
+        gap: 30px 15px;
+    }
+
+    .introduction .number-info .number {
+        flex: 0 0 calc(50% - 7.5px);
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .introduction .number-info .number .num-label {
+        font-size: 18px;
+    }
+
+    .introduction .number-info .number .num-title {
+        font-size: 36px;
+    }
+
+    .introduction .number-info .number .num-title em {
+        font-size: 20px;
+    }
+
+    .introduction .text-info {
+        gap: 60px;
+    }
+
+    .introduction .text-info .text-item {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .introduction .text-info .text-label {
+        width: 100%;
         font-size: 28px;
     }
 
-    .inquiry-subtitle {
+    .introduction .text-info .text-title {
+        font-size: 20px;
+    }
+
+    .introduction .text-info .text-title.col-ui {
+        width: 100%;
+    }
+
+    .introduction .text-info .text-title.col-ui ul {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .introduction .text-info .text-title.col-ui ul li {
+        width: 100%;
+    }
+
+    .introduction .text-info .text-title.col-ui ul li .card-title {
+        font-size: 20px;
+    }
+
+    .introduction .text-info .text-title.col-ui ul li img {
+        height: auto;
+    }
+
+    .introduction .text-info .text-title.row-ui ul {
+        gap: 40px;
+    }
+
+    .introduction .text-info .text-title.row-ui ul li img {
+        height: 150px;
+    }
+
+    .address-info-wrapper {
+        padding: 60px 30px;
+        margin: 0 auto;
+    }
+
+    .location .address-info {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .location .address-info .address-item h1 {
+        font-size: 30px;
+    }
+
+    .location .address-info .address-item .address-title {
+        font-size: 20px;
+        padding-left: 90px;
+    }
+
+    .location .address-info .address-item .address-title::before {
+        width: 80px;
+        height: 80px;
+    }
+
+    .location .address-info .address-item .address-title.subway::before {
+        width: 80px;
+        height: 80px;
+    }
+
+    .location .address-info .address-item .address-title p {
         font-size: 16px;
+    }
+
+    .inquiry-case-content {
+        padding: 20px;
+    }
+
+    .casestudy {
+        width: calc(100% - 40px);
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cloud-infra-container {
+        padding: 0 30px;
+    }
+
+    .cloud-infra-header {
+        padding-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .cloud-infra-title {
+        font-size: 36px;
+    }
+
+    .cloud-intro-main {
+        font-size: 22px;
+    }
+
+    .cloud-intro-service,
+    .cloud-intro-solution {
+        font-size: 16px;
+    }
+
+    .cloud-section-title {
+        font-size: 24px;
+    }
+
+    .cloud-card-title {
+        font-size: 24px;
+    }
+
+    .cloud-card-subtitle,
+    .cloud-card-desc,
+    .info-case-subtitle,
+    .info-case-desc {
+        font-size: 16px;
+    }
+
+    .cloud-step-title,
+    .info-case-title {
+        font-size: 20px;
+    }
+
+    .cloud-competency-card,
+    .info-case-card {
+        padding: 30px;
+    }
+
+    .cloud-competencies,
+    .cloud-process,
+    .info-case-studies {
+        margin-bottom: 60px;
+    }
+
+    /* Business Pages Mobile */
+    .info-header {
+        padding-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .info-intro,
+    .info-competencies,
+    .info-process,
+    .info-case-studies {
+        margin-bottom: 80px;
+    }
+
+    .info-title {
+        font-size: 36px;
+    }
+
+    .info-intro-main {
+        font-size: 20px;
+    }
+
+    .info-section-title {
+        font-size: 24px;
+    }
+
+    .info-card-title,
+    .info-step-title,
+    .info-case-title {
+        font-size: 22px;
+    }
+
+    .info-competency-grid,
+    .info-case-grid,
+    .info-case-grid.column2,
+    .info-case-grid.colum3 {
+        grid-template-columns: 1fr;
+    }
+
+    .info-competency-card,
+    .info-process-step,
+    .info-case-card {
+        padding: 30px;
+    }
+
+    .info-container {
+        padding: 0 20px;
+    }
+
+    .inquiry-section-title {
+        font-size: 24px;
+    }
+
+    .inquiry-case-grid,
+    .inquiry-case-grid.colum2,
+    .inquiry-case-grid.colum3,
+    .inquiry-case-grid.colum4,
+    .inquiry-case-grid.colum6 {
+        grid-template-columns: 1fr;
+    }
+
+    .inquiry-case-content {
+        padding: 30px;
+    }
+
+    .inquiry-case-content h3 {
+        font-size: 26px;
+    }
+
+    .inquiry-tel {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    .inquiry-tel p {
+        font-size: 18px;
+    }
+
+    .inquiry-case-studies {
+        margin-bottom: 40px;
+    }
+
+    table.tb_type2 colgroup {
+        display: none;
+    }
+
+    table.tb_type2 tr th:nth-child(1) {
+        display: none;
+    }
+
+    table.tb_type2 tr th:nth-child(2) {
+        display: none;
+    }
+
+    table.tb_type2 tr td:nth-child(1) {
+        display: none;
+    }
+
+    table.tb_type2 tr td:nth-child(2) {
+        display: none;
+    }
+
+    .casestudy-info .link_menu.tab_info ul li {
+        width: calc(50% - 10px);
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .inquiry-container {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img-info .pc {
+        display: none;
+    }
+
+    .img-info .mo {
+        display: block;
+    }
+
+    .inquiry {
+        padding: 60px 0 0;
+    }
+
+    .inquiry-subtitle {
+        font-size: 18px;
     }
 
     .inquiry-form {
@@ -1964,3 +2489,80 @@ section.introduction {
         font-size: 16px;
     }
 }
+
+/* ===================================
+   Small Mobile (max-width: 480px)
+   =================================== */
+@media screen and (max-width: 480px) {
+
+    .history-hero-content,
+    .timeline-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .timeline-year {
+        gap: 20px;
+    }
+
+    .timeline-year .year {
+        font-size: 18px;
+        width: 50px;
+    }
+
+    .timeline-hero .period-title {
+        font-size: 32px;
+    }
+
+    .tab-btn {
+        font-size: 14px;
+    }
+
+    /* Introduction Responsive - Extra Small Mobile */
+    section.introduction {
+        padding: 0 20px;
+        gap: 40px;
+        margin: 40px auto;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .cloud-infra-container {
+        padding: 0 20px;
+    }
+
+    .cloud-infra-title {
+        font-size: 28px;
+    }
+
+    .cloud-intro-main {
+        font-size: 18px;
+    }
+
+    .cloud-competency-card,
+    .info-case-card {
+        padding: 20px;
+    }
+
+    /* Business Pages Small Mobile */
+    .info-title {
+        font-size: 28px;
+    }
+
+    .info-competency-card,
+    .info-process-step,
+    .info-case-card {
+        padding: 20px;
+    }
+
+    .info-container {
+        padding: 0 20px;
+    }
+
+
+    .casestudy {
+        padding: 0 20px;
+        width: calc(100% - 40px);
+    }
