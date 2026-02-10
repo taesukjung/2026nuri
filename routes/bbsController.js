@@ -112,11 +112,7 @@ module.exports = (app)=>{
                 tbl_bbs.count({},function(result){
                     console.log("INSERT : " + result)
                 })
-                tbl_bbs.findAll({ order: [['b_id', 'DESC']] })
-                    .then(function (result) {
-                        // res.send(result)
-                        res.render('contact/contact1.html');
-                    })
+                res.render('contact/contact1.html');
 
             });
     });
@@ -164,7 +160,6 @@ module.exports = (app)=>{
             {where : {b_id : b_id}
             })
             .then(function(result){
-                // res.send(result)
                 res.render('contact/contact1.html')
             })
     })
@@ -176,7 +171,6 @@ module.exports = (app)=>{
             where : {b_id : b_id}
         })
             .then(function(result){
-                // res.send(result)
                 res.render('contact/contact1.html')
 
             })
