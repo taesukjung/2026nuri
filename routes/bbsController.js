@@ -80,15 +80,6 @@ module.exports = (app)=>{
                     pages: pageArray,
                     category: b_category
                 })
-/*                res.send({
-                    result:true,
-                    BBS_LIST: result.rows,
-                    pageCount,
-                    itemCount: result.count,
-                    currentPage: req.query.b_page,
-                    pages: pageArray,
-                    category: b_category
-                })*/
             })
 
         return router
