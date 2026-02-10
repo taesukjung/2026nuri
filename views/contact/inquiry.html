@@ -52,40 +52,49 @@
                     <p class="inquiry-subtitle">누리인포스의 기술로 비즈니스의 해답을 찾고 싶다면, 지금 바로 제안과 문의를 남겨주세요.</p>
                 </div>
                 <div class="inquiry-form">
-                    <div class="answer">
-                        <div class="answer_info">
-                            <input type="hidden" name="emailTo" id="emailTo" value="<%= emailTo %>">
-                            <input type="text" title="회사이름" name="companyNm" id="companyNm" placeholder="회사이름 (필수)"
-                                class="input_text">
-                            <input type="text" title="담당자성함" name="empNm" id="empNm" placeholder="담당자성함 (필수)"
-                                class="input_text w50 left">
-                            <input type="text" title="직책" name="position" id="position" placeholder="직책 (필수)"
-                                class="input_text w50">
-                            <input type="text" title="전화번호" name="telNo" id="telNo" pattern="(010)-\d{3,4}-\d{4}"
-                                placeholder="전화번호 (필수)" class="input_text w50 left">
-                            <input type="text" title="이메일" name="email" id="email" placeholder="이메일 (필수)"
-                                class="input_text w50">
-                            <select id="div" name="div" class="select_text_date w100">
-                                <option value="pegasus@nis.co.kr" selected="">Anyworks®PRM</option>
-                                <option value="hslee@nis.co.kr">Anyworks®FM</option>
-                                <option value="hslee@nis.co.kr">Anyworks®Brokerage</option>
-                                <option value="hslee@nis.co.kr">Anyworks®BIS</option>
-                                <option value="brian@nis.co.kr">Citrix</option>
-                                <option value="kimjh@nis.co.kr">제조/유통</option>
-                                <option value="hslee@nis.co.kr">금융</option>
-                                <option value="ischoi@nis.co.kr">공공</option>
-                                <option value="ischoi@nis.co.kr">HW, EMC</option>
-                                <option value="recruit@nis.co.kr">채용</option>
-                            </select>
+                    <form name="wform" action="/mail/sendMail" method="post" onsubmit="return sendMail(event)">
+                        <div class="answer">
+                            <div class="answer_info">
+                                <input type="hidden" name="emailTo" id="emailTo" value="<%= emailTo %>">
+                                <label for="companyNm" class="sr-only">회사이름</label>
+                                <input type="text" title="회사이름" name="companyNm" id="companyNm" placeholder="회사이름 (필수)"
+                                    class="input_text">
+                                <label for="empNm" class="sr-only">담당자성함</label>
+                                <input type="text" title="담당자성함" name="empNm" id="empNm" placeholder="담당자성함 (필수)"
+                                    class="input_text w50 left">
+                                <label for="position" class="sr-only">직책</label>
+                                <input type="text" title="직책" name="position" id="position" placeholder="직책 (필수)"
+                                    class="input_text w50">
+                                <label for="telNo" class="sr-only">전화번호</label>
+                                <input type="text" title="전화번호" name="telNo" id="telNo" pattern="(010)-\d{3,4}-\d{4}"
+                                    placeholder="전화번호 (필수)" class="input_text w50 left">
+                                <label for="email" class="sr-only">이메일</label>
+                                <input type="text" title="이메일" name="email" id="email" placeholder="이메일 (필수)"
+                                    class="input_text w50">
+                                <label for="div" class="sr-only">문의 종류</label>
+                                <select id="div" name="div" class="select_text_date w100">
+                                    <option value="pegasus@nis.co.kr" selected="">Anyworks®PRM</option>
+                                    <option value="hslee@nis.co.kr">Anyworks®FM</option>
+                                    <option value="hslee@nis.co.kr">Anyworks®Brokerage</option>
+                                    <option value="hslee@nis.co.kr">Anyworks®BIS</option>
+                                    <option value="brian@nis.co.kr">Citrix</option>
+                                    <option value="kimjh@nis.co.kr">제조/유통</option>
+                                    <option value="hslee@nis.co.kr">금융</option>
+                                    <option value="ischoi@nis.co.kr">공공</option>
+                                    <option value="ischoi@nis.co.kr">HW, EMC</option>
+                                    <option value="recruit@nis.co.kr">채용</option>
+                                </select>
+                            </div>
+                            <p class="write_info mgt20">
+                                <label for="content" class="sr-only">문의 내용</label>
+                                <textarea class="input_text" id="content" name="content"
+                                    placeholder="문의 관련된 기초정보를 입력해주세요."></textarea>
+                            </p>
                         </div>
-                        <p class="write_info mgt20">
-                            <textarea class="input_text" id="content" name="content"
-                                placeholder="문의 관련된 기초정보를 입력해주세요."></textarea>
-                        </p>
-                    </div>
-                    <div class="etc pt10">
-                        <div class="btn1"><a href="javascript:sendMail();">문의 등록하기</a></div>
-                    </div>
+                        <div class="etc pt10">
+                            <div class="btn1"><button type="submit" id="btnSubmit">문의 등록하기</button></div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -103,11 +112,21 @@
                 }
             });
 
-            function sendMail() {
+            function sendMail(e) {
+                if(e) e.preventDefault();
+
                 var data = validator();
                 if (!data.flag) {
                     alert(data.msg);
-                    return;
+                    return false;
+                }
+
+                var btn = document.getElementById("btnSubmit");
+                if (btn) {
+                    btn.disabled = true;
+                    btn.innerText = "처리중...";
+                    btn.style.opacity = "0.7";
+                    btn.style.cursor = "not-allowed";
                 }
 
                 var f = document.wform;
@@ -115,6 +134,7 @@
                 f.method = "post"
                 console.log("@@@@@@@@ : " + $("#div").val());
                 f.submit();
+                return true;
             }
 
             function validator() {
