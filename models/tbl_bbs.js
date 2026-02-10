@@ -1,4 +1,3 @@
-console.log("--------> models/tbl_bbs.js")
 module.exports = (sequelize, DataTypes) => {
 
     var bbs = sequelize.define('tbl_bbs', {
