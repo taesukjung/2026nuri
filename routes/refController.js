@@ -101,12 +101,8 @@ module.exports = (app)=>{
                 tbl_ref.count({},function(result){
                     console.log("INSERT : " + result)
                 })
-                tbl_ref.findAll({ order: [['b_date', 'DESC'],['b_id', 'DESC']] })
-                    .then(function (result) {
-                        // res.send(result)
-                        res.render('about/about4.html');
-                    })
-
+                // Optimized: Removed unnecessary findAll which fetched all records but discarded them
+                res.render('about/about4.html');
             });
     });
 
@@ -143,12 +139,13 @@ module.exports = (app)=>{
 
 
     router.get('/getContent', function (req, res, next) {
-        tbl_ref.findAndCountAll({
+        // Optimized: Use findAll instead of findAndCountAll to avoid extra COUNT query
+        tbl_ref.findAll({
             where : {b_id : req.query.b_id}
         })
             .then(function(result){
                 res.send({
-                    REF_LIST: result.rows
+                    REF_LIST: result
                 })
             })
     })
