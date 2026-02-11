@@ -12,11 +12,21 @@ const upload = multer({
             cb(null, new Date().valueOf() + path.extname(file.originalname));
         }
     }),
+    fileFilter: function (req, file, cb) {
+        const filetypes = /jpeg|jpg|png|gif/;
+        const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+        const mimetype = filetypes.test(file.mimetype);
+
+        if (mimetype && extname) {
+            return cb(null, true);
+        } else {
+            cb(new Error('Only images are allowed!'));
+        }
+    }
 });
-module.exports = (app)=>{
+module.exports = ()=>{
 
     router.post('/image', upload.single('file'), function(req, res){
-        console.log(req.file)
         res.send({
             url: "/uploads/"+req.file.filename
         })

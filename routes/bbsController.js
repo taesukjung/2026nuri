@@ -20,7 +20,6 @@ module.exports = (app)=>{
     router.all(function (req, res, next) {
         // set default or minimum is 10 (as it was prior to v0.2.0)
         if (req.query.limit <= 10) req.query.limit = 10;
-        // if (req.query.page < 1) req.query.page = 1;
         next();
     });
 
@@ -81,15 +80,6 @@ module.exports = (app)=>{
                     pages: pageArray,
                     category: b_category
                 })
-/*                res.send({
-                    result:true,
-                    BBS_LIST: result.rows,
-                    pageCount,
-                    itemCount: result.count,
-                    currentPage: req.query.b_page,
-                    pages: pageArray,
-                    category: b_category
-                })*/
             })
 
         return router
@@ -112,11 +102,7 @@ module.exports = (app)=>{
                 tbl_bbs.count({},function(result){
                     console.log("INSERT : " + result)
                 })
-                tbl_bbs.findAll({ order: [['b_id', 'DESC']] })
-                    .then(function (result) {
-                        // res.send(result)
-                        res.render('contact/contact1.html');
-                    })
+                res.render('contact/contact1.html');
 
             });
     });
@@ -164,7 +150,6 @@ module.exports = (app)=>{
             {where : {b_id : b_id}
             })
             .then(function(result){
-                // res.send(result)
                 res.render('contact/contact1.html')
             })
     })
@@ -176,7 +161,6 @@ module.exports = (app)=>{
             where : {b_id : b_id}
         })
             .then(function(result){
-                // res.send(result)
                 res.render('contact/contact1.html')
 
             })

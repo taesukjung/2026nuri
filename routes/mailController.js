@@ -2,17 +2,18 @@ const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 
+const transporter = nodemailer.createTransport({
+    host: 'mail.nis.co.kr',
+    port: '465',
+    secure: true,
+    auth: {
+       user: 'admin@nis.co.kr',
+       pass: 'k5s#fscyqB'
+    }
+});
+
 router.post("/sendMail", function(req, res, next){
     let emailTo = req.body.div; 	//메일 담당자 
-    let transporter = nodemailer.createTransport({
-        host: 'mail.nis.co.kr',
-        port: '465',
-        secure: true,
-        auth: {
-           user: 'admin@nis.co.kr',
-           pass: 'k5s#fscyqB'
-        }
-    });
 
     let content = "";
     content +=

@@ -1,4 +1,3 @@
-console.log("--------> models/tbl_auth.js")
 module.exports = (sequelize, DataTypes) => {
 
     var auth = sequelize.define('tbl_auth', {

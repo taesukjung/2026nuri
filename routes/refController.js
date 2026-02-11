@@ -1,10 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var moment = require('moment');
 var sequelize = require('sequelize');
-
-require('moment-timezone');
-moment.tz.setDefault("Asia/Seoul");
 
 module.exports = (app)=>{
 
@@ -33,9 +29,6 @@ module.exports = (app)=>{
 
         if(typeof b_category == "undefined") b_category = "";
         if(typeof b_sector == "undefined") b_sector = "";
-
-        //if(b_category == 0)  b_category = "";
-        //if(b_sector == 0)  b_sector = "";
 
         let offset = (req.query.b_page- 1) * pageLimit
         if(offset < 1) offset = 0

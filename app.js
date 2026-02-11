@@ -3,6 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var moment = require('moment');
+require('moment-timezone');
+moment.tz.setDefault("Asia/Seoul");
 
 var app = express();
 
@@ -14,8 +17,8 @@ var usersRouter = require('./routes/users');
 var mailRouter = require('./routes/mailController');
 var bbsRouter = require('./routes/bbsController')(app);
 var refRouter = require('./routes/refController')(app);
-var uploadRouter = require('./routes/uploadController')(app);
-var authRouter = require('./routes/authController')(app);
+var uploadRouter = require('./routes/uploadController')();
+var authRouter = require('./routes/authController')();
 
 var sequelize = require('./models/index').sequelize;
 sequelize.sync()
@@ -60,20 +63,6 @@ app.use(function(err, req, res, next) {
 
 
 // redirect HTTP to HTTPS
-/*
-app.all('*', (req, res, next) =>
-{
-	let protocol = req.headers['x-forwarded-proto'] || req.protocol;
-	if (protocol == 'https') { next(); }
-	else {
-		let from = `${protocol}://${req.hostname}${req.url}`;
-		let to = `https://'${req.hostname}${req.url}`;
-		// log and redirect
-		console.log(`[${req.method}]: ${from} -> ${to}`);
-		res.redirect(to);
-	}
-});
-*/
 app.get("*", function (req, res, next) {
     res.redirect("https://" + req.headers.host + "/" + req.path);
 });

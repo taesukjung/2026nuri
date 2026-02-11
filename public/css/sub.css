@@ -1280,7 +1280,8 @@ section.introduction {
     display: inline-block;
 }
 
-.inquiry-form .btn1 a {
+.inquiry-form .btn1 a,
+.inquiry-form .btn1 button {
     display: inline-block;
     font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
     font-size: 18px;
@@ -1291,11 +1292,21 @@ section.introduction {
     border-radius: 50px;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
-.inquiry-form .btn1 a:hover {
+.inquiry-form .btn1 a:hover,
+.inquiry-form .btn1 button:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(49, 44, 191, 0.3);
+}
+
+.inquiry-form .btn1 button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
 }
 
 /***********************/
@@ -2484,7 +2495,8 @@ table.tb_type2 tr td {
         width: 100%;
     }
 
-    .inquiry-form .btn1 a {
+    .inquiry-form .btn1 a,
+    .inquiry-form .btn1 button {
         padding: 16px 40px;
         font-size: 16px;
     }
