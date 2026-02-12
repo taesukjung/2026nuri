@@ -7,8 +7,8 @@ const transporter = nodemailer.createTransport({
     port: '465',
     secure: true,
     auth: {
-       user: 'admin@nis.co.kr',
-       pass: 'k5s#fscyqB'
+       user: process.env.MAIL_USER,
+       pass: process.env.MAIL_PASS
     }
 });
 
@@ -29,7 +29,7 @@ router.post("/sendMail", function(req, res, next){
 
     console.log("mail emailTo : "+ emailTo);
     let mailOptions = {
-        from: 'admin@nis.co.kr',
+        from: process.env.MAIL_FROM || process.env.MAIL_USER,
         to: emailTo ,
         subject: '누리인포스 홈페이지에서 문의사항이 등록되었습니다.',
         text: content
