@@ -73,7 +73,7 @@
                     </ul>
                 </div>
                 <div class="contact pt0">
-                    <table cellspacing="0" summary="Anyworks®PRM 구축사례" class="tb_type2 mt15">
+                    <table cellspacing="0" summary="Anyworks®PRM 구축사례" class="tb_type2 casestudy_info mt15">
                         <caption>구축사례</caption>
                         <colgroup>
                             <col width="15%">
@@ -103,10 +103,12 @@
                 <div class="layer_popup2">
                     <div class="popup_close"><img src="/images/btn_close_popup.png"></div>
                     <div class="layer_info">
-                        <div class="tit">누리인포스 관리자님<br>비밀번호를 입력하세요.</div>
-                        <input type="password" name="w_passwd" id="w_passwd">
-                        <input type="hidden" name="b_id" id="b_id">
-                        <div class="btn2 popup_close">확인</div>
+                        <form name="wform">
+                            <div class="tit">누리인포스 관리자님<br>비밀번호를 입력하세요.</div>
+                            <input type="password" name="w_passwd" id="w_passwd">
+                            <input type="hidden" name="b_id" id="b_id">
+                        </form>
+                        <div class="btn2 popup_confirm">확인</div>
                     </div>
                 </div>
             </div>
@@ -131,6 +133,12 @@
                     $(".take_over").css(
                         "display", "none");
 
+                    // Reset fields on close
+                    $("#b_id").val("");
+                    $("#w_passwd").val("");
+                });
+
+                $(".popup_confirm").click(function () {
                     save();
                 });
 
@@ -249,7 +257,7 @@
 
             function save() {
                 var f = document.wform;
-                f.action = "/auth/check/ref";
+                f.action = "/auth/check/casestudy";
                 f.method = "post";
                 f.submit();
 

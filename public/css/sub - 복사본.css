@@ -85,20 +85,6 @@ body {
     height: 100vh;
 }
 
-.history-hero.notice {
-    background: url(../images/sub/notice_bg.png) center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-}
-
-.history-hero.anyworks {
-    background: url(../images/sub/anyworks_bg.png) center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-}
-
 .history-hero-content {
     max-width: 1440px;
     margin: 0 auto;
@@ -263,7 +249,7 @@ body {
     z-index: 100;
     background-color: #ffffff;
     width: 100%;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #eee;
     overflow-x: hidden;
     box-sizing: border-box;
     opacity: 0;
@@ -281,7 +267,7 @@ body {
 .period-tabs {
     display: flex;
     justify-content: center;
-    padding: 30px 20px;
+    padding: 20px 20px;
     margin-bottom: 0;
     max-width: 1440px;
     margin: 0 auto;
@@ -299,27 +285,16 @@ body {
     cursor: pointer;
     padding: 0;
     transition: all 0.3s ease;
-    line-height: 30px;
 }
 
 .tab-btn.active {
-    color: #312cbf;
+    color: var(--color-text-dark);
     font-weight: 700;
-    position: relative;
-}
-
-.tab-btn.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #312cbf;
+    border-bottom: 1px solid #222;
 }
 
 .tab-btn:hover {
-    color: #312cbf;
+    color: var(--color-text-dark);
 }
 
 .timeline-line {
@@ -865,12 +840,6 @@ section.introduction {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.solutions-info .info-competency-grid {
-    display: grid;
-    gap: 40px;
-    grid-template: none;
-}
-
 .info-competency-card {
     border: 1px solid #cccccc;
     border-radius: 10px;
@@ -880,7 +849,6 @@ section.introduction {
     flex-direction: column;
     gap: 20px;
 }
-
 
 .info-competency-card.card-blue {
     background: #687EE0;
@@ -892,22 +860,6 @@ section.introduction {
     width: 50px;
     height: 50px;
     aspect-ratio: 1/1;
-}
-
-.solutions-info .info-card-title {
-    font-size: 26px;
-    font-weight: 600;
-    color: #312CBF;
-}
-
-.solutions-info .info-competency-card {
-    background-color: #f8f8f8;
-    border: none;
-}
-
-.solutions-info .info-card-subtitle {
-    color: #222222;
-    font-size: 22px;
 }
 
 .info-card-title {
@@ -1261,7 +1213,7 @@ section.introduction {
 .inquiry-form .input_text {
     font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
     font-size: 16px;
-    padding: 12px 20px;
+    padding: 16px 20px;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     background-color: #ffffff;
@@ -1291,7 +1243,7 @@ section.introduction {
 .inquiry-form .select_text_date {
     font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
     font-size: 16px;
-    padding: 12px 20px;
+    padding: 16px 20px;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     background-color: #ffffff;
@@ -1350,12 +1302,7 @@ section.introduction {
     box-shadow: 0 8px 25px rgba(49, 44, 191, 0.3);
 }
 
-.inquiry-form .btn1 button:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
-}
+<<<<<<< HEAD
 
 /***********************/
 .inquiry-case-studies {
@@ -1613,7 +1560,7 @@ section.introduction {
 
 .casestudy-info .title {
     text-align: center;
-    margin: 20px 0px;
+    margin: 90px 0px 70px;
     clear: both;
     position: relative;
 }
@@ -1660,8 +1607,6 @@ section.introduction {
     font-size: 28px;
     font-weight: 600;
     border: none;
-    color: #888888;
-    font-weight: 300;
 }
 
 .casestudy-info .link_menu.tab_area ul li:last-child a {
@@ -1670,7 +1615,6 @@ section.introduction {
 
 .casestudy-info .link_menu.tab_area ul li a.on {
     color: #312CBF;
-    font-weight: 600;
 }
 
 .casestudy-info .link_menu.tab_info {
@@ -1712,7 +1656,7 @@ table.tb_type2 {
     border-bottom: 1px solid #cccccc;
     margin-top: 40px;
     width: 100%;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 table.tb_type2 thead {
@@ -1733,48 +1677,7 @@ table.tb_type2 tr:last-child {
 
 table.tb_type2 tr td {
     text-align: center;
-    line-height: 30px;
-    margin: 0px 10px;
-}
-
-table.tb_type2 tr td input {
-    width: 94%;
-}
-
-.btn_area {
-    height: 100px;
-    display: block;
-    margin-top: 20px;
-}
-
-.btn_area a {
-    display: inline-block;
-    font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffffff;
-    background: linear-gradient(135deg, #312cbf 0%, #4540d4 100%);
-    padding: 18px 60px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
-
-.btn_area a.line {
-    display: inline-block;
-    font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: #222222;
-    background: #ffffff;
-    padding: 18px 60px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #ccc;
-    cursor: pointer;
+    line-height: 22px;
 }
 
 /* Paging */
@@ -1782,72 +1685,27 @@ table.tb_type2 tr td input {
     padding: 50px 0 100px 0;
     text-align: center;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .paging .paging_inner {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.paging .paging_inner a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: #fff;
-    font-family: var(--font-pretendard);
-    font-size: 14px;
-    color: #666;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.paging .paging_inner a:hover {
-    color: #312CBF;
-    background-color: rgba(49, 44, 191, 0.05);
-}
-
-.paging .paging_inner a.prev,
-.paging .paging_inner a.next {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 8px auto;
-    /* Adjust size as needed */
-}
-
-.paging .paging_inner a.prev {
-    background-image: url('../images/sub/icon_prev.png');
-    background-size: 20px;
-}
-
-.paging .paging_inner a.next {
-    background-image: url('../images/sub/icon_next.png');
-    background-size: 20px;
-}
-
-/* Hide text for screen readers visually */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+    display: inline-block;
 }
 
 .paging .paging_inner a.current {
-    border: 1px solid #cccccc;
-    font-weight: 700;
-    box-shadow: 0 2px 5px rgba(182, 182, 182, 0.3);
+    border-color: #777;
+    background: #777;
+    color: #fff;
+    border-radius: 99px;
+}
+
+.paging .paging_inner a {
+    float: left;
+    width: 34px;
+    height: 34px;
+    line-height: 33px;
+    background: #fff;
+    font-size: 14px;
+    color: #272727;
 }
 
 /* Button & Popup */
@@ -1864,13 +1722,6 @@ table.tb_type2 tr td input {
     right: 0px;
     top: 50px;
     border-radius: 20px;
-}
-
-.btn2.popup_confirm {
-    margin: 10px auto 0px;
-    position: relative;
-    right: auto;
-    top: auto;
 }
 
 .btn2:hover {
@@ -1898,7 +1749,7 @@ table.tb_type2 tr td input {
 }
 
 .popup_close {
-    right: calc(50% - 65px);
+    right: calc(50% - 50px);
     top: auto;
     bottom: 20px;
     border: 0px;
@@ -1938,162 +1789,6 @@ table.tb_type2 tr td input {
     display: block;
 }
 
-.notice-list tr td:nth-child(2) {
-    text-align: left;
-}
-
-.title_area .day {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.gnb_etc_service {
-    position: relative;
-    float: left;
-}
-
-.gnb_etc_service>select {
-    height: 50px;
-    width: 200px;
-    padding-left: 10px;
-    border: 1px solid #fff;
-    margin-top: -2px;
-    box-sizing: border-box;
-    appearance: none;
-    -webkit-appearance: none;
-    background: url(../images/select_bg.png) 95% 50% no-repeat;
-}
-
-.search_area {
-    width: calc(100% - 24px);
-    border: 12px solid #f3f5f6;
-    height: 50px;
-    line-height: 50px;
-    margin-top: 50px;
-    clear: both;
-}
-
-.search_area .input_search {
-    float: left;
-    min-width: 500px;
-    padding: 0 20px;
-    height: 48px;
-    border: 0px;
-}
-
-.search_area .input_search input {
-    border: 0px;
-}
-
-.search_area>span {
-    float: right;
-    background-color: #312CBF;
-    height: 50px;
-    line-height: 50px;
-    color: #fff;
-    width: 124px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.news_view {
-    border-top: 2px solid #312CBF;
-    border-bottom: 2px solid #cfcfcf;
-    margin-top: 50px;
-}
-
-.news_view .title_area {
-    padding: 40px 20px;
-    border-bottom: 2px solid #cfcfcf;
-}
-
-.news_view .title_area .day {
-    color: #312CBF;
-    font-size: 18px;
-    font-weight: bold;
-    display: inline-block;
-    margin: 0px;
-}
-
-.news_view .title_area .day>span {
-    margin-left: 20px;
-}
-
-.news_view .title_area .day>span::before {
-    content: '';
-    width: 1px;
-    height: 10px;
-    background-color: #ccc;
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.news_view .title_area p.title {
-    margin: 20px 0px 0px;
-    text-align: left;
-    font-size: 24px;
-}
-
-.news_view .news_content {
-    padding: 40px 20px;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.info-intro.solution h1 {
-    margin: 100px 0px 40px;
-}
-
-.info-intro.solution img {
-    margin: 40px auto;
-    display: block;
-}
-
-
-.solution-tabs {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.solution-btn {
-    display: inline-block;
-    font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    color: #666666;
-    background: #ffffff;
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: none;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    min-height: 50px;
-}
-
-.solution-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(185, 185, 185, 0.3);
-}
-
-.solution-btn.active {
-    font-weight: 600;
-    background-color: #312cbf;
-    color: #ffffff;
-    background: linear-gradient(135deg, #312cbf 0%, #4540d4 100%);
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
-
 /* ===================================
    Desktop (max-width: 1440px)
    =================================== */
@@ -2101,8 +1796,8 @@ table.tb_type2 tr td input {
 
     .history-hero-content,
     .timeline-container {
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 120px;
+        padding-right: 120px;
     }
 
     /* Introduction Responsive */
@@ -2173,946 +1868,721 @@ table.tb_type2 tr td input {
     .info-container {
         width: 100%;
         padding: 0 40px;
-    }
 
-    .inquiry-container {
-        width: 100%;
-        padding: 0 40px;
-    }
+        =======.inquiry-form .btn1 button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
 
-    .casestudy {
-        width: calc(100% - 80px);
-        padding: 0 40px;
-    }
+        /* Inquiry Form Responsive */
+        @media screen and (max-width: 768px) {
+            .inquiry {
+                padding: 60px 0;
+                >>>>>>>02f64f318878a2ad5b85e9e6e1756d07227407ea
+            }
 
-    .casestudy-info {
-        width: 100%;
-    }
+            .inquiry-container {
+                width: 100%;
+                padding: 0 40px;
+            }
 
-    .casestudy.write {
-        width: 100%;
-        padding: 0 20px;
-    }
-}
+            .casestudy {
+                width: calc(100% - 80px);
+                padding: 0 40px;
+            }
 
-@media (max-width: 1440px) {
-    .cloud-infra-container {
-        padding: 0 120px;
-    }
-}
+            .casestudy-info {
+                width: 100%;
+            }
+        }
 
-/* ===================================
+        @media (max-width: 1440px) {
+            .cloud-infra-container {
+                padding: 0 120px;
+            }
+        }
+
+        /* ===================================
    Tablet (max-width: 1024px)
    =================================== */
-@media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1024px) {
 
-    .history-hero-content,
-    .timeline-container {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
+            .history-hero-content,
+            .timeline-container {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
 
-    .timeline-container {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
+            .timeline-container {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
 
-    .timeline-year {
-        gap: 60px;
-        /* Gap 축소 */
-    }
+            .timeline-year {
+                gap: 60px;
+                /* Gap 축소 */
+            }
 
-    .timeline-year .year {
-        font-size: 32px;
-        width: 100px;
-    }
+            .timeline-year .year {
+                font-size: 32px;
+                width: 100px;
+            }
 
-    /* Introduction Responsive */
-    section.introduction {
-        max-width: 960px;
-        padding: 0 40px;
-        gap: 80px;
-        margin: 80px auto;
-    }
+            /* Introduction Responsive */
+            section.introduction {
+                max-width: 960px;
+                padding: 0 40px;
+                gap: 80px;
+                margin: 80px auto;
+            }
 
-    .introduction .number-info {
-        flex-wrap: wrap;
-        gap: 40px 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+            .introduction .number-info {
+                flex-wrap: wrap;
+                gap: 40px 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-    .introduction .number-info .number {
-        flex: 0 0 calc(50% - 10px);
-    }
+            .introduction .number-info .number {
+                flex: 0 0 calc(50% - 10px);
+            }
 
-    .introduction .number-info .number .num-label {
-        font-size: 24px;
-    }
+            .introduction .number-info .number .num-label {
+                font-size: 24px;
+            }
 
-    .introduction .number-info .number .num-title {
-        font-size: 50px;
-    }
+            .introduction .number-info .number .num-title {
+                font-size: 50px;
+            }
 
-    .introduction .number-info .number .num-title em {
-        font-size: 26px;
-    }
+            .introduction .number-info .number .num-title em {
+                font-size: 26px;
+            }
 
-    .introduction .text-info {
-        gap: 80px;
-    }
+            .introduction .text-info {
+                gap: 80px;
+            }
 
-    .introduction .text-info .text-item {
-        gap: 60px;
-    }
+            .introduction .text-info .text-item {
+                gap: 60px;
+            }
 
-    .introduction .text-info .text-label {
-        width: 150px;
-        font-size: 36px;
-    }
+            .introduction .text-info .text-label {
+                width: 150px;
+                font-size: 36px;
+            }
 
-    .introduction .text-info .text-title {
-        font-size: 22px;
-    }
+            .introduction .text-info .text-title {
+                font-size: 22px;
+            }
 
-    .introduction .text-info .text-title p {
-        font-size: 18px;
-    }
+            .introduction .text-info .text-title p {
+                font-size: 18px;
+            }
 
-    .introduction .text-info .text-title.col-ui ul li .card-title {
-        font-size: 24px;
-    }
+            .introduction .text-info .text-title.col-ui ul li .card-title {
+                font-size: 24px;
+            }
 
-    .introduction .text-info .text-title.col-ui ul li p {
-        font-size: 16px;
-    }
+            .introduction .text-info .text-title.col-ui ul li p {
+                font-size: 16px;
+            }
 
-    .introduction .text-info .text-title.row-ui ul li .card-title {
-        font-size: 24px;
-    }
+            .introduction .text-info .text-title.row-ui ul li .card-title {
+                font-size: 24px;
+            }
 
-    .introduction .text-info .text-title.row-ui ul li p {
-        font-size: 16px;
-    }
+            .introduction .text-info .text-title.row-ui ul li p {
+                font-size: 16px;
+            }
 
-    .casestudy-info .link_menu.tab_info ul li {
-        width: calc(33.33% - 10px);
-        margin-right: 10px;
-        margin-bottom: 10px;
-    }
+            .casestudy-info .link_menu.tab_info ul li {
+                width: calc(33.33% - 10px);
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
 
-    .casestudy-info .link_menu.tab_info ul li a {
-        width: 100%;
-        border-radius: 0px;
-        font-size: 16px;
-    }
+            .casestudy-info .link_menu.tab_info ul li a {
+                width: 100%;
+                border-radius: 0px;
+                font-size: 16px;
+            }
+        }
 
-    .solution-tabs-wrapper {
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
+        @media (max-width: 1024px) {
+            .cloud-infra-container {
+                padding: 0 60px;
+                width: 100%;
+            }
 
-    .solution-tabs {
-        justify-content: flex-start;
-        padding: 0 20px;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        gap: 8px;
-        height: 60px;
-        flex-wrap: nowrap;
-        /* Prevent wrapping on mobile */
-    }
+            .cloud-competency-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
 
-    .solution-tabs::-webkit-scrollbar {
-        height: 0px;
-        background: transparent;
-    }
+            .cloud-competency-grid.colum4 {
+                grid-template-columns: 1fr;
+            }
 
-    .solution-btn {
-        font-size: 15px;
-        padding: 0 16px;
-        height: 36px;
-        flex-shrink: 0;
-    }
+            .cloud-process-flow {
+                flex-direction: column;
+            }
 
-    .info-competency-card {
-        border: 1px solid #cccccc;
-        border-radius: 10px;
-        padding: 20px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+            .cloud-process-arrow {
+                transform: rotate(90deg);
+            }
 
-    .info-intro.solution img {
-        width: 100%;
-    }
+            .cloud-case-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
 
-}
+            .cloud-case-grid.colum2 {
+                grid-template-columns: 1fr;
+            }
 
-@media (max-width: 1024px) {
-    .cloud-infra-container {
-        padding: 0 60px;
-        width: 100%;
-    }
+            .cloud-case-grid.colum3 {
+                grid-template-columns: 1fr;
+            }
 
-    .cloud-competency-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
+            .cloud-process-step {
+                width: 100%;
+                min-height: 160px;
+            }
 
-    .cloud-competency-grid.colum4 {
-        grid-template-columns: 1fr;
-    }
+            /* Business Pages (Cloud, Public, Industries) */
+            .info-competency-grid,
+            .info-competency-grid.colum4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-    .cloud-process-flow {
-        flex-direction: column;
-    }
+            .info-process-flow {
+                flex-direction: column;
+            }
 
-    .cloud-process-arrow {
-        transform: rotate(90deg);
-    }
+            .info-process-arrow {
+                transform: rotate(90deg);
+            }
 
-    .cloud-case-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
+            .info-case-grid,
+            .info-case-grid.column2,
+            .info-case-grid.colum3 {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-    .cloud-case-grid.colum2 {
-        grid-template-columns: 1fr;
-    }
+            .info-process-step {
+                width: 100%;
+                min-height: auto;
+            }
 
-    .cloud-case-grid.colum3 {
-        grid-template-columns: 1fr;
-    }
+            .inquiry-case-grid.colum3,
+            .inquiry-case-grid.colum4,
+            .inquiry-case-grid.colum6 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
 
-    .cloud-process-step {
-        width: 100%;
-        min-height: 160px;
-    }
-
-    /* Business Pages (Cloud, Public, Industries) */
-    .info-competency-grid,
-    .info-competency-grid.colum4 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .info-process-flow {
-        flex-direction: column;
-    }
-
-    .info-process-arrow {
-        transform: rotate(90deg);
-    }
-
-    .info-case-grid,
-    .info-case-grid.column2,
-    .info-case-grid.colum3 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .info-process-step {
-        width: 100%;
-        min-height: auto;
-    }
-
-    .inquiry-case-grid.colum3,
-    .inquiry-case-grid.colum4,
-    .inquiry-case-grid.colum6 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .search_area {
-        display: none;
-    }
-}
-
-/* ===================================
+        /* ===================================
    Mobile (max-width: 768px)
    =================================== */
-@media screen and (max-width: 768px) {
-    .history-hero-content h2 {
-        font-size: 20px;
-    }
-
-    .history-hero-content,
-    .timeline-container {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    .timeline-hero {
-        text-align: center;
-        padding: 40px 0 30px;
-        position: relative;
-    }
-
-    .timeline-container {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-
-    .timeline-hero .period-label {
-        font-size: 20px;
-    }
-
-    .history-hero .hero-title {
-        font-size: 30px;
-    }
-
-    .timeline-hero .period-title {
-        font-size: 40px;
-    }
-
-    .timeline-hero .period-desc {
-        font-size: 16px;
-        font-weight: normal;
-        padding: 20px 20px 0px;
-    }
-
-    .timeline-year {
-        gap: 30px;
-        /* Gap 대폭 축소 */
-    }
-
-    .timeline-year .year {
-        width: 60px;
-        /* 연도 너비 축소 */
-        font-size: 20px;
-        text-align: right;
-        padding-top: 8px;
-        /* 마커와 높이 맞춤 */
-    }
-
-    .timeline-marker .dot {
-        width: 10px;
-        height: 10px;
-        left: -4px;
-        top: 12px;
-    }
-
-    .timeline-year.active .timeline-marker .dot {
-        width: 14px;
-        height: 14px;
-        left: -6px;
-    }
-
-    .year-events {
-        gap: 15px;
-        padding-bottom: 40px;
-    }
-
-    .event-month {
-        font-size: 16px;
-        padding-bottom: 4px;
-    }
-
-    .event-desc {
-        font-size: 15px;
-    }
-
-    .period-tabs {
-        gap: 8px;
-        padding: 15px 10px;
-        flex-wrap: wrap;
-    }
-
-    .tab-btn {
-        font-size: 14px;
-        white-space: nowrap;
-    }
-
-    .period-name {
-        display: none;
-    }
-
-    /* Introduction Responsive - Mobile */
-    section.introduction {
-        padding: 0 20px;
-        gap: 60px;
-        margin: 60px auto;
-        width: calc(100% - 40px);
-    }
-
-    .introduction .number-info {
-        gap: 30px 15px;
-    }
-
-    .introduction .number-info .number {
-        flex: 0 0 calc(50% - 7.5px);
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .introduction .number-info .number .num-label {
-        font-size: 18px;
-    }
-
-    .introduction .number-info .number .num-title {
-        font-size: 36px;
-    }
-
-    .introduction .number-info .number .num-title em {
-        font-size: 20px;
-    }
-
-    .introduction .text-info {
-        gap: 60px;
-    }
-
-    .introduction .text-info .text-item {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .introduction .text-info .text-label {
-        width: 100%;
-        font-size: 28px;
-    }
-
-    .introduction .text-info .text-title {
-        font-size: 20px;
-    }
-
-    .introduction .text-info .text-title.col-ui {
-        width: 100%;
-    }
-
-    .introduction .text-info .text-title.col-ui ul {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .introduction .text-info .text-title.col-ui ul li {
-        width: 100%;
-    }
-
-    .introduction .text-info .text-title.col-ui ul li .card-title {
-        font-size: 20px;
-    }
-
-    .introduction .text-info .text-title.col-ui ul li img {
-        height: auto;
-    }
-
-    .introduction .text-info .text-title.row-ui ul {
-        gap: 40px;
-    }
-
-    .introduction .text-info .text-title.row-ui ul li img {
-        height: 150px;
-    }
-
-    .address-info-wrapper {
-        padding: 60px 30px;
-        margin: 0 auto;
-    }
-
-    /* Responsive Paging */
-    .paging {
-        padding: 30px 0 60px 0;
-    }
-
-    .paging .paging_inner {
-        gap: 3px;
-    }
-
-    .paging .paging_inner a {
-        width: 28px;
-        height: 28px;
-        font-size: 13px;
-    }
-
-    .location .address-info {
-        flex-direction: column;
-        gap: 50px;
-    }
-
-    .location .address-info .address-item h1 {
-        font-size: 30px;
-    }
-
-    .location .address-info .address-item .address-title {
-        font-size: 20px;
-        padding-left: 90px;
-    }
-
-    .location .address-info .address-item .address-title::before {
-        width: 80px;
-        height: 80px;
-    }
-
-    .location .address-info .address-item .address-title.subway::before {
-        width: 80px;
-        height: 80px;
-    }
-
-    .location .address-info .address-item .address-title p {
-        font-size: 16px;
-    }
-
-    .inquiry-case-content {
-        padding: 20px;
-    }
-
-    .casestudy {
-        width: calc(100% - 40px);
-        padding: 0 20px;
-    }
-
-}
-
-@media (max-width: 768px) {
-    .cloud-infra-container {
-        padding: 0 30px;
-    }
-
-    .cloud-infra-header {
-        padding-top: 60px;
-        margin-bottom: 60px;
-    }
-
-    .cloud-infra-title {
-        font-size: 36px;
-    }
-
-    .cloud-intro-main {
-        font-size: 22px;
-    }
-
-    .cloud-intro-service,
-    .cloud-intro-solution {
-        font-size: 16px;
-    }
-
-    .cloud-section-title {
-        font-size: 24px;
-    }
-
-    .cloud-card-title {
-        font-size: 24px;
-    }
-
-    .cloud-card-subtitle,
-    .cloud-card-desc,
-    .info-case-subtitle,
-    .info-case-desc,
-    .info-card-desc {
-        font-size: 16px;
-    }
-
-    .cloud-step-title,
-    .info-case-title {
-        font-size: 20px;
-    }
-
-    .cloud-competency-card,
-    .info-case-card {
-        padding: 30px;
-    }
-
-    .cloud-competencies,
-    .cloud-process,
-    .info-case-studies {
-        margin-bottom: 60px;
-    }
-
-    /* Business Pages Mobile */
-    .info-header {
-        padding-top: 60px;
-        margin-bottom: 60px;
-    }
-
-    .info-intro,
-    .info-competencies,
-    .info-process,
-    .info-case-studies {
-        margin-bottom: 80px;
-    }
-
-    .info-title {
-        font-size: 36px;
-    }
-
-    .info-intro-main {
-        font-size: 20px;
-    }
-
-    .info-section-title {
-        font-size: 24px;
-    }
-
-    .info-card-title,
-    .info-step-title,
-    .info-case-title {
-        font-size: 22px;
-    }
-
-    .info-competency-grid,
-    .info-case-grid,
-    .info-case-grid.column2,
-    .info-case-grid.colum3 {
-        grid-template-columns: 1fr;
-    }
-
-    .info-competency-card,
-    .info-process-step,
-    .info-case-card {
-        padding: 30px;
-    }
-
-    .info-container {
-        padding: 0 20px;
-    }
-
-    .inquiry-section-title {
-        font-size: 24px;
-    }
-
-    .inquiry-case-grid,
-    .inquiry-case-grid.colum2,
-    .inquiry-case-grid.colum3,
-    .inquiry-case-grid.colum4,
-    .inquiry-case-grid.colum6 {
-        grid-template-columns: 1fr;
-    }
-
-    .inquiry-case-content {
-        padding: 30px;
-    }
-
-    .inquiry-case-content h3 {
-        font-size: 26px;
-    }
-
-    .inquiry-tel {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-        margin-top: 30px;
-    }
-
-    .inquiry-tel p {
-        font-size: 18px;
-    }
-
-    .inquiry-case-studies {
-        margin-bottom: 40px;
-    }
-
-    table.tb_type2.casestudy_info colgroup {
-        display: none;
-    }
-
-    table.tb_type2.casestudy_info tr th:nth-child(1) {
-        display: none;
-    }
-
-    table.tb_type2.casestudy_info tr th:nth-child(2) {
-        display: none;
-    }
-
-    table.tb_type2.casestudy_info tr td:nth-child(1) {
-        display: none;
-    }
-
-    table.tb_type2.casestudy_info tr td:nth-child(2) {
-        display: none;
-    }
-
-    .casestudy-info .link_menu.tab_info ul li {
-        width: calc(50% - 10px);
-        margin-right: 10px;
-        margin-bottom: 10px;
-    }
-
-    .inquiry-container {
-        padding: 0 20px;
-    }
-
-    .search_area {
-        width: calc(100% - 64px);
-        margin: 0px 20px;
-    }
-
-    table.tb_type2 colgroup {
-        display: none;
-    }
-
-    table.tb_type2 tr th:nth-child(1) {
-        display: none;
-    }
-
-    table.tb_type2.news tr th:nth-child(2) {
-        display: inline-block;
-        text-align: center;
-        width: 100%;
-        padding-left: 0px;
-    }
-
-    table.tb_type2.news tr th:nth-child(3) {
-        width: 25%;
-        text-align: center;
-        padding-left: 0px;
-    }
-
-    table.tb_type2 tr td:nth-child(1) {
-        display: none;
-    }
-
-    table.tb_type2.news tr td:nth-child(2) {
-        display: inline-block;
-        width: 100%;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        padding-left: 10px;
-    }
-
-    table.tb_type2.news tr td:nth-child(3) {
-        width: 25%;
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .img-info .pc {
-        display: none;
-    }
-
-    .img-info .mo {
-        display: block;
-    }
-
-    .inquiry {
-        padding: 60px 0 0;
-    }
-
-    .inquiry-subtitle {
-        font-size: 18px;
-    }
-
-    .inquiry-form {
-        padding: 30px 20px;
-        border-radius: 0px;
-    }
-
-    .inquiry-form .answer h3 {
-        font-size: 18px;
-    }
-
-    .inquiry-form .input_text.w50 {
-        width: 100%;
-    }
-
-    .inquiry-form .btn1 a,
-    .inquiry-form .btn1 button {
-        padding: 16px 40px;
-        font-size: 16px;
-    }
-
-    /* Mobile Paging: Show only Prev/Next */
-    .paging .paging_inner a.num {
-        display: none;
-    }
-
-    .paging .paging_inner {
-        gap: 10px;
-        /* Increase gap between prev/next */
-    }
-}
-
-/* ===================================
+        @media screen and (max-width: 768px) {
+            .history-hero-content h2 {
+                font-size: 20px;
+            }
+
+            .history-hero-content,
+            .timeline-container {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            .timeline-hero {
+                text-align: center;
+                padding: 40px 0 30px;
+                position: relative;
+            }
+
+            .timeline-container {
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+
+            .timeline-hero .period-label {
+                font-size: 20px;
+            }
+
+            .history-hero .hero-title {
+                font-size: 30px;
+            }
+
+            .timeline-hero .period-title {
+                font-size: 40px;
+            }
+
+            .timeline-hero .period-desc {
+                font-size: 16px;
+                font-weight: normal;
+                padding: 20px 20px 0px;
+            }
+
+            .timeline-year {
+                gap: 30px;
+                /* Gap 대폭 축소 */
+            }
+
+            .timeline-year .year {
+                width: 60px;
+                /* 연도 너비 축소 */
+                font-size: 20px;
+                text-align: right;
+                padding-top: 8px;
+                /* 마커와 높이 맞춤 */
+            }
+
+            .timeline-marker .dot {
+                width: 10px;
+                height: 10px;
+                left: -4px;
+                top: 12px;
+            }
+
+            .timeline-year.active .timeline-marker .dot {
+                width: 14px;
+                height: 14px;
+                left: -6px;
+            }
+
+            .year-events {
+                gap: 15px;
+                padding-bottom: 40px;
+            }
+
+            .event-month {
+                font-size: 16px;
+                padding-bottom: 4px;
+            }
+
+            .event-desc {
+                font-size: 15px;
+            }
+
+            .period-tabs {
+                gap: 8px;
+                padding: 15px 10px;
+                flex-wrap: wrap;
+            }
+
+            .tab-btn {
+                font-size: 14px;
+                white-space: nowrap;
+            }
+
+            .period-name {
+                display: none;
+            }
+
+            /* Introduction Responsive - Mobile */
+            section.introduction {
+                padding: 0 20px;
+                gap: 60px;
+                margin: 60px auto;
+                width: calc(100% - 40px);
+            }
+
+            .introduction .number-info {
+                gap: 30px 15px;
+            }
+
+            .introduction .number-info .number {
+                flex: 0 0 calc(50% - 7.5px);
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .introduction .number-info .number .num-label {
+                font-size: 18px;
+            }
+
+            .introduction .number-info .number .num-title {
+                font-size: 36px;
+            }
+
+            .introduction .number-info .number .num-title em {
+                font-size: 20px;
+            }
+
+            .introduction .text-info {
+                gap: 60px;
+            }
+
+            .introduction .text-info .text-item {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .introduction .text-info .text-label {
+                width: 100%;
+                font-size: 28px;
+            }
+
+            .introduction .text-info .text-title {
+                font-size: 20px;
+            }
+
+            .introduction .text-info .text-title.col-ui {
+                width: 100%;
+            }
+
+            .introduction .text-info .text-title.col-ui ul {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .introduction .text-info .text-title.col-ui ul li {
+                width: 100%;
+            }
+
+            .introduction .text-info .text-title.col-ui ul li .card-title {
+                font-size: 20px;
+            }
+
+            .introduction .text-info .text-title.col-ui ul li img {
+                height: auto;
+            }
+
+            .introduction .text-info .text-title.row-ui ul {
+                gap: 40px;
+            }
+
+            .introduction .text-info .text-title.row-ui ul li img {
+                height: 150px;
+            }
+
+            .address-info-wrapper {
+                padding: 60px 30px;
+                margin: 0 auto;
+            }
+
+            .location .address-info {
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            .location .address-info .address-item h1 {
+                font-size: 30px;
+            }
+
+            .location .address-info .address-item .address-title {
+                font-size: 20px;
+                padding-left: 90px;
+            }
+
+            .location .address-info .address-item .address-title::before {
+                width: 80px;
+                height: 80px;
+            }
+
+            .location .address-info .address-item .address-title.subway::before {
+                width: 80px;
+                height: 80px;
+            }
+
+            .location .address-info .address-item .address-title p {
+                font-size: 16px;
+            }
+
+            .inquiry-case-content {
+                padding: 20px;
+            }
+
+            .casestudy {
+                width: calc(100% - 40px);
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cloud-infra-container {
+                padding: 0 30px;
+            }
+
+            .cloud-infra-header {
+                padding-top: 60px;
+                margin-bottom: 60px;
+            }
+
+            .cloud-infra-title {
+                font-size: 36px;
+            }
+
+            .cloud-intro-main {
+                font-size: 22px;
+            }
+
+            .cloud-intro-service,
+            .cloud-intro-solution {
+                font-size: 16px;
+            }
+
+            .cloud-section-title {
+                font-size: 24px;
+            }
+
+            .cloud-card-title {
+                font-size: 24px;
+            }
+
+            .cloud-card-subtitle,
+            .cloud-card-desc,
+            .info-case-subtitle,
+            .info-case-desc {
+                font-size: 16px;
+            }
+
+            .cloud-step-title,
+            .info-case-title {
+                font-size: 20px;
+            }
+
+            .cloud-competency-card,
+            .info-case-card {
+                padding: 30px;
+            }
+
+            .cloud-competencies,
+            .cloud-process,
+            .info-case-studies {
+                margin-bottom: 60px;
+            }
+
+            /* Business Pages Mobile */
+            .info-header {
+                padding-top: 60px;
+                margin-bottom: 60px;
+            }
+
+            .info-intro,
+            .info-competencies,
+            .info-process,
+            .info-case-studies {
+                margin-bottom: 80px;
+            }
+
+            .info-title {
+                font-size: 36px;
+            }
+
+            .info-intro-main {
+                font-size: 20px;
+            }
+
+            .info-section-title {
+                font-size: 24px;
+            }
+
+            .info-card-title,
+            .info-step-title,
+            .info-case-title {
+                font-size: 22px;
+            }
+
+            .info-competency-grid,
+            .info-case-grid,
+            .info-case-grid.column2,
+            .info-case-grid.colum3 {
+                grid-template-columns: 1fr;
+            }
+
+            .info-competency-card,
+            .info-process-step,
+            .info-case-card {
+                padding: 30px;
+            }
+
+            .info-container {
+                padding: 0 20px;
+            }
+
+            .inquiry-section-title {
+                font-size: 24px;
+            }
+
+            .inquiry-case-grid,
+            .inquiry-case-grid.colum2,
+            .inquiry-case-grid.colum3,
+            .inquiry-case-grid.colum4,
+            .inquiry-case-grid.colum6 {
+                grid-template-columns: 1fr;
+            }
+
+            .inquiry-case-content {
+                padding: 30px;
+            }
+
+            .inquiry-case-content h3 {
+                font-size: 26px;
+            }
+
+            .inquiry-tel {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+                margin-top: 30px;
+            }
+
+            .inquiry-tel p {
+                font-size: 18px;
+            }
+
+            .inquiry-case-studies {
+                margin-bottom: 40px;
+            }
+
+            table.tb_type2 colgroup {
+                display: none;
+            }
+
+            table.tb_type2 tr th:nth-child(1) {
+                display: none;
+            }
+
+            table.tb_type2 tr th:nth-child(2) {
+                display: none;
+            }
+
+            table.tb_type2 tr td:nth-child(1) {
+                display: none;
+            }
+
+            table.tb_type2 tr td:nth-child(2) {
+                display: none;
+            }
+
+            .casestudy-info .link_menu.tab_info ul li {
+                width: calc(50% - 10px);
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+
+            .inquiry-container {
+                padding: 0 20px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .img-info .pc {
+                display: none;
+            }
+
+            .img-info .mo {
+                display: block;
+            }
+
+            .inquiry {
+                padding: 60px 0 0;
+            }
+
+            .inquiry-subtitle {
+                font-size: 18px;
+            }
+
+            .inquiry-form {
+                padding: 30px 20px;
+                border-radius: 0px;
+            }
+
+            .inquiry-form .answer h3 {
+                font-size: 18px;
+            }
+
+            .inquiry-form .input_text.w50 {
+                width: 100%;
+            }
+
+            .inquiry-form .btn1 a,
+            .inquiry-form .btn1 button {
+                padding: 16px 40px;
+                font-size: 16px;
+            }
+        }
+
+        /* ===================================
    Small Mobile (max-width: 480px)
    =================================== */
-@media screen and (max-width: 480px) {
+        @media screen and (max-width: 480px) {
 
-    .history-hero-content,
-    .timeline-container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+            .history-hero-content,
+            .timeline-container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
 
-    .timeline-year {
-        gap: 20px;
-    }
+            .timeline-year {
+                gap: 20px;
+            }
 
-    .timeline-year .year {
-        font-size: 18px;
-        width: 50px;
-    }
+            .timeline-year .year {
+                font-size: 18px;
+                width: 50px;
+            }
 
-    .timeline-hero .period-title {
-        font-size: 32px;
-    }
+            .timeline-hero .period-title {
+                font-size: 32px;
+            }
 
-    .tab-btn {
-        font-size: 14px;
-    }
+            .tab-btn {
+                font-size: 14px;
+            }
 
-    /* Introduction Responsive - Extra Small Mobile */
-    section.introduction {
-        padding: 0 20px;
-        gap: 40px;
-        margin: 40px auto;
-    }
-
-    .history-hero .hero-title>br {
-        display: none;
-    }
-
-}
-
-@media (max-width: 480px) {
-    .cloud-infra-container {
-        padding: 0 20px;
-    }
-
-    .cloud-infra-title {
-        font-size: 28px;
-    }
-
-    .cloud-intro-main {
-        font-size: 18px;
-    }
-
-    .cloud-competency-card,
-    .info-case-card {
-        padding: 20px;
-    }
-
-    /* Business Pages Small Mobile */
-    .info-title {
-        font-size: 28px;
-    }
-
-    .info-competency-card,
-    .info-process-step,
-    .info-case-card {
-        padding: 20px;
-    }
-
-    .info-container {
-        padding: 0 20px;
-    }
+            /* Introduction Responsive - Extra Small Mobile */
+            section.introduction {
+                padding: 0 20px;
+                gap: 40px;
+                margin: 40px auto;
+            }
 
 
-    .casestudy {
-        padding: 0 20px;
-        width: calc(100% - 40px);
-    }
+        }
 
-    table.tb_type2.news thead {
-        display: none;
-    }
+        @media (max-width: 480px) {
+            .cloud-infra-container {
+                padding: 0 20px;
+            }
 
-    table.tb_type2.news tr td:nth-child(2) {
-        padding-left: 0px;
-        margin: 0px;
-    }
+            .cloud-infra-title {
+                font-size: 28px;
+            }
 
-    table.tb_type2.news tr td:nth-child(3) {
-        display: none;
-    }
-}
+            .cloud-intro-main {
+                font-size: 18px;
+            }
 
-/* Solution Tabs (Anyworks) */
-.solution-tabs-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 99;
-    background: #ffffff;
-    width: 100%;
-    border-bottom: 1px solid #e5e5e5;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-20px);
-}
+            .cloud-competency-card,
+            .info-case-card {
+                padding: 20px;
+            }
 
-.solution-tabs-wrapper.visible {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-}
+            /* Business Pages Small Mobile */
+            .info-title {
+                font-size: 28px;
+            }
 
-.solution-tabs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 20px;
-    max-width: 1000px;
-    /* Reduced width to force wrap if needed, or just let it wrap */
-    margin: 0 auto;
-    height: auto;
-    /* Allow growth */
-    gap: 10px;
-    flex-wrap: wrap;
-    /* Enable wrapping */
-}
+            .info-competency-card,
+            .info-process-step,
+            .info-case-card {
+                padding: 20px;
+            }
 
-.solution-btn {
-    font-family: var(--font-pretendard);
-    font-size: 18px;
-    font-weight: 500;
-    color: #888888;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0 20px;
-    height: 40px;
-    border-radius: 20px;
-    white-space: nowrap;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+            .info-container {
+                padding: 0 20px;
+            }
 
-.solution-btn:hover {
-    color: #312cbf;
-    background-color: rgba(49, 44, 191, 0.05);
-}
 
-.solution-btn.active {
-    color: #ffffff;
-    background-color: #312cbf;
-    font-weight: 700;
-    box-shadow: 0 4px 10px rgba(49, 44, 191, 0.2);
-}
-
-/* Mobile Responsive */
-@media screen and (max-width: 1024px) {
-    .solution-tabs-wrapper {
-        top: 0;
-    }
-
-    .solution-tabs {
-        justify-content: flex-start;
-        padding: 10px 20px;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        gap: 8px;
-        height: 60px;
-        flex-wrap: nowrap;
-        /* Prevent wrapping on mobile */
-    }
-
-    .solution-tabs::-webkit-scrollbar {
-        height: 0px;
-        background: transparent;
-    }
-
-    .solution-btn {
-        font-size: 15px;
-        padding: 0 16px;
-        height: 36px;
-        flex-shrink: 0;
-    }
-}
+            .casestudy {
+                padding: 0 20px;
+                width: calc(100% - 40px);
+            }

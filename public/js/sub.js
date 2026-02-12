@@ -118,6 +118,34 @@ $(document).ready(function () {
         }
     });
 
+    // 5. Solution Tabs Visibility Control (Anyworks Page)
+    const solutionTabs = $('.solution-tabs-wrapper');
+    const solutionTitle = $('.info-title'); // The H1 "Anyworks®"
+
+    if (solutionTabs.length && solutionTitle.length) {
+        // Check on scroll
+        $(window).on('scroll', function () {
+            const scrollPos = $(window).scrollTop();
+            // Trigger when the H1 is close to the top (e.g., header height offset)
+            // Adjust offset as needed. 
+            // If we want it to appear *as* the H1 leaves the top, or *as* it enters?
+            // "h1 이 보일경우" -> When H1 is visible.
+            // Let's make it appear when we scroll PAST the H1, effectively "docking" it? 
+            // Or if they want it ON SCREEN when H1 is ON SCREEN?
+            // Usually sticky nav appears when you scroll down to the content.
+            // Let's set it to appear when scroll reaches the H1's top position minus some offset.
+
+            const titleTop = solutionTitle.offset().top;
+            const triggerPoint = titleTop - 100; // Appeart slightly before/at H1
+
+            if (scrollPos >= triggerPoint) {
+                solutionTabs.addClass('visible');
+            } else {
+                solutionTabs.removeClass('visible');
+            }
+        });
+    }
+
     // 5. Hero Title Typing Effect (with sequential description typing)
     const $heroContent = $('.history-hero-content');
     const $heroTitle = $('.hero-title');

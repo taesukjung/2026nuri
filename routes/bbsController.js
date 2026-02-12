@@ -6,10 +6,10 @@ var sequelize = require('sequelize');
 require('moment-timezone');
 moment.tz.setDefault("Asia/Seoul");
 
-module.exports = (app)=>{
+module.exports = (app) => {
 
-// 페이지네이션을 처리하기 위한 middleware
-// https://github.com/expressjs/express-paginate
+    // 페이지네이션을 처리하기 위한 middleware
+    // https://github.com/expressjs/express-paginate
     var paginate = require('express-paginate');
 
     app.use(paginate.middleware(10, 50));
@@ -30,11 +30,11 @@ module.exports = (app)=>{
         let search_text = req.query.search_text;
         let b_category = req.query.b_category;
 
-        if(typeof search_text == "undefined") search_text = "";
-        if(typeof b_category == "undefined") b_category = "";
+        if (typeof search_text == "undefined") search_text = "";
+        if (typeof b_category == "undefined") b_category = "";
 
-        let offset = (req.query.b_page- 1) * pageLimit
-        if(offset < 1) offset = 0
+        let offset = (req.query.b_page - 1) * pageLimit
+        if (offset < 1) offset = 0
         console.log('offset :' + offset)
         tbl_bbs.findAndCountAll({
             order: [['b_date', 'DESC'], ['b_time', 'DESC']],
@@ -42,10 +42,10 @@ module.exports = (app)=>{
             offset: offset, // (Math.ceil((req.query.page - 1) / pageLimit))
             where: {
                 b_subject: {
-                    [Op.like]: '%'+search_text+'%'
+                    [Op.like]: '%' + search_text + '%'
                 },
                 b_category: {
-                    [Op.like]: '%'+b_category+'%'
+                    [Op.like]: '%' + b_category + '%'
                 }
             }
         })
@@ -56,23 +56,23 @@ module.exports = (app)=>{
                 // 선택된 페이지를 중심으로 좌우로 limite 개수 만큼 페이지 번호 나열
                 let pageCount = Math.ceil(result.count / pageLimit);
                 //let pageCount = 5;
-                
-               
 
-                const pageArray = paginate.getArrayPages(req)(pageLimit, pageCount,req.query.b_page)
-                
-                if(pageCount > 10){
-                	if(pageArray[0].number != 1){
-                		if(pageCount >= Math.ceil(req.query.b_page)+5){
-                			pageCount = Math.ceil(req.query.b_page)+5;
-                		}
-                	}else{
-                		pageCount = 10;
-                	}
+
+
+                const pageArray = paginate.getArrayPages(req)(pageLimit, pageCount, req.query.b_page)
+
+                if (pageCount > 10) {
+                    if (pageArray[0].number != 1) {
+                        if (pageCount >= Math.ceil(req.query.b_page) + 5) {
+                            pageCount = Math.ceil(req.query.b_page) + 5;
+                        }
+                    } else {
+                        pageCount = 10;
+                    }
                 }
-                
+
                 res.send({
-                    result:true,
+                    result: true,
                     BBS_LIST: result.rows,
                     pageCount,
                     itemCount: result.count,
@@ -99,7 +99,7 @@ module.exports = (app)=>{
             b_text: req.body.b_text
         })
             .then(result => {
-                tbl_bbs.count({},function(result){
+                tbl_bbs.count({}, function (result) {
                     console.log("INSERT : " + result)
                 })
                 res.render('contact/contact1.html');
@@ -111,23 +111,24 @@ module.exports = (app)=>{
         let b_id = req.query.b_id
 
         tbl_bbs.findOne({
-            where : {b_id : b_id}
+            where: { b_id: b_id }
 
         })
-            .then(function(record){
+            .then(function (record) {
 
                 // 조회수 update
                 tbl_bbs.update(
                     {
-                        b_count : record.b_count + 1
+                        b_count: record.b_count + 1
                     },
-                    {where : {b_id : b_id}
+                    {
+                        where: { b_id: b_id }
                     }).
-                then(function(result){
-                    record.b_text = record.b_text.replace(/\n/g, "").replace(/&nbsp;/g, " ");
-                    console.log("record :: "+record.b_text);
-                    res.render('contact/contact1_view.html',{bbs:record})
-                })
+                    then(function (result) {
+                        record.b_text = record.b_text.replace(/\n/g, "").replace(/&nbsp;/g, " ");
+                        console.log("record :: " + record.b_text);
+                        res.render('contact/contact1_view.html', { bbs: record })
+                    })
             })
             .catch(function (err) {
                 res.json(err)
@@ -147,9 +148,10 @@ module.exports = (app)=>{
                 b_subject: req.body.b_subject,
                 b_text: req.body.b_text
             },
-            {where : {b_id : b_id}
+            {
+                where: { b_id: b_id }
             })
-            .then(function(result){
+            .then(function (result) {
                 res.render('contact/contact1.html')
             })
     })
@@ -158,9 +160,9 @@ module.exports = (app)=>{
 
         let b_id = req.body.b_id
         tbl_bbs.destroy({
-            where : {b_id : b_id}
+            where: { b_id: b_id }
         })
-            .then(function(result){
+            .then(function (result) {
                 res.render('contact/contact1.html')
 
             })
@@ -168,13 +170,85 @@ module.exports = (app)=>{
 
     router.get('/getContent', function (req, res, next) {
         tbl_bbs.findAndCountAll({
-            where : {b_id : req.query.b_id}
+            where: { b_id: req.query.b_id }
         })
-            .then(function(result){
+            .then(function (result) {
                 res.send({
                     BBS_LIST: result.rows
                 })
             })
+    })
+
+    // --- NOTICE BOARD ROUTES ---
+
+    // View Notice (GET)
+    router.get('/notice/view', function (req, res, next) {
+        let b_id = req.query.b_id
+        tbl_bbs.findOne({ where: { b_id: b_id } })
+            .then(function (record) {
+                tbl_bbs.update({ b_count: record.b_count + 1 }, { where: { b_id: b_id } })
+                    .then(function (result) {
+                        record.b_text = record.b_text.replace(/\n/g, "").replace(/&nbsp;/g, " ");
+                        // Assuming notice-view handles content display appropriately.
+                        res.render('archive/notice-view.html', { bbs: record })
+                    })
+            })
+            .catch(function (err) {
+                res.json(err)
+            });
+    })
+
+    // Insert Notice (POST)
+    router.post('/notice/insert', function (req, res, next) {
+        tbl_bbs.create({
+            b_id: 0,
+            b_category: req.body.b_category,
+            b_date: req.body.b_date,
+            b_time: moment().format('HH:mm:ss'),
+            b_writer: 'ADMIN',
+            b_subject: req.body.b_subject,
+            b_text: req.body.b_text
+        })
+            .then(result => {
+                res.redirect('/archive/notice');
+            })
+            .catch(err => {
+                console.error(err);
+                res.status(500).send("Error inserting notice");
+            });
+    });
+
+    // Update Notice (POST)
+    router.post('/notice/update', function (req, res, next) {
+        let b_id = req.body.b_id
+        tbl_bbs.update({
+            b_category: req.body.b_category,
+            b_date: req.body.b_date,
+            b_time: moment().format('HH:mm:ss'),
+            b_writer: 'ADMIN',
+            b_subject: req.body.b_subject,
+            b_text: req.body.b_text
+        }, { where: { b_id: b_id } })
+            .then(function (result) {
+                res.redirect('/archive/notice');
+            })
+            .catch(err => {
+                console.error(err);
+                res.status(500).send("Error updating notice");
+            });
+    })
+
+    // Delete Notice (POST)
+    router.post('/notice/delete', function (req, res, next) {
+        let b_id = req.body.b_id
+        tbl_bbs.destroy({ where: { b_id: b_id } })
+            .then(function (result) {
+                res.redirect('/archive/notice');
+            })
+            .catch(err => {
+                console.error(err);
+                res.status(500).send("Error deleting notice");
+            });
     })
 
     return router;

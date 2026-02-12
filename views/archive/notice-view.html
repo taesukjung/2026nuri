@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>공지사항 - NURIINFOS</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+        rel="stylesheet">
+    <link href="/css/common.css" rel="stylesheet" type="text/css">
+    <link href="/css/sub.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="/css/nav-style.css">
+    <script src="/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+    <meta name="GENERATOR" content="MSHTML 11.00.10570.1001">
+</head>
+
+<body>
+    <!-- 공통 네비게이션 포함 -->
+    <%- include('../layout/nav.html') %>
+
+        <!-- 히어로 섹션 -->
+        <section class="history-hero notice">
+            <div class="history-hero-content">
+                <h2 class="hero-label">공지사항 </h2>
+                <h1 class="hero-title">기술의 중심에서 전하는 깊이 있는 정보, <br>누리인포스의 소식을 만나보세요.</h1>
+            </div>
+            <div class="scroll-down">
+                <span>Scroll Down</span>
+                <div class="arrow"></div>
+            </div>
+        </section>
+
+        <section class="inquiry">
+            <div class="inquiry-container">
+                <div class="inquiry-header">
+                    <h2 class="inquiry-title">공지사항 </h2>
+                    <p class="inquiry-subtitle">솔루션 업데이트와 공식 소식을 통해 누리인포스의 최신 행보를 공유합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="casestudy">
+            <div class="casestudy-info">
+                <div class="contact">
+                    <div class="news_view">
+                        <div class="title_area">
+                            <div class="day">
+                                <%=bbs.b_id%><span>
+                                        <%=bbs.b_date%>
+                                    </span>
+                            </div>
+                            <p class="title">
+                                <%=bbs.b_subject%>
+                            </p>
+                        </div>
+                        <!--<textarea name="b_text" id="b_text" value="" style="width: 100%; height: 500px"><pre><%=bbs.b_text%></pre></textarea>-->
+                        <div id="b_text" class="news_content"></div>
+                    </div>
+                    <div class="btn_area">
+                        <!--
+                        <span><a href="">이전</a></span>
+                        <span><a href="">다음</a></span>
+                        -->
+                        <span><a href="/archive/notice" class="line">목록</a></span>
+                        <span class="fr"><a href="javascript:openPop()" class="line">수정</a></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="layer_popup_area take_over">
+            <div class="layer_popup2">
+                <div class="popup_close"><img src="/images/btn_close_popup.png"></div>
+                <div class="layer_info">
+                    <form name="wform" method="post">
+                        <div class="tit">누리인포스 관리자님<br>비밀번호를 입력하세요.</div>
+                        <input type="password" name="w_passwd" id="w_passwd">
+                        <input type="hidden" name="b_id" id="b_id" value="<%=bbs.b_id%>">
+                        <div class="btn2 popup_close">확인</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section (Wrapped for styling match with Index) -->
+        <div id="footer-section">
+            <%- include('../layout/footer.html') %>
+        </div>
+
+        <script src="/js/sub.js" type="text/javascript"></script>
+        <script>
+            /*
+            $('#summernote').summernote({
+                toolbar: false,
+                lang: 'ko-KR',
+                codemirror: { // codemirror options
+                    theme: 'monokai'
+                },
+                minHeight: '300px',
+                width:'100%',
+                height:'100%'
+
+            });
+
+            $(".note-editable").attr("contenteditable","false");
+            $('.note-editable').css("backgroundColor", "#FFFFFF");
+            */
+
+            $(function () {
+
+                var htmlTag = "<%=bbs.b_text%>";
+                var res = htmlTag.replaceAll("&gt;", ">").replaceAll("&lt;", "<").replaceAll("&#34;", "\'");
+                $("#b_text").html(res);
+
+                $(".pw_open").click(function () {
+                    $(".take_over").css(
+                        "display", "block");
+                });
+
+                $(".popup_close").click(function () {
+                    $(".take_over").css(
+                        "display", "none");
+
+                    save();
+                });
+            });
+
+            function openPop() {
+                $(".take_over").css(
+                    "display", "block");
+            }
+
+            function save() {
+                var f = document.wform;
+                f.action = "/auth/check/notice";
+                f.method = "post";
+                f.submit();
+                $("#w_passwd").val("");
+            }
+
+            String.prototype.replaceAll = function (org, dest) {
+                return this.split(org).join(dest);
+            }
+
+        </script>
+</body>
+
+</html>

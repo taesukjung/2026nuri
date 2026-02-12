@@ -232,38 +232,84 @@ textarea {
 }
 
 input[type='text'] {
-	border-radius: 0px;
+	border-radius: 10px;
 	-webkit-appearance: none;
 }
 
 input[type='password'] {
-	border-radius: 0px;
+	border-radius: 10px;
 	-webkit-appearance: none;
 }
 
 input[type='submit'] {
-	border-radius: 0px;
+	border-radius: 10px;
 	-webkit-appearance: none;
 }
 
 input[type='search'] {
-	border-radius: 0px;
+	border-radius: 10px;
 	-webkit-appearance: none;
 }
 
 input[type='number'] {
-	border-radius: 0px;
+	border-radius: 10px;
 	-webkit-appearance: none;
 }
 
 input[type='tel'] {
-	border-radius: 0px;
+	border-radius: 10px;
 	-webkit-appearance: none;
 }
 
 input[type='date'] {
-	border-radius: 0px;
+	border-radius: 10px;
 	-webkit-appearance: none;
+}
+
+input {
+	font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
+	font-size: 16px;
+	padding: 12px 20px;
+	border: 1px solid #e0e0e0;
+	border-radius: 10px;
+	background-color: #ffffff;
+	box-sizing: border-box;
+	width: 100%;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+	min-height: 48px;
+}
+
+
+input:focus {
+	outline: none;
+	border-color: #312cbf;
+	box-shadow: 0 0 0 3px rgba(49, 44, 191, 0.1);
+}
+
+input::placeholder {
+	color: #999999;
+}
+
+select {
+	font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
+	font-size: 16px;
+	padding: 10px 20px;
+	border: 1px solid #e0e0e0;
+	border-radius: 10px;
+	background-color: #ffffff;
+	box-sizing: border-box;
+	width: 100%;
+	cursor: pointer;
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 20px center;
+	min-height: 48px;
+}
+
+select:focus {
+	outline: none;
+	border-color: #312cbf;
 }
 
 a {

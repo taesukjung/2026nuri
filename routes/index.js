@@ -66,4 +66,14 @@ router.get('/archive/casestudy', function (req, res, next) {
     res.render('archive/casestudy.html', { title: '구축사례 - NURIINFOS' })
 });
 
+/* GET solutions anyworks page. */
+router.get('/solutions/anyworks', function (req, res, next) {
+    res.render('solutions/anyworks.html', { title: '스마트유통 - NURIINFOS' })
+});
+
+/* GET notice page. */
+router.get('/archive/notice', function (req, res, next) {
+    res.render('archive/notice.html', { title: '공지사항 - NURIINFOS' })
+});
+
 module.exports = router;
