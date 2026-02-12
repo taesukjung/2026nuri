@@ -76,4 +76,9 @@ router.get('/archive/notice', function (req, res, next) {
     res.render('archive/notice.html', { title: '공지사항 - NURIINFOS' })
 });
 
+/* GET privacy policy page. */
+router.get('/archive/policy', function (req, res, next) {
+    res.render('archive/policy.html', { title: '개인정보처리방침 - NURIINFOS' })
+});
+
 module.exports = router;

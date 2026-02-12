@@ -2044,6 +2044,7 @@ table.tb_type2 tr td input {
 
 .info-intro.solution h1 {
     margin: 100px 0px 40px;
+    color: #312CBF;
 }
 
 .info-intro.solution img {
@@ -3115,4 +3116,34 @@ table.tb_type2 tr td input {
         height: 36px;
         flex-shrink: 0;
     }
+}
+
+/* Privacy Policy Page Styles */
+.privacy {
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.privacy ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.privacy ul li {
+    font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+.privacy ul li b {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    display: block;
+    margin-bottom: 10px;
 }

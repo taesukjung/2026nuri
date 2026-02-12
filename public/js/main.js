@@ -116,7 +116,7 @@ $(document).ready(function () {
 
                     // 최대 2개만 표시 (index.html 로직 참조)
                     for (var i = 0; i < Math.min(results.length, 2); i++) {
-                        str += "<li><a href='/bbs/view?b_id=" + results[i].b_id + "'>" + results[i].b_subject
+                        str += "<li><a href='/bbs/notice/view?b_id=" + results[i].b_id + "'>" + results[i].b_subject
                             + "<span>" + results[i].b_date + '</span></a></li>';
                     }
                     str += '</ul>';
