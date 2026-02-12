@@ -167,12 +167,12 @@ module.exports = (app)=>{
     })
 
     router.get('/getContent', function (req, res, next) {
-        tbl_bbs.findAndCountAll({
+        tbl_bbs.findAll({
             where : {b_id : req.query.b_id}
         })
             .then(function(result){
                 res.send({
-                    BBS_LIST: result.rows
+                    BBS_LIST: result
                 })
             })
     })
