@@ -58,23 +58,8 @@ $(document).ready(function () {
         }
     });
 
-    // Solution tabs (Anyworks page)
-    $('.solution-btn').on('click', function () {
-        // Add active class to clicked button and remove from siblings
-        $(this).addClass('active').siblings().removeClass('active');
+    // Solution tabs (Anyworks page) - Logic moved to specific block below
 
-        const period = $(this).data('period');
-        // Match .info-intro.solution.[prm, srm, etc]
-        const targetSection = $(`.info-intro.solution.${period}`);
-
-        if (targetSection.length) {
-            // Offset for fixed header/tab bar if needed
-            const offset = 100;
-            $('html, body').animate({
-                scrollTop: targetSection.offset().top - offset
-            }, 500);
-        }
-    });
 
     // 3. 스크롤 스파이 (Scroll Spy) & 타임라인 라인 컬러링
     $(window).on('scroll', function () {
@@ -134,17 +119,75 @@ $(document).ready(function () {
                 $('.period-tabs-wrapper').removeClass('visible');
             }
         }
+    });
 
-        // 5. Solution Tabs Scroll Spy (Anyworks Page)
-        // Only run if solution tabs exist
-        if ($('.solution-tabs-wrapper').length) {
+    // 5. Solution Tabs Logic (Anyworks Page)
+    if ($('.solution-tabs-wrapper').length) {
+        const $glider = $('.glider');
+
+        function updateGlider($targetBtn) {
+            const $activeBtn = $targetBtn || $('.solution-btn.active');
+            if ($activeBtn.length && $glider.length) {
+                // Calculate position relative to the parent .solution-tabs
+                $glider.css({
+                    'width': $activeBtn.outerWidth(),
+                    'height': $activeBtn.outerHeight(),
+                    'left': $activeBtn[0].offsetLeft,
+                    'top': $activeBtn[0].offsetTop,
+                    'opacity': 1
+                });
+            }
+        }
+
+        // Initial call and resize
+        setTimeout(function () { updateGlider(); }, 100);
+        $(window).on('resize', function () { updateGlider(); });
+
+        let isManualScrolling = false;
+        let activeTimeout = null; // Store timeout ID
+
+        // Click handler handles its own active class toggling, but needs to update glider
+        $('.solution-btn').on('click', function () {
+            const $this = $(this);
+            const period = $this.data('period');
+            const targetSection = $(`.info-intro.solution.${period}`);
+
+            // Clear any pending timeout just in case
+            if (activeTimeout) clearTimeout(activeTimeout);
+
+            if (targetSection.length) {
+                const offset = 100;
+                isManualScrolling = true; // Disable scroll spy
+
+                // Animate scroll first
+                $('html, body').stop().animate({ // Stop previous animation
+                    scrollTop: targetSection.offset().top - offset
+                }, 500, function () {
+                    // Animation complete: Apply active state and move glider
+                    $this.addClass('active').siblings().removeClass('active');
+                    updateGlider($this);
+
+                    isManualScrolling = false; // Re-enable scroll spy
+                });
+            } else {
+                // Fallback if section not found (shouldn't happen)
+                $this.addClass('active').siblings().removeClass('active');
+                updateGlider($this);
+            }
+        });
+
+        // Scroll Spy Logic
+        $(window).on('scroll', function () {
+            if (isManualScrolling) return; // Skip if manually scrolling
+
+            const scrollPos = $(window).scrollTop();
+            const offset = 100;
             let activePeriod = null;
+
             $('.info-intro.solution').each(function () {
                 const currentSection = $(this);
-                // Adjust offset to trigger slightly before the section hits top
                 const sectionTop = currentSection.offset().top - offset - 100;
 
-                // If scrolled past this section header
                 if (scrollPos >= sectionTop) {
                     const classes = currentSection.attr('class').split(' ');
                     for (let i = 0; i < classes.length; i++) {
@@ -157,15 +200,15 @@ $(document).ready(function () {
             });
 
             if (activePeriod) {
-                // Update active tab only if it changes
                 const currentActive = $('.solution-btn.active').data('period');
                 if (currentActive !== activePeriod) {
                     $('.solution-btn').removeClass('active');
                     $(`.solution-btn[data-period="${activePeriod}"]`).addClass('active');
+                    updateGlider();
                 }
             }
-        }
-    });
+        });
+    }
 
     // 5. Solution Tabs Visibility Control (Anyworks Page)
     const solutionTabs = $('.solution-tabs-wrapper');

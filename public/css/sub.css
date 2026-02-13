@@ -3139,6 +3139,24 @@ table.tb_type2 tr td input {
     gap: 10px;
     flex-wrap: wrap;
     /* Enable wrapping */
+    position: relative;
+    /* For glider positioning */
+}
+
+/* Glider (Sliding Background) */
+.glider {
+    position: absolute;
+    height: 40px;
+    background-color: #312cbf;
+    border-radius: 99px;
+    /* Same as button radius */
+    z-index: 1;
+    /* Behind text */
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    /* More natural ease out */
+    box-shadow: 0 4px 10px rgba(49, 44, 191, 0.2);
+    /* Initial state (hidden or set via JS) */
+    opacity: 0;
 }
 
 .solution-btn {
@@ -3153,22 +3171,31 @@ table.tb_type2 tr td input {
     height: 40px;
     border-radius: 20px;
     white-space: nowrap;
-    transition: all 0.2s ease;
+    transition: color 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    /* Match glider transition */
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    /* For z-index */
+    z-index: 2;
+    /* In front of glider */
 }
 
 .solution-btn:hover {
     color: #312cbf;
-    background-color: rgba(49, 44, 191, 0.05);
+    /* background-color: rgba(49, 44, 191, 0.05); hover bg effect might conflict with slider so keep it subtle or remove */
+    background-color: transparent;
 }
 
 .solution-btn.active {
     color: #ffffff;
-    background-color: #312cbf;
+    /* background-color: #312cbf; */
+    background-color: transparent;
+    /* Glider provides bg */
     font-weight: 700;
-    box-shadow: 0 4px 10px rgba(49, 44, 191, 0.2);
+    /* transition-delay: 0.1s; Removed for strict JS sync */
+    /* box-shadow: 0 4px 10px rgba(49, 44, 191, 0.2); Glider has shadow */
 }
 
 /* Mobile Responsive */
