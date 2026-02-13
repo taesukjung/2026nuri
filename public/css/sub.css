@@ -738,6 +738,7 @@ section.introduction {
     box-sizing: border-box;
 }
 
+
 /* Header Section */
 .info-header {
     padding-top: 100px;
@@ -845,6 +846,10 @@ section.introduction {
     font-size: 22px;
 }
 
+.info-competencies>p.mb20 {
+    margin-bottom: 20px;
+}
+
 .info-competencies .img-info {
     margin: 40px auto 0px;
 
@@ -869,6 +874,12 @@ section.introduction {
     display: grid;
     gap: 40px;
     grid-template: none;
+}
+
+.solutions-info.colum2 .info-competency-grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .info-competency-card {
@@ -907,7 +918,24 @@ section.introduction {
 
 .solutions-info .info-card-subtitle {
     color: #222222;
+    font-size: 24px;
+}
+
+.solutions-info .info-card-subtitle2 {
+    color: #1e0070;
     font-size: 22px;
+    font-weight: 600;
+    margin: 20px 0 6px;
+}
+
+.solutions-info .info-card-subtitle2::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 12px;
+    background-color: #1e0070;
+    border-radius: 4px 0px 4px 0px;
+    margin-right: 10px;
 }
 
 .info-card-title {
@@ -944,6 +972,24 @@ section.introduction {
     color: #222222;
     margin: 0;
     line-height: 27px;
+}
+
+.info-card-desc.dot {
+    position: relative;
+    margin-left: 28px;
+}
+
+.info-card-desc.dot::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #222222;
+    border-radius: 50%;
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Process Section */
@@ -1205,6 +1251,7 @@ section.introduction {
 .inquiry-subtitle {
     font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
     font-size: 20px;
+    line-height: 30px;
     font-weight: 400;
     color: #666666;
     margin: 0;
@@ -2047,6 +2094,11 @@ table.tb_type2 tr td input {
     color: #312CBF;
 }
 
+.solutions-wrapper .info-intro.solution h1 {
+    margin: 0px;
+    padding: 100px 0px 40px;
+}
+
 .info-intro.solution img {
     margin: 40px auto;
     display: block;
@@ -2743,21 +2795,31 @@ table.tb_type2 tr td input {
         font-size: 20px;
     }
 
+    .info-intro-service,
+    .info-intro-solution {
+        font-size: 18px;
+    }
+
     .info-section-title {
         font-size: 24px;
     }
 
     .info-card-title,
     .info-step-title,
-    .info-case-title {
+    .info-case-title,
+    .solutions-info .info-card-title {
         font-size: 22px;
     }
 
     .info-competency-grid,
     .info-case-grid,
     .info-case-grid.column2,
-    .info-case-grid.colum3 {
+    .info-case-grid.colum3,
+    .info-competency-grid.colum4,
+    .solutions-info .info-competency-grid,
+    .solutions-info.colum2 .info-competency-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .info-competency-card,
@@ -2772,6 +2834,27 @@ table.tb_type2 tr td input {
 
     .inquiry-section-title {
         font-size: 24px;
+    }
+
+    .info-competencies>p {
+        font-size: 18px;
+    }
+
+    .solutions-info .info-card-subtitle,
+    .solutions-info .info-card-subtitle2 {
+        font-size: 20px;
+    }
+
+    .solutions-info .info-card-subtitle2::before {
+        display: none;
+    }
+
+    .info-card-desc.dot::before {
+        top: 13px;
+    }
+
+    .info-card-desc.dot {
+        margin-left: 10px;
     }
 
     .inquiry-case-grid,
@@ -3103,6 +3186,10 @@ table.tb_type2 tr td input {
         height: 60px;
         flex-wrap: nowrap;
         /* Prevent wrapping on mobile */
+    }
+
+    .solutions-wrapper .info-intro.solution h1 {
+        padding: 50px 0px 40px;
     }
 
     .solution-tabs::-webkit-scrollbar {

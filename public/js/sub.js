@@ -46,14 +46,32 @@ $(document).ready(function () {
     });
 
     // 2. 탭 클릭 이벤트 핸들러 (Bookmark Scroll)
+    // Timeline tabs
     $('.tab-btn').on('click', function () {
         const period = $(this).data('period');
         const targetSection = $(`.timeline-${period}`);
 
         if (targetSection.length) {
-            // 해당 섹션으로 부드럽게 스크롤
             $('html, body').animate({
                 scrollTop: targetSection.offset().top
+            }, 500);
+        }
+    });
+
+    // Solution tabs (Anyworks page)
+    $('.solution-btn').on('click', function () {
+        // Add active class to clicked button and remove from siblings
+        $(this).addClass('active').siblings().removeClass('active');
+
+        const period = $(this).data('period');
+        // Match .info-intro.solution.[prm, srm, etc]
+        const targetSection = $(`.info-intro.solution.${period}`);
+
+        if (targetSection.length) {
+            // Offset for fixed header/tab bar if needed
+            const offset = 100;
+            $('html, body').animate({
+                scrollTop: targetSection.offset().top - offset
             }, 500);
         }
     });
@@ -114,6 +132,37 @@ $(document).ready(function () {
                 $('.period-tabs-wrapper').addClass('visible');
             } else {
                 $('.period-tabs-wrapper').removeClass('visible');
+            }
+        }
+
+        // 5. Solution Tabs Scroll Spy (Anyworks Page)
+        // Only run if solution tabs exist
+        if ($('.solution-tabs-wrapper').length) {
+            let activePeriod = null;
+            $('.info-intro.solution').each(function () {
+                const currentSection = $(this);
+                // Adjust offset to trigger slightly before the section hits top
+                const sectionTop = currentSection.offset().top - offset - 100;
+
+                // If scrolled past this section header
+                if (scrollPos >= sectionTop) {
+                    const classes = currentSection.attr('class').split(' ');
+                    for (let i = 0; i < classes.length; i++) {
+                        if (classes[i] !== 'info-intro' && classes[i] !== 'solution') {
+                            activePeriod = classes[i];
+                            break;
+                        }
+                    }
+                }
+            });
+
+            if (activePeriod) {
+                // Update active tab only if it changes
+                const currentActive = $('.solution-btn.active').data('period');
+                if (currentActive !== activePeriod) {
+                    $('.solution-btn').removeClass('active');
+                    $(`.solution-btn[data-period="${activePeriod}"]`).addClass('active');
+                }
             }
         }
     });

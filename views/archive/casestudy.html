@@ -26,7 +26,7 @@
         <section class="history-hero casestudy">
             <div class="history-hero-content">
                 <h2 class="hero-label">구축사례</h2>
-                <h1 class="hero-title">경험으로 증명하고 결과로 답합니다.<br>누리인포스가 완성한 성공의 기록들</h1>
+                <h1 class="hero-title">경험으로 증명하고 결과로 답합니다. <br>누리인포스가 완성한 성공의 기록들</h1>
             </div>
             <div class="scroll-down">
                 <span>Scroll Down</span>
@@ -213,35 +213,21 @@
                             var itemCount = result.itemCount;
 
                             if (curPage > 0 && itemCount > 0) {
-                                //str += "<a href='/ref/list?page='"+ (curPage-1) +"'><</a>";
-                                //str += "<a href='javascript:search_data(\"+ b_category + \",\"+ b_sector + \",\" + currentPage + \")'>";
                                 var currentPage = curPage <= 1 ? 1 : (curPage - 1);
-                                str += "<a href='javascript:search_data(" + b_category + "," + b_sector + "," + currentPage + ")'>";
-                                str += "<</a>";
+                                str += "<a href='javascript:search_data(" + b_category + "," + b_sector + "," + currentPage + ")' class='prev'><span class='sr-only'>이전 페이지</span></a>";
                             }
                             for (var i = startPage; i <= endPage; i++) {
                                 if (i > totalPage) { break; }
 
                                 if (i == curPage) {
-                                    //str += "<a href='/ref/list/?page='"+ i + "' class=\"current\">";
-                                    str += "<a href='javascript:search_data(" + b_category + "," + b_sector + "," + i + ")'; class=\'current\'>";
-                                    str += i;
-                                    str += "</a>";
+                                    str += "<a href='javascript:search_data(" + b_category + "," + b_sector + "," + i + ")' class='current num'>" + i + "</a>";
                                 } else {
-                                    //str += " <a href='/ref/list/?page='"+ i +"'>";
-                                    str += "<a href='javascript:search_data(" + b_category + "," + b_sector + "," + i + ")'>";
-                                    str += i;
-                                    str += "</a>";
+                                    str += "<a href='javascript:search_data(" + b_category + "," + b_sector + "," + i + ")' class='num'>" + i + "</a>";
                                 }
                             } //for
                             if (curPage <= totalPage) {
-                                if (curPage != totalPage) {
-                                    //str += "<a href='/ref/list?page='"+ (curPage+1) +"'>></a>";
-                                    str += "<a href='javascript:search_data(" + b_category + "," + b_sector + "," + (curPage + 1) + ")'>></a>";
-                                } else {
-                                    //str += "<a href='/ref/list?page='"+ (curPage) +"'>></a>";
-                                    str += "<a href='javascript:search_data(" + b_category + "," + b_sector + "," + (curPage) + ")'>></a>";
-                                }
+                                var nextPage = (curPage >= totalPage) ? totalPage : (curPage + 1);
+                                str += "<a href='javascript:search_data(" + b_category + "," + b_sector + "," + nextPage + ")' class='next'><span class='sr-only'>다음 페이지</span></a>";
                             }
                             $(".paging_inner").append(str);
                         }
