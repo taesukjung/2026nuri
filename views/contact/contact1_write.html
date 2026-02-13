@@ -174,6 +174,7 @@
                         <div class="news_write">
                             <div class="title_area info">
                                 <div class="day">
+                                    <label for="b_category" class="sr-only">카테고리</label>
                                     <select id="b_category" name="b_category" class="select_text_date">
                                         <option value="1" selected="">Solution</option>
                                         <option value="2">Service</option>
@@ -182,23 +183,28 @@
                                         <option value="5">누리인포스</option>
                                     </select>
                                     <span>
+                                        <label for="b_date" class="sr-only">날짜</label>
                                         <input type="date" title="날짜" name="b_date" id="b_date" value=""
-                                            placeholder="날짜" class="input_text_date">
+                                            placeholder="날짜" class="input_text_date" required>
                                     </span>
                                 </div>
-                                <p class="title"><input type="text" title="제목" name="b_subject" id="b_subject" value=""
-                                        placeholder="제목을 입력하세요" class="input_text"></p>
+                                <p class="title">
+                                    <label for="b_subject" class="sr-only">제목</label>
+                                    <input type="text" title="제목" name="b_subject" id="b_subject" value=""
+                                        placeholder="제목을 입력하세요" class="input_text" required>
+                                </p>
                                 <input type="hidden" id="b_id" name="b_id" value="<%=b_id%>">
                             </div>
                             <p class="write_info">
                                 <!-- <textarea class="input_text" placeholder="내용을 입력하세요"></textarea> -->
+                                <label for="summernote" class="sr-only">내용</label>
                                 <textarea name="b_text" id="summernote" value=""></textarea>
                             </p>
                         </div>
                         <div class="btn_area">
                             <span><a href="/move/contact/contact1.html">취소</a></span>
-                            <span class="fr"><a href="javascript:save();">저장</a></span>
-                            <span class="fr" id="btn_del"><a href="javascript:del();">삭제</a></span>
+                            <span class="fr"><a href="javascript:save();" role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); save(); }">저장</a></span>
+                            <span class="fr" id="btn_del"><a href="javascript:del();" role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); del(); }">삭제</a></span>
                         </div>
                     </div>
                 </div>
