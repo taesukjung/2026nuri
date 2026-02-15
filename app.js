@@ -2,6 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var session = require('express-session');
 var logger = require('morgan');
 var moment = require('moment');
 require('moment-timezone');
@@ -32,6 +33,14 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({
+    secret: process.env.SESSION_SECRET || 'dev_secret_key',
+    resave: false,
+    saveUninitialized: false,
+    // TODO: Use a persistent store (e.g., connect-redis) for production.
+    // The default MemoryStore is not suitable for production environments.
+    cookie: { secure: app.get('env') === 'production', httpOnly: true }
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
