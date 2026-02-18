@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <!-- saved from url=(0041)http://www.auton-detailing.com/ko/main.do -->
 <!DOCTYPE html PUBLIC "" "">
 <html lang="ko">
@@ -197,8 +197,8 @@
                         </div>
                         <div class="btn_area">
                             <span><a href="/move/contact/contact1.html">취소</a></span>
-                            <span class="fr"><a href="javascript:save();">저장</a></span>
-                            <span class="fr" id="btn_del"><a href="javascript:del();">삭제</a></span>
+                            <span class="fr"><button type="button" onclick="save(this)">저장</button></span>
+                            <span class="fr" id="btn_del"><button type="button" onclick="del(this)">삭제</button></span>
                         </div>
                     </div>
                 </div>
@@ -271,11 +271,16 @@
             });
         });
 
-        function save() {
+        function save(btn) {
             var data = validator();
             if (!data.flag) {
                 alert(data.msg);
                 return;
+            }
+
+            if (btn) {
+                btn.disabled = true;
+                btn.innerHTML = '저장 중...';
             }
 
             var f = document.wform;
@@ -284,8 +289,12 @@
             f.submit();
         }
 
-        function del() {
+        function del(btn) {
             if (confirm("삭제하시겠습니까?")) {
+                if (btn) {
+                    btn.disabled = true;
+                    btn.innerHTML = '삭제 중...';
+                }
                 var f = document.wform;
                 f.action = "/bbs/delete"
                 f.method = "post";
