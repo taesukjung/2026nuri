@@ -32,6 +32,13 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(require('express-session')({
+  // Use env variable or generate a random secret (sessions will be reset on restart)
+  secret: process.env.SESSION_SECRET || require('crypto').randomBytes(64).toString('hex'),
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false } // Set to true if using HTTPS
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
