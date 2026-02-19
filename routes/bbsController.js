@@ -17,6 +17,14 @@ module.exports = (app) => {
     // models/*.js 파일이름이 객체 이름이 된다.
     const { tbl_bbs } = require('../models')
 
+    // Middleware to check authentication
+    const isAuthenticated = (req, res, next) => {
+        if (req.session && req.session.isAdmin) {
+            return next();
+        }
+        res.status(401).send('Unauthorized');
+    };
+
     router.all(function (req, res, next) {
         // set default or minimum is 10 (as it was prior to v0.2.0)
         if (req.query.limit <= 10) req.query.limit = 10;
@@ -86,7 +94,7 @@ module.exports = (app) => {
     });
 
     /* POST insert */
-    router.post('/insert', function (req, res, next) {
+    router.post('/insert', isAuthenticated, function (req, res, next) {
         tbl_bbs.create({
             // req.body
 
@@ -136,7 +144,7 @@ module.exports = (app) => {
 
     })
 
-    router.post('/update', function (req, res, next) {
+    router.post('/update', isAuthenticated, function (req, res, next) {
 
         let b_id = req.body.b_id
         tbl_bbs.update(
@@ -156,7 +164,7 @@ module.exports = (app) => {
             })
     })
 
-    router.post('/delete', function (req, res, next) {
+    router.post('/delete', isAuthenticated, function (req, res, next) {
 
         let b_id = req.body.b_id
         tbl_bbs.destroy({
@@ -199,7 +207,7 @@ module.exports = (app) => {
     })
 
     // Insert Notice (POST)
-    router.post('/notice/insert', function (req, res, next) {
+    router.post('/notice/insert', isAuthenticated, function (req, res, next) {
         tbl_bbs.create({
             b_id: 0,
             b_category: req.body.b_category,
@@ -219,7 +227,7 @@ module.exports = (app) => {
     });
 
     // Update Notice (POST)
-    router.post('/notice/update', function (req, res, next) {
+    router.post('/notice/update', isAuthenticated, function (req, res, next) {
         let b_id = req.body.b_id
         tbl_bbs.update({
             b_category: req.body.b_category,
@@ -239,7 +247,7 @@ module.exports = (app) => {
     })
 
     // Delete Notice (POST)
-    router.post('/notice/delete', function (req, res, next) {
+    router.post('/notice/delete', isAuthenticated, function (req, res, next) {
         let b_id = req.body.b_id
         tbl_bbs.destroy({ where: { b_id: b_id } })
             .then(function (result) {
