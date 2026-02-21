@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var multer = require('multer');
+const { isAuthenticated } = require('../middleware/auth');
 
 const path = require('path');
 const upload = multer({
@@ -26,7 +27,7 @@ const upload = multer({
 });
 module.exports = ()=>{
 
-    router.post('/image', upload.single('file'), function(req, res){
+    router.post('/image', isAuthenticated, upload.single('file'), function(req, res){
         res.send({
             url: "/uploads/"+req.file.filename
         })

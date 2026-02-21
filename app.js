@@ -2,6 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var session = require('express-session');
 var logger = require('morgan');
 var moment = require('moment');
 require('moment-timezone');
@@ -33,6 +34,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// TODO: Replace MemoryStore with a persistent store (e.g., connect-session-sequelize) for production.
+app.use(session({
+    secret: process.env.SESSION_SECRET || require('crypto').randomBytes(64).toString('hex'),
+    resave: false,
+    saveUninitialized: false,
+    cookie: { httpOnly: true }
+}));
 
 app.use('/', indexRouter);
 app.use('/en', enIndexRouter);
