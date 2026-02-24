@@ -12,7 +12,11 @@ module.exports = () => {
             where: { w_id: 'admin' }
         })
             .then(function (record) {
-                return record && record.w_passwd == req.body.w_passwd;
+                const isValid = record && record.w_passwd == req.body.w_passwd;
+                if (isValid) {
+                    req.session.isAdmin = true;
+                }
+                return isValid;
             });
     };
 
