@@ -10,9 +10,8 @@ body {
 }
 
 .history-hero {
-    background-color: var(--color-primary-purple);
-    background: url(../images/sub/history_bg.png) center center no-repeat;
-    background-size: cover;
+    background-color: #000;
+    /* Base color */
     width: 100%;
     height: 100vh;
     display: flex;
@@ -20,83 +19,83 @@ body {
     justify-content: center;
     position: relative;
     box-sizing: border-box;
+    overflow: hidden;
+    z-index: 1;
+    /* Create stacking context */
 }
 
-.history-hero.intro {
-    background: url(../images/sub/introduction_bg.png) center center no-repeat;
-    background-size: cover;
+/* Base background layer */
+.history-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    background: url(../images/sub/history_bg.png) var(--parallax-x, center) var(--parallax-y, 0px) no-repeat;
+    background-size: cover;
+    z-index: 0;
+    /* Above parent background, below content */
+    will-change: transform, filter, opacity;
+    animation: kenBurns 40s infinite alternate ease-in-out;
+    opacity: var(--hero-opacity, 1);
+    filter: blur(var(--hero-blur, 0px));
+    transition: opacity 0.1s ease-out, filter 0.1s ease-out;
+    /* Smooth JS updates */
 }
 
-.history-hero.map {
-    background: url(../images/sub/location_bg.png) center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+@keyframes kenBurns {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
 }
 
-.history-hero.cloud {
-    background: url(../images/sub/cloud_bg.png) center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+.history-hero.intro::before {
+    background-image: url(../images/sub/introduction_bg.png);
 }
 
-.history-hero.public {
-    background: url(../images/sub/public_bg.png) center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+.history-hero.map::before {
+    background-image: url(../images/sub/location_bg.png);
 }
 
-.history-hero.prm {
-    background: url(../images/sub/prm_bg.png) center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+.history-hero.cloud::before {
+    background-image: url(../images/sub/cloud_bg.png);
 }
 
-.history-hero.careers {
-    background: url(../images/sub/careers_bg.png) center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+.history-hero.public::before {
+    background-image: url(../images/sub/public_bg.png);
 }
 
-.history-hero.inquiry {
-    background: url(../images/sub/inquiry_bg.png) center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+.history-hero.prm::before {
+    background-image: url(../images/sub/prm_bg.png);
 }
 
-.history-hero.support {
-    background: url(../images/sub/support_bg.png) center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+.history-hero.careers::before {
+    background-image: url(../images/sub/careers_bg.png);
 }
 
-.history-hero.casestudy {
-    background: url(../images/sub/casestudy_bg.png) center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+.history-hero.inquiry::before {
+    background-image: url(../images/sub/inquiry_bg.png);
 }
 
-.history-hero.notice {
-    background: url(../images/sub/notice_bg.png) center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+.history-hero.support::before {
+    background-image: url(../images/sub/support_bg.png);
 }
 
-.history-hero.anyworks {
-    background: url(../images/sub/anyworks_bg.png) center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+.history-hero.casestudy::before {
+    background-image: url(../images/sub/casestudy_bg.png);
+}
+
+.history-hero.notice::before {
+    background-image: url(../images/sub/notice_bg.png);
+}
+
+.history-hero.anyworks::before {
+    background-image: url(../images/sub/anyworks_bg.png);
 }
 
 .history-hero-content {
@@ -104,6 +103,8 @@ body {
     margin: 0 auto;
     padding: 0 240px;
     color: #ffffff;
+    position: relative;
+    z-index: 2;
 }
 
 .history-hero-content h1 {
@@ -136,6 +137,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    z-index: 2;
 }
 
 .scroll-down span {
@@ -631,7 +633,6 @@ section.introduction {
     border-radius: 6px;
 }
 
-.location {}
 
 .location .map-info {
     display: flex;
@@ -719,9 +720,6 @@ section.introduction {
     font-size: 20px;
 }
 
-.location .address-info .text-item {}
-
-.location .address-info .text-item .text-title {}
 
 
 /* Footer Section Snap Alignment */
@@ -1510,26 +1508,6 @@ section.introduction {
 }
 
 /*********/
-.link_menu ul li {
-    float: left;
-}
-
-.link_menu ul li a {
-    border: 1px solid #c3c3c3;
-    border-radius: 20px;
-    height: 40px;
-    line-height: 40px;
-    width: 100%;
-    float: left;
-    text-align: center;
-    cursor: pointer
-}
-
-
-.link_menu.tab_area ul li {
-    width: auto;
-    margin-right: auto
-}
 
 .link_menu.tab_area ul li a {
     width: 260px;
@@ -1552,16 +1530,12 @@ section.introduction {
     margin: 40px 0px 0px;
 }
 
-.link_menu.tab_info ul li {
-    width: auto;
-    margin-right: 0.5%;
-}
 
 .link_menu.tab_info ul li a {
-    width: 220px;
-    height: 38px;
-    line-height: 38px;
-    border-radius: 18px;
+    border-radius: 99px;
+    padding: 10px 30px;
+    font-size: 20px;
+    border: 1px solid #e0e0e0;
 }
 
 .link_menu.tab_info ul li a.on {
@@ -1596,17 +1570,6 @@ section.introduction {
     margin-top: 15px
 }
 
-.link_menu.tab_info.tab1_sub {
-    display: block;
-    height: 65px;
-    width: 100%
-}
-
-.link_menu.tab_info.tab2_sub {
-    display: none;
-    width: 100%;
-    height: 65px
-}
 
 .link_menu2 {
     font-size: 26px;
@@ -1680,25 +1643,16 @@ section.introduction {
 /* Tab Menu */
 .casestudy-info .link_menu {
     font-size: 20px;
-    height: 42px;
+    height: 52px;
     margin: 0 auto;
     display: table;
     width: 100%;
 }
 
-.casestudy-info .link_menu ul li a {
-    height: 40px;
-    line-height: 40px;
-    width: 100%;
-    float: left;
-    text-align: center;
-    cursor: pointer
-}
-
-
-.casestudy-info .link_menu.tab_area ul li {
-    width: auto;
-    margin-right: auto
+.casestudy-info .link_menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
 .casestudy-info .link_menu.tab_area ul li a {
@@ -1724,18 +1678,13 @@ section.introduction {
     margin: 20px 0px 0px;
 }
 
-.casestudy-info .link_menu.tab_info ul li {
-    width: auto;
-    margin-right: 0.5%;
+.casestudy-info .link_menu.tab_info ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.casestudy-info .link_menu.tab_info ul li a {
-    width: 220px;
-    height: 38px;
-    line-height: 38px;
-    border-radius: 18px;
-    margin-right: 20px;
-}
+
 
 .casestudy-info .link_menu.tab_info ul li a.on {
     background-color: #DFE3FF;
@@ -1743,14 +1692,8 @@ section.introduction {
     color: #222222
 }
 
-.casestudy-info .link_menu.tab_info.tab1_sub {
-    display: block;
-    height: 65px;
-}
-
 .casestudy-info .link_menu.tab_info.tab2_sub {
     display: none;
-    height: 65px
 }
 
 /* Table Styles */
@@ -2349,18 +2292,6 @@ table.tb_type2 tr td input {
         font-size: 16px;
     }
 
-    .casestudy-info .link_menu.tab_info ul li {
-        width: calc(33.33% - 10px);
-        margin-right: 10px;
-        margin-bottom: 10px;
-    }
-
-    .casestudy-info .link_menu.tab_info ul li a {
-        width: 100%;
-        border-radius: 0px;
-        font-size: 16px;
-    }
-
     .solution-tabs-wrapper {
         top: 0;
         left: 0;
@@ -2402,6 +2333,21 @@ table.tb_type2 tr td input {
 
     .info-intro.solution img {
         width: 100%;
+    }
+
+    .casestudy-info .link_menu {
+        height: auto;
+    }
+
+    .casestudy-info .link_menu.tab_info ul {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .link_menu.tab_info ul li a {
+        display: block;
+        text-align: center;
     }
 
 }
@@ -2717,6 +2663,15 @@ table.tb_type2 tr td input {
         padding: 0 20px;
     }
 
+    .casestudy-info .link_menu.tab_info ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .link_menu.tab_info ul li a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -2908,12 +2863,6 @@ table.tb_type2 tr td input {
         display: none;
     }
 
-    .casestudy-info .link_menu.tab_info ul li {
-        width: calc(50% - 10px);
-        margin-right: 10px;
-        margin-bottom: 10px;
-    }
-
     .inquiry-container {
         padding: 0 20px;
     }
@@ -3047,6 +2996,14 @@ table.tb_type2 tr td input {
 
     .history-hero .hero-title>br {
         display: none;
+    }
+
+    .casestudy-info .link_menu.tab_info ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .link_menu.tab_info ul li a {
+        padding: 8px 10px;
     }
 
 }

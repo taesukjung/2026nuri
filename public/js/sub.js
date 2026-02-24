@@ -107,17 +107,44 @@ $(document).ready(function () {
         });
 
         // 4. Period Tabs Visibility Control
-        // timeline-hero history_bg1 영역이 화면 상단에 닿을 때 탭 보이기
         const targetHero = $('.timeline-hero.history_bg1');
         if (targetHero.length) {
             const heroTop = targetHero.offset().top;
-
-            // 스크롤 위치가 히어로 영역 상단보다 크거나 같으면 (화면 위로 붙었을 때)
             if (scrollPos >= heroTop) {
                 $('.period-tabs-wrapper').addClass('visible');
             } else {
                 $('.period-tabs-wrapper').removeClass('visible');
             }
+        }
+
+        // 5. Hero Advanced Background Effects (Parallax, Blur, Dim)
+        const $hero = $('.history-hero');
+        if ($hero.length) {
+            const speed = 0.3;
+            const yPos = scrollPos * speed;
+
+            // Calculate blur and dimming based on scroll position
+            // Dimming: 1.0 (top) down to 0.3 (at 1vh scroll)
+            const opacity = Math.max(0.3, 1 - (scrollPos / (windowHeight * 0.8)));
+            // Blur: 0px (top) up to 10px
+            const blur = Math.min(10, scrollPos / 50);
+
+            $hero[0].style.setProperty('--parallax-y', `${yPos}px`);
+            $hero[0].style.setProperty('--hero-opacity', opacity);
+            $hero[0].style.setProperty('--hero-blur', `${blur}px`);
+        }
+    });
+
+    // 6. Mouse-follow Interactive Parallax (Desktop Only)
+    $('.history-hero').on('mousemove', function (e) {
+        if (window.innerWidth > 1024) {
+            const $this = $(this);
+            const moveX = (e.pageX - window.innerWidth / 2) / 50;
+            const moveY = (e.pageY - window.innerHeight / 2) / 50;
+
+            // Move background slightly opposite to mouse movement for depth
+            // We combine this with the scroll parallax in CSS by using center + moveX
+            $this[0].style.setProperty('--parallax-x', `calc(50% + ${-moveX}px)`);
         }
     });
 
