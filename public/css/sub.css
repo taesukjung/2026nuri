@@ -37,11 +37,21 @@ body {
     z-index: 0;
     /* Above parent background, below content */
     will-change: transform, filter, opacity;
-    animation: kenBurns 40s infinite alternate ease-in-out;
+    animation: heroReveal 1.5s ease-out forwards, kenBurns 40s infinite alternate ease-in-out 1.5s;
     opacity: var(--hero-opacity, 1);
     filter: blur(var(--hero-blur, 0px));
     transition: opacity 0.1s ease-out, filter 0.1s ease-out;
     /* Smooth JS updates */
+}
+
+@keyframes heroReveal {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes kenBurns {
