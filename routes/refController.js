@@ -98,15 +98,9 @@ module.exports = (app) => {
             b_text: req.body.b_text
         })
             .then(result => {
-                tbl_ref.count({}, function (result) {
-                    console.log("INSERT : " + result)
-                })
-                tbl_ref.findAll({ order: [['b_date', 'DESC'], ['b_id', 'DESC']] })
-                    .then(function (result) {
-                        // res.send(result)
-                        res.redirect('/move/archive/casestudy.html');
-                    })
-
+                // Optimized: Removed redundant findAll and count queries.
+                // The previous code fetched the entire table just to redirect.
+                res.redirect('/move/archive/casestudy.html');
             });
     });
 
