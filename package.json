@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "debug": "nodemon --inspect ./bin/www",
-    "test": "node test/test_404.js"
+    "test": "node test/test_404.js && node test/test_db_config.js"
   },
   "dependencies": {
     "cookie-parser": "*",
