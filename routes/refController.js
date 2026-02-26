@@ -12,6 +12,7 @@ module.exports = (app) => {
 
     // models/*.js 파일이름이 객체 이름이 된다.
     const { tbl_ref } = require('../models')
+    const { isAuthenticated } = require('../middleware/auth');
 
     router.all(function (req, res, next) {
         // set default or minimum is 10 (as it was prior to v0.2.0)
@@ -87,7 +88,7 @@ module.exports = (app) => {
     });
 
     /* POST insert */
-    router.post('/insert', function (req, res, next) {
+    router.post('/insert', isAuthenticated, function (req, res, next) {
         tbl_ref.create({
             // req.body
             b_id: 0,
@@ -110,7 +111,7 @@ module.exports = (app) => {
             });
     });
 
-    router.post('/update', function (req, res, next) {
+    router.post('/update', isAuthenticated, function (req, res, next) {
 
         let b_id = req.body.b_id
         tbl_ref.update(
@@ -130,7 +131,7 @@ module.exports = (app) => {
             })
     })
 
-    router.post('/delete', function (req, res, next) {
+    router.post('/delete', isAuthenticated, function (req, res, next) {
 
         let b_id = req.body.b_id
         tbl_ref.destroy({
