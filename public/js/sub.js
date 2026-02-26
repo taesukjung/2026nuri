@@ -406,3 +406,28 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(numberInfo);
     }
 });
+
+// info-competency-card, info-case-card 스크롤 시 순차적 등장 효과
+document.addEventListener('DOMContentLoaded', function () {
+    // 화면의 20% 정도 카드가 보였을 때 애니메이션 작동
+    const cardObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // 한번 나타난 후에는 재생하지 않으려면 아래 주석 해제 (현재는 주석 처리되어 스크롤할 때마다 효과 발생)
+                // observer.unobserve(entry.target); 
+            }
+        });
+    }, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
+
+    // 각 그리드 구역별로 카드를 찾아서 순서대로(왼쪽에서 오른쪽) 딜레이 부여
+    const grids = document.querySelectorAll('.info-competency-grid, .info-case-grid');
+    grids.forEach(grid => {
+        const cards = grid.querySelectorAll('.info-competency-card, .info-case-card');
+        cards.forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.15}s`;
+            cardObserver.observe(card);
+        });
+    });
+});
+
