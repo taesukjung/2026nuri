@@ -1,0 +1,3 @@
+## 2025-02-20 - Redundant Full-Table Scans After Insert
+**Learning:** The codebase contains a recurring anti-pattern where controllers (e.g., `refController.js`, `bbsController.js`) perform `count()` and `findAll()` operations immediately after a record insertion (`create()`), but completely discard the results before redirecting. This causes O(N) performance degradation on every write operation for no reason.
+**Action:** When auditing other controllers, specifically look for `create()` calls followed by `findAll()` or `count()` inside the same handler. Remove these redundant calls to restore O(1) performance.
