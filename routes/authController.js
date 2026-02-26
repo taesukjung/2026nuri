@@ -20,7 +20,10 @@ module.exports = () => {
         checkAdmin(req)
             .then(function (loginCheck) {
                 if (loginCheck) {
-                    res.render('contact/contact1_write.html', { "b_id": req.body.b_id })
+                    req.session.regenerate(function (err) {
+                        req.session.isAdmin = true;
+                        res.render('contact/contact1_write.html', { "b_id": req.body.b_id })
+                    });
                 } else {
                     res.render('contact/contact1.html');
                 }
@@ -32,7 +35,10 @@ module.exports = () => {
         checkAdmin(req)
             .then(function (loginCheck) {
                 if (loginCheck) {
-                    res.render('about/about4_write.html', { "b_id": req.body.b_id })
+                    req.session.regenerate(function (err) {
+                        req.session.isAdmin = true;
+                        res.render('about/about4_write.html', { "b_id": req.body.b_id })
+                    });
                 } else {
                     res.render('about/about4.html');
                 }
@@ -44,7 +50,10 @@ module.exports = () => {
         checkAdmin(req)
             .then(function (loginCheck) {
                 if (loginCheck) {
-                    res.render('archive/casestudy-write.html', { "b_id": req.body.b_id })
+                    req.session.regenerate(function (err) {
+                        req.session.isAdmin = true;
+                        res.render('archive/casestudy-write.html', { "b_id": req.body.b_id })
+                    });
                 } else {
                     res.render('archive/casestudy.html');
                 }
@@ -56,7 +65,10 @@ module.exports = () => {
         checkAdmin(req)
             .then(function (loginCheck) {
                 if (loginCheck) {
-                    res.render('archive/notice-write.html', { "b_id": req.body.b_id })
+                    req.session.regenerate(function (err) {
+                        req.session.isAdmin = true;
+                        res.render('archive/notice-write.html', { "b_id": req.body.b_id })
+                    });
                 } else {
                     res.render('archive/notice.html');
                 }

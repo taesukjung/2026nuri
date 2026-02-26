@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var moment = require('moment');
 var sequelize = require('sequelize');
+const { isAuthenticated } = require('../middleware/auth');
 
 require('moment-timezone');
 moment.tz.setDefault("Asia/Seoul");
@@ -86,7 +87,7 @@ module.exports = (app) => {
     });
 
     /* POST insert */
-    router.post('/insert', function (req, res, next) {
+    router.post('/insert', isAuthenticated, function (req, res, next) {
         tbl_bbs.create({
             // req.body
 
@@ -136,7 +137,7 @@ module.exports = (app) => {
 
     })
 
-    router.post('/update', function (req, res, next) {
+    router.post('/update', isAuthenticated, function (req, res, next) {
 
         let b_id = req.body.b_id
         tbl_bbs.update(
@@ -156,7 +157,7 @@ module.exports = (app) => {
             })
     })
 
-    router.post('/delete', function (req, res, next) {
+    router.post('/delete', isAuthenticated, function (req, res, next) {
 
         let b_id = req.body.b_id
         tbl_bbs.destroy({
@@ -199,7 +200,7 @@ module.exports = (app) => {
     })
 
     // Insert Notice (POST)
-    router.post('/notice/insert', function (req, res, next) {
+    router.post('/notice/insert', isAuthenticated, function (req, res, next) {
         tbl_bbs.create({
             b_id: 0,
             b_category: req.body.b_category,
@@ -219,7 +220,7 @@ module.exports = (app) => {
     });
 
     // Update Notice (POST)
-    router.post('/notice/update', function (req, res, next) {
+    router.post('/notice/update', isAuthenticated, function (req, res, next) {
         let b_id = req.body.b_id
         tbl_bbs.update({
             b_category: req.body.b_category,
@@ -239,7 +240,7 @@ module.exports = (app) => {
     })
 
     // Delete Notice (POST)
-    router.post('/notice/delete', function (req, res, next) {
+    router.post('/notice/delete', isAuthenticated, function (req, res, next) {
         let b_id = req.body.b_id
         tbl_bbs.destroy({ where: { b_id: b_id } })
             .then(function (result) {
