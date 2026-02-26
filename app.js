@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var moment = require('moment');
+var session = require('express-session');
+var crypto = require('crypto');
 require('moment-timezone');
 moment.tz.setDefault("Asia/Seoul");
 
@@ -32,6 +34,15 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({
+    secret: process.env.SESSION_SECRET || crypto.randomBytes(64).toString('hex'),
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        secure: false,
+        httpOnly: true
+    }
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
