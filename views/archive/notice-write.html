@@ -83,7 +83,7 @@
                     </div>
                     <div class="btn_area">
                         <span><a href="/archive/notice" class="line">취소</a></span>
-                        <span class="fr"><a href="javascript:save();">저장</a></span>
+                        <span class="fr"><button type="button" onclick="save(this);">저장</button></span>
                         <span class="fr" id="btn_del"><a href="javascript:del();" class="line">삭제</a></span>
                     </div>
                 </div>
@@ -158,11 +158,16 @@
                 });
             });
 
-            function save() {
+            function save(btn) {
                 var data = validator();
                 if (!data.flag) {
                     alert(data.msg);
                     return;
+                }
+
+                if (btn) {
+                    btn.disabled = true;
+                    btn.innerText = "저장 중...";
                 }
 
                 var f = document.wform;
