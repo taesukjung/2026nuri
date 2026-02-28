@@ -1763,7 +1763,8 @@ table.tb_type2 tr td input {
     margin-top: 20px;
 }
 
-.btn_area a {
+.btn_area a,
+.btn_area button {
     display: inline-block;
     font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
     font-size: 18px;
@@ -1778,7 +1779,8 @@ table.tb_type2 tr td input {
     cursor: pointer;
 }
 
-.btn_area a.line {
+.btn_area a.line,
+.btn_area button.line {
     display: inline-block;
     font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
     font-size: 18px;
@@ -3243,4 +3245,11 @@ table.tb_type2 tr td input {
     color: #222;
     display: block;
     margin-bottom: 10px;
+}
+
+.btn_area button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
 }
