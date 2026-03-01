@@ -1763,7 +1763,7 @@ table.tb_type2 tr td input {
     margin-top: 20px;
 }
 
-.btn_area a {
+.btn_area a, .btn_area button {
     display: inline-block;
     font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
     font-size: 18px;
@@ -1778,7 +1778,14 @@ table.tb_type2 tr td input {
     cursor: pointer;
 }
 
-.btn_area a.line {
+.btn_area button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn_area a.line, .btn_area button.line {
     display: inline-block;
     font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
     font-size: 18px;
