@@ -248,7 +248,8 @@ table.tb_type2 tr td select{margin-left: 20px; width: calc(100% - 20px)}
 .news_write > img{width: 100%; margin: 50px 0px}
 .news_write > p.news_info{margin: 50px 0px; line-height: 30px}
 .btn_area{margin-top: 25px;}
-.btn_area > span > a{border: 1px solid #c3c3c3; width: 130px; height: 40px; line-height: 40px; text-align: center; cursor: pointer; display: inline-block; border-radius: 20px}
+.btn_area > span > a, .btn_area > span > button {border: 1px solid #c3c3c3; width: 130px; height: 40px; line-height: 40px; text-align: center; cursor: pointer; display: inline-block; border-radius: 20px; background: none;}
+.btn_area > span > button:disabled {background: #ccc; cursor: not-allowed;}
 ::placeholder{color: #acacac}
 .input_text_date {padding-left: 10px; border: 1px solid #ccc; width: calc(50% - 10px); height: 50px; float: right}
 .select_text_date {padding-left: 10px; border: 1px solid #ccc; width: calc(50% - 67px); height: 50px;appearance: none; -webkit-appearance: none; background: url(../images/select_bg.png) 98% 50% no-repeat}
@@ -677,7 +678,7 @@ address {padding: 20px 0px; box-sizing: border-box}
 .map dl dt {background: none !important; width: 100%; height: auto; font-size: 20px; line-height: 40px;}
 .map dl dd {float: none; width: 100%; height: auto; margin-bottom: 50px; font-size: 15px}
 .news_write .title_area p.title {font-size: 18px}    
-.btn_area > span > a {width: 100px}
+.btn_area > span > a, .btn_area > span > button {width: 100px}
 .etc.contact6{margin: 0px 20px}
 .contact6_info {border-radius: 0px; height: auto; display: inline-block; padding: 20px}
 .contact6_info > p {width: 100%; padding: 0px; font-size: 18px;}
