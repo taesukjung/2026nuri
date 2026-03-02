@@ -168,13 +168,15 @@ module.exports = (app) => {
             })
     })
 
+    // ⚡ Bolt: Optimize by replacing findAndCountAll with findAll
+    // to avoid unnecessary SELECT COUNT(*) query for single records.
     router.get('/getContent', function (req, res, next) {
-        tbl_bbs.findAndCountAll({
+        tbl_bbs.findAll({
             where: { b_id: req.query.b_id }
         })
             .then(function (result) {
                 res.send({
-                    BBS_LIST: result.rows
+                    BBS_LIST: result
                 })
             })
     })
