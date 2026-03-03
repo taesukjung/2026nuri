@@ -1,0 +1,3 @@
+## 2026-03-03 - Form Submit Loading States & Semantic Buttons
+**Learning:** `javascript:` protocol anchor tags (`<a>`) used as form submit triggers break accessibility. Replacing them with `<button type="button">` fixes keyboard a11y. However, the existing CSS targeting (`.btn_area a`) will not style the buttons automatically.
+**Action:** When replacing unsemantic pseudo-links with semantic `<button>`s, explicitly update the associated CSS classes (e.g., adding `.btn_area button`) to match styling and prevent visual regressions. Additionally, disabling the button and setting its text to "Saving..." inside the `save()` JS function effectively prevents double-submissions.
