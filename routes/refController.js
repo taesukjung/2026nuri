@@ -144,12 +144,14 @@ module.exports = (app) => {
 
 
     router.get('/getContent', function (req, res, next) {
-        tbl_ref.findAndCountAll({
+        // Bolt ⚡: Used findAll instead of findAndCountAll to avoid redundant SELECT COUNT(*)
+        // since the total count is not utilized in the response.
+        tbl_ref.findAll({
             where: { b_id: req.query.b_id }
         })
             .then(function (result) {
                 res.send({
-                    REF_LIST: result.rows
+                    REF_LIST: result // findAll returns an array directly, not an object with 'rows'
                 })
             })
     })
