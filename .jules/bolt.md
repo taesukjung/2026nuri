@@ -1,0 +1,3 @@
+## 2025-02-14 - Replace findAndCountAll with findAll when total counts are unused
+**Learning:** In endpoints that retrieve content for a specific ID (like `/getContent`), the codebase previously used `Model.findAndCountAll()`. This triggers a redundant `SELECT COUNT(*)` query because the client only needs the individual record data (`result.rows`) and discards the total count.
+**Action:** When working on routes that retrieve specific data items and do not implement pagination, always prefer `Model.findAll()` (or `Model.findOne()`/`Model.findByPk()`) over `Model.findAndCountAll()` to avoid unnecessary database load.
