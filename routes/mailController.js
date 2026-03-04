@@ -2,13 +2,15 @@ const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 
+// 🛡️ Sentinel: Removed hardcoded SMTP credentials to prevent secret leakage.
+// Now relies on environment variables for secure configuration.
 const transporter = nodemailer.createTransport({
-    host: 'mail.nis.co.kr',
-    port: '465',
-    secure: true,
+    host: process.env.MAIL_HOST || 'mail.nis.co.kr',
+    port: process.env.MAIL_PORT || '465',
+    secure: process.env.MAIL_SECURE !== 'false', // defaults to true
     auth: {
-       user: 'admin@nis.co.kr',
-       pass: 'k5s#fscyqB'
+       user: process.env.MAIL_USER || 'admin@nis.co.kr',
+       pass: process.env.MAIL_PASS || 'default_pass_needs_override'
     }
 });
 
@@ -29,7 +31,7 @@ router.post("/sendMail", function(req, res, next){
 
     console.log("mail emailTo : "+ emailTo);
     let mailOptions = {
-        from: 'admin@nis.co.kr',
+        from: process.env.MAIL_USER || 'admin@nis.co.kr',
         to: emailTo ,
         subject: '누리인포스 홈페이지에서 문의사항이 등록되었습니다.',
         text: content
