@@ -1,0 +1,4 @@
+## 2024-03-04 - [CRITICAL] Hardcoded SMTP Credentials found in mailController.js
+**Vulnerability:** A hardcoded SMTP password `k5s#fscyqB` and associated host/user credentials were leaked in `routes/mailController.js` inside `nodemailer.createTransport()`.
+**Learning:** This existed because the application did not originally utilize environment variables for sensitive settings like SMTP credentials. Exposing passwords in the codebase allows lateral movement, hijacking of email infrastructure, and represents a high-severity security risk.
+**Prevention:** I replaced the static strings with `process.env.MAIL_HOST`, `process.env.MAIL_PORT`, `process.env.MAIL_USER`, and `process.env.MAIL_PASS`. Moving forward, secrets must always be referenced via environment variables in application configuration files and never committed to source code. I also added a `.env.example` file for reference.
