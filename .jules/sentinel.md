@@ -1,0 +1,4 @@
+## 2024-05-24 - Path Traversal Vulnerability in Express Route
+**Vulnerability:** The `/move/:dir/:file` route directly uses `req.params.dir` and `req.params.file` to construct the path passed to `res.render()` without any validation or sanitization. This allows an attacker to manipulate the file path using `..` (dot-dot-slash) sequences to traverse outside the view directory and read arbitrary files or achieve Local File Inclusion (LFI).
+**Learning:** Never pass untrusted, user-supplied input directly to `res.render()` in Express. Even simple path components must be validated.
+**Prevention:** Always validate and sanitize user input before using it to construct file paths. Use strict whitelists or regular expressions (e.g., `/^[a-zA-Z0-9_-]+$/`) to ensure the input only contains expected characters and cannot be used for path traversal.
