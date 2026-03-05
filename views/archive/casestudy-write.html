@@ -88,9 +88,8 @@
                 </form>
                 <div class="btn_area">
                     <span><a href="/move/archive/casestudy.html" class="line">목록</a></span>
-                    <span class="fr"><a href="javascript:save();">저장</a></span>
-                    <span class="fr" id="btn_del"><a href="javascript
-                        :del();" class="line">삭제</a></span>
+                    <span class="fr"><button type="button" id="saveBtn" onclick="save()">저장</button></span>
+                    <span class="fr" id="btn_del"><a href="javascript:del();" class="line">삭제</a></span>
                 </div>
             </div>
         </section>
@@ -143,6 +142,12 @@
                 if (!data.flag) {
                     alert(data.msg);
                     return;
+                }
+
+                var saveBtn = document.getElementById("saveBtn");
+                if (saveBtn) {
+                    saveBtn.disabled = true;
+                    saveBtn.innerText = "저장 중...";
                 }
 
                 var f = document.wform;
