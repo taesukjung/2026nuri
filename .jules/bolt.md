@@ -1,0 +1,3 @@
+## 2025-03-05 - [Performance Optimization] Replace findAndCountAll with findAll in /getContent routes
+**Learning:** In Sequelize, `findAndCountAll` is expensive because it executes a `SELECT COUNT(*)` query in addition to the normal `SELECT` query. When an endpoint such as `/getContent` fetches a single item by ID and does not actually use the count (e.g., no pagination metadata is needed for the response), `findAndCountAll` is an anti-pattern.
+**Action:** Replace `findAndCountAll` with `findAll` for endpoints that don't need pagination count, and ensure the response payload correctly uses the returned array (`result` directly instead of `result.rows`).
