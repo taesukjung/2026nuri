@@ -1,0 +1,3 @@
+## 2024-05-18 - Avoid O(N) Overhead on Unused Count Lookups and Discarded Query Results
+**Learning:** In routes that return simple data structures or redirect without needing total records, using `findAndCountAll()` executes an expensive `SELECT COUNT(*)` that's just thrown away. Additionally, there were redundant queries like `.count()` and `.findAll()` running immediately after `create()` on `/insert` endpoints right before rendering views or redirecting.
+**Action:** Always prefer `findAll()` over `findAndCountAll()` when total pagination info isn't needed. Check POST endpoints for discarded queries running strictly for debugging/side-effects and eliminate them.
