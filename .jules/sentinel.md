@@ -1,0 +1,4 @@
+## 2024-03-08 - [Path Traversal in Dynamic View Router]
+**Vulnerability:** Found Local File Inclusion (LFI) vulnerability in dynamic route rendering (`routes/move.js`, `routes/enMove.js`) where user-supplied input (`req.params.dir`, `req.params.file`) was passed directly to `res.render()` without validation.
+**Learning:** `res.render()` with attacker-controlled input allows path traversal using relative `../` sequences, bypassing the standard view directories and leaking unintended files (e.g. `package.json`, `.env`).
+**Prevention:** Always validate, sanitize, and strictly allow-list user-supplied input before passing it to filesystem or template rendering functions. Implemented strict RegEx (`/^[a-zA-Z0-9_-]+$/` and `/^[a-zA-Z0-9_.-]+$/`) validation to ensure only legitimate view paths are allowed.
