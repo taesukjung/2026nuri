@@ -1,0 +1,4 @@
+## 2024-05-18 - Hardcoded SMTP Credentials
+**Vulnerability:** Found hardcoded plaintext SMTP credentials (`admin@nis.co.kr` and `k5s#fscyqB`) inside `routes/mailController.js` for the nodemailer configuration.
+**Learning:** In projects that don't enforce an environment variable standard from the start, developers might leave sensitive credentials hardcoded in files instead of extracting them to external configuration.
+**Prevention:** Always require configuration files or `process.env` for environment-specific secrets. Add static analysis or pre-commit hooks to detect secrets before pushing code.
