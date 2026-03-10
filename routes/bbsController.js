@@ -99,9 +99,7 @@ module.exports = (app) => {
             b_text: req.body.b_text
         })
             .then(result => {
-                tbl_bbs.count({}, function (result) {
-                    console.log("INSERT : " + result)
-                })
+                // ⚡ Bolt: Removed redundant tbl_bbs.count() query that was executed and discarded
                 res.render('contact/contact1.html');
 
             });
@@ -169,12 +167,14 @@ module.exports = (app) => {
     })
 
     router.get('/getContent', function (req, res, next) {
-        tbl_bbs.findAndCountAll({
+        // ⚡ Bolt: Replaced findAndCountAll with findAll to avoid unnecessary SELECT COUNT(*) query
+        tbl_bbs.findAll({
             where: { b_id: req.query.b_id }
         })
             .then(function (result) {
                 res.send({
-                    BBS_LIST: result.rows
+                    // When using findAll, the result is the array of rows directly
+                    BBS_LIST: result
                 })
             })
     })
