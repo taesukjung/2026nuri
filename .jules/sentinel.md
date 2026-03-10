@@ -1,0 +1,4 @@
+## 2024-11-13 - Regression of Hardcoded Secrets in SMTP Configuration
+**Vulnerability:** Hardcoded credentials (`admin@nis.co.kr`, `k5s#fscyqB`) were found in `routes/mailController.js` for the nodemailer SMTP transporter configuration despite a prior fix according to Sentinel logs.
+**Learning:** Re-introduced hardcoded credentials can occur if branches are incorrectly merged, tests are not enforced in CI, or if developers bypass security checks when debugging mail functionality. The absence of a dedicated test file to assert that secrets are not committed allowed this regression to go unnoticed.
+**Prevention:** Implement a regression test (`test/test_mail_secrets.js`) to assert that `routes/mailController.js` uses `process.env.SMTP_USER` and `process.env.SMTP_PASS` and fails if the known hardcoded secrets are present. This ensures that future regressions are caught immediately.
