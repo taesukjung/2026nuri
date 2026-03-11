@@ -169,12 +169,13 @@ module.exports = (app) => {
     })
 
     router.get('/getContent', function (req, res, next) {
-        tbl_bbs.findAndCountAll({
+        // Bolt: Optimized findAndCountAll to findAll to remove unnecessary COUNT(*) query
+        tbl_bbs.findAll({
             where: { b_id: req.query.b_id }
         })
             .then(function (result) {
                 res.send({
-                    BBS_LIST: result.rows
+                    BBS_LIST: result // findAll returns an array directly
                 })
             })
     })
