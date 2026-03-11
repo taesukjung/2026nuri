@@ -1763,7 +1763,8 @@ table.tb_type2 tr td input {
     margin-top: 20px;
 }
 
-.btn_area a {
+.btn_area a,
+.btn_area button {
     display: inline-block;
     font-family: 'Pretendard GOV', 'Pretendard', sans-serif;
     font-size: 18px;

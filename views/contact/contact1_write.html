@@ -174,6 +174,7 @@
                         <div class="news_write">
                             <div class="title_area info">
                                 <div class="day">
+                                    <label for="b_category" class="sr-only">카테고리</label>
                                     <select id="b_category" name="b_category" class="select_text_date">
                                         <option value="1" selected="">Solution</option>
                                         <option value="2">Service</option>
@@ -182,11 +183,12 @@
                                         <option value="5">누리인포스</option>
                                     </select>
                                     <span>
+                                        <label for="b_date" class="sr-only">날짜</label>
                                         <input type="date" title="날짜" name="b_date" id="b_date" value=""
                                             placeholder="날짜" class="input_text_date">
                                     </span>
                                 </div>
-                                <p class="title"><input type="text" title="제목" name="b_subject" id="b_subject" value=""
+                                <p class="title"><label for="b_subject" class="sr-only">제목</label><input type="text" title="제목" name="b_subject" id="b_subject" value=""
                                         placeholder="제목을 입력하세요" class="input_text"></p>
                                 <input type="hidden" id="b_id" name="b_id" value="<%=b_id%>">
                             </div>
@@ -197,8 +199,8 @@
                         </div>
                         <div class="btn_area">
                             <span><a href="/move/contact/contact1.html">취소</a></span>
-                            <span class="fr"><a href="javascript:save();">저장</a></span>
-                            <span class="fr" id="btn_del"><a href="javascript:del();">삭제</a></span>
+                            <span class="fr"><button type="button" onclick="save();">저장</button></span>
+                            <span class="fr" id="btn_del"><button type="button" onclick="del();">삭제</button></span>
                         </div>
                     </div>
                 </div>
