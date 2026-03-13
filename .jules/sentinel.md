@@ -1,0 +1,4 @@
+## 2024-05-24 - [Fix Path Traversal (LFI) in dynamic view routes]
+**Vulnerability:** Path traversal vulnerability in Express view routing (`routes/move.js`, `routes/enMove.js`). The server was taking unvalidated input from URL parameters (`req.params.dir` and `req.params.file`) and directly passing them into `res.render()`.
+**Learning:** Never pass untrusted, user-supplied input directly to `res.render()` in Express. Doing so allows an attacker to provide sequences like `../` to access files outside the view directory. This can lead to Local File Inclusion (LFI) or information disclosure.
+**Prevention:** Apply strict input validation for view names and directory paths using regular expressions (e.g., restrict to alphanumeric, dashes, dots, and underscores). Alternatively, avoid passing raw user input to `res.render()` entirely and use a safe mapping of keys to view paths.
