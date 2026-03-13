@@ -98,15 +98,9 @@ module.exports = (app) => {
             b_text: req.body.b_text
         })
             .then(result => {
-                tbl_ref.count({}, function (result) {
-                    console.log("INSERT : " + result)
-                })
-                tbl_ref.findAll({ order: [['b_date', 'DESC'], ['b_id', 'DESC']] })
-                    .then(function (result) {
-                        // res.send(result)
-                        res.redirect('/move/archive/casestudy.html');
-                    })
-
+                // Bolt: Removed unused tbl_ref.count() and tbl_ref.findAll() queries
+                // that were executed immediately before redirecting, saving DB roundtrips.
+                res.redirect('/move/archive/casestudy.html');
             });
     });
 
@@ -144,12 +138,14 @@ module.exports = (app) => {
 
 
     router.get('/getContent', function (req, res, next) {
-        tbl_ref.findAndCountAll({
+        // Bolt: Swapped findAndCountAll for findAll.
+        // The total count is not used by the client here, saving an extra SELECT COUNT(*) query.
+        tbl_ref.findAll({
             where: { b_id: req.query.b_id }
         })
             .then(function (result) {
                 res.send({
-                    REF_LIST: result.rows
+                    REF_LIST: result
                 })
             })
     })
