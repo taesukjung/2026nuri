@@ -3,7 +3,15 @@ var router = express.Router();
 
 /* GET Move Target Page. */
 router.get('/:dir/:file', function (req, res, next) {
-    res.render(req.params.dir + "/" + req.params.file, {
+    const dir = req.params.dir;
+    const file = req.params.file;
+
+    // Validate dir and file to prevent path traversal (LFI)
+    if (!/^[a-zA-Z0-9_-]+$/.test(dir) || !/^[a-zA-Z0-9_.-]+$/.test(file)) {
+        return res.status(400).send("Invalid directory or file name.");
+    }
+
+    res.render(dir + "/" + file, {
         emailTo: req.query.emailTo
     })
 });
