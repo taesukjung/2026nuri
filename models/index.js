@@ -11,7 +11,17 @@ let sequelize;
 if (config.use_env_variable) {
     sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-    sequelize = new Sequelize(config.database, config.username, config.password, config);
+    const database = process.env.DB_DATABASE || config.database;
+    const username = process.env.DB_USERNAME || config.username;
+    const password = process.env.DB_PASSWORD || config.password;
+    const host = process.env.DB_HOST || config.host;
+    const port = process.env.DB_PORT || config.port;
+
+    sequelize = new Sequelize(database, username, password, {
+        ...config,
+        host,
+        port
+    });
 }
 
 // model.js 자동 스캔
