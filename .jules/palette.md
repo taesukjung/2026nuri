@@ -1,0 +1,3 @@
+## 2026-03-14 - Interactive icon-only elements should be semantic buttons
+**Learning:** Interactive icon-only elements (e.g., the language selector globe icon in `views/layout/nav.html`) were just image tags relying on JavaScript event listeners, which causes accessibility issues (not focusable, missing role).
+**Action:** Always wrap interactive icon-only elements in semantic `<button type="button">` tags with descriptive `aria-label` attributes and inline reset styles (`background: none; border: none; padding: 0; cursor: pointer; display: flex;`) to maintain visual layout while ensuring keyboard accessibility.
