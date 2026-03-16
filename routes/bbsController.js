@@ -99,11 +99,7 @@ module.exports = (app) => {
             b_text: req.body.b_text
         })
             .then(result => {
-                tbl_bbs.count({}, function (result) {
-                    console.log("INSERT : " + result)
-                })
                 res.render('contact/contact1.html');
-
             });
     });
 
@@ -169,12 +165,12 @@ module.exports = (app) => {
     })
 
     router.get('/getContent', function (req, res, next) {
-        tbl_bbs.findAndCountAll({
+        tbl_bbs.findAll({
             where: { b_id: req.query.b_id }
         })
             .then(function (result) {
                 res.send({
-                    BBS_LIST: result.rows
+                    BBS_LIST: result
                 })
             })
     })
