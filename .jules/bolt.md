@@ -1,0 +1,3 @@
+## 2024-05-18 - Avoid redundant database calls for unneeded counts
+**Learning:** Found an O(N) performance anti-pattern in `routes/refController.js` and `routes/bbsController.js` where database queries (`count()`, `findAll()`) were executed immediately before redirects/renders, entirely discarding the results. Additionally, `findAndCountAll()` was used in `getContent` routes when only the rows were needed, invoking an expensive, unused `COUNT(*)` query.
+**Action:** Remove useless queries when data is not consumed by the response or subsequent logic. When paginated count is not required, use `findAll()` over `findAndCountAll()` to bypass the expensive COUNT calculation.
