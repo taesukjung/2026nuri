@@ -1,0 +1,5 @@
+
+## 2024-05-24 - Unsanitized input in Express view renderer
+**Vulnerability:** In Express routes `move.js` and `enMove.js`, user-controlled path parameters (`dir`, `file`) were directly concatenated and passed to `res.render()`. This allowed attackers to use directory traversal sequences (e.g., `..%2f..%2f`) to read arbitrary files from the server, causing a critical Local File Inclusion (LFI) vulnerability.
+**Learning:** Passing unsanitized user input directly to file-system functions or view renderers like `res.render()` implicitly trusts the input and opens the door for path traversal, as the underlying filesystem resolver does not enforce view-directory constraints tightly enough against malicious dot-dot-slash patterns.
+**Prevention:** Always validate and sanitize user input before using it in file paths or render targets. Using an allowlist or a strict regex pattern (e.g., `^[a-zA-Z0-9_.-]+$`) ensures that only expected characters are processed, proactively blocking path traversals and other injection attacks.
