@@ -98,15 +98,9 @@ module.exports = (app) => {
             b_text: req.body.b_text
         })
             .then(result => {
-                tbl_ref.count({}, function (result) {
-                    console.log("INSERT : " + result)
-                })
-                tbl_ref.findAll({ order: [['b_date', 'DESC'], ['b_id', 'DESC']] })
-                    .then(function (result) {
-                        // res.send(result)
-                        res.redirect('/move/archive/casestudy.html');
-                    })
-
+                // ⚡ Bolt: Removed redundant tbl_ref.count() and tbl_ref.findAll() queries.
+                // These were unnecessarily fetching data that was discarded immediately before redirecting.
+                res.redirect('/move/archive/casestudy.html');
             });
     });
 
