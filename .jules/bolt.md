@@ -1,0 +1,3 @@
+## 2024-05-15 - Remove redundant database queries on insertion routes
+**Learning:** Executing database queries like `count()` or `findAll()` immediately before `res.redirect()` or `res.render()` without passing the fetched data to the view is an O(N) bottleneck in this codebase's architecture and a clear anti-pattern.
+**Action:** When migrating Sequelize queries or auditing route controllers, explicitly check if the data fetched by `.count()` or `.findAll()` is actually being consumed by the response. If not, safely remove them to prevent unnecessary blocking operations and performance degradation.
