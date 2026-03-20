@@ -3,12 +3,12 @@ const router = express.Router();
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
-    host: 'mail.nis.co.kr',
-    port: '465',
+    host: process.env.SMTP_HOST || 'mail.nis.co.kr',
+    port: process.env.SMTP_PORT || '465',
     secure: true,
     auth: {
-       user: 'admin@nis.co.kr',
-       pass: 'k5s#fscyqB'
+       user: process.env.SMTP_USER || 'admin@nis.co.kr',
+       pass: process.env.SMTP_PASS
     }
 });
 
@@ -29,7 +29,7 @@ router.post("/sendMail", function(req, res, next){
 
     console.log("mail emailTo : "+ emailTo);
     let mailOptions = {
-        from: 'admin@nis.co.kr',
+        from: process.env.SMTP_USER || 'admin@nis.co.kr',
         to: emailTo ,
         subject: '누리인포스 홈페이지에서 문의사항이 등록되었습니다.',
         text: content
