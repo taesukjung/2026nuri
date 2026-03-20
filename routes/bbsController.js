@@ -99,11 +99,9 @@ module.exports = (app) => {
             b_text: req.body.b_text
         })
             .then(result => {
-                tbl_bbs.count({}, function (result) {
-                    console.log("INSERT : " + result)
-                })
+                // Removed redundant count() query before render
+                // to prevent O(N) database bottleneck
                 res.render('contact/contact1.html');
-
             });
     });
 
