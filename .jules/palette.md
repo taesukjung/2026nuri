@@ -1,0 +1,3 @@
+## 2024-05-24 - Improve accessibility of form action buttons
+**Learning:** Anchor tags acting as pseudo-buttons (e.g. `javascript:save()`) cause poor accessibility and keyboard support. Replacing them with `<button type="button">` is a widely recognized best practice that improves keyboard navigability and correct interpretation by screen readers.
+**Action:** Replace `javascript:action()` anchor pseudo-buttons with `<button type="button">` tags across form views to improve semantic HTML and accessibility without visual regressions, and update CSS classes to target `<button>` tags specifically.
