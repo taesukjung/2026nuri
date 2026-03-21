@@ -1,0 +1,5 @@
+
+## 2024-05-18 - [CRITICAL] Fix Hardcoded Database Credentials
+**Vulnerability:** Hardcoded database credentials (including username, password, host, port, and database name) were stored in plaintext in `config/config.json`, exposing sensitive environment information directly in the repository.
+**Learning:** `models/index.js` instantiated Sequelize using `config.database, config.username, config.password` directly from `config.json`. Although it supported `config.use_env_variable`, it was only useful if the entire connection string was passed in a single variable. The app actually prioritizes specific environment variables (`DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`, `DB_HOST`, `DB_PORT`) based on historical context, so we needed to modify `models/index.js` to explicitly override the config file values with these individual env vars if present.
+**Prevention:** Never commit credentials to version control. Configuration files should provide dummy or generic local values and the application initialization logic must prioritize environment variables for sensitive properties, avoiding complete reliance on static files for production configuration.
