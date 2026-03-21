@@ -99,9 +99,8 @@ module.exports = (app) => {
             b_text: req.body.b_text
         })
             .then(result => {
-                tbl_bbs.count({}, function (result) {
-                    console.log("INSERT : " + result)
-                })
+                // ⚡ Bolt: Removed redundant tbl_bbs.count() query
+                // that was executed without passing data to the view
                 res.render('contact/contact1.html');
 
             });
